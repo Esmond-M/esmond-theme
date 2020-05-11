@@ -449,6 +449,7 @@ ul.third-level-sub-menu li a::before {
    justify-content: center;
    flex-wrap:wrap;
    padding: 15px;
+   clear: both;
 }
 .footer-menu > ul > li{
    padding-right:0px;	
