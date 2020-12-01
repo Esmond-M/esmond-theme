@@ -1,24 +1,30 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package website-theme-name
+ */
 
-  <div class="footer-item"><?php esmondblankboilerplatetheme_footer_nav(); ?></div>
- <div class="footer-item" style="margin-top: auto;">
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'Esmondblank_theme'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="https://esmondmccain.com" title="Esmond">Esmondblank_theme</a>.
-				</p>
-				<!-- /copyright -->
-	 </div>
-  <div class="footer-item"></div>
+?>
 
-			</footer>
-			<!-- /footer -->
-
-		</div>
-		<!-- /wrapper -->
-
-		<?php wp_footer(); ?>
-
-	</body>
+<footer id="colophon" class="site-footer website-theme-name-footer">
+		<div class="container"><div class="row"><div class="col-md-4 col-sm-4 col-xs-12"><section><div class="contact-location"><div class="hours-title"><h4>location</h4></div><div class="address">9702 Greenwell Springs Rd</div><div class="city-state">Baton Rouge, LA</div><div class="zip">70814</div></div></section></div><div class="col-md-4 col-sm-4 col-xs-12"><section><div class="hours"><div class="hours-title"><h4>hours</h4></div><div class="days">
+                        Mon - Sun                    </div><div style="position:relative;left:-6px;"class="from-to">
+                        11:00 AM - 11:00 PM                    </div></div></section></div><div class="col-md-4 col-sm-4 col-xs-12">
+			<div class="find-us"><section>
+				<div class="social"><div class="social-title"><h4>find us on...</h4></div>
+					<div class="social-links social-icons-holder social-square">
+						<a title="Wrookies Instagram" class="contact-icon" href="https://www.instagram.com/wrookiesbilliards/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						<a title="Wrookies Facebook" class="contact-icon" href="https://facebook.com/wrookiesbilliards/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+						<a title="Wrookies Waitr" class="website-theme-name-waitr-footer-contain" href="https://waitrapp.com/restaurants/la/baton-rouge/wrookies/18643" target="_blank"><span class="icon-wrookies-waitr-logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a></div>
+				</div></section>
+				<section><div class="contact-us"><div class="contact-us-title"><h4>contact us</h4></div>
+					<a title="Wrookies Phone" href="tel:+12252566994" id="contact_us_v3_section_phone_link">(225)-256-6994</a><p>
+					<a title="Wrookies Email" href="mailto:comments@wrookies.com">comments@wrookies.com</a></p></div></section></div></div></div></div></footer><!-- #colophon -->
+<?php wp_footer(); ?>
+</body>
 </html>
