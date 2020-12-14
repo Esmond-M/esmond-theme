@@ -105,29 +105,29 @@ and (max-width : 500px) {
 ----------------------------------------------------------------
 */
 
-.website-theme-name-footer {
+.ROOTEDinfooter {
 	background: black;
 }
-.website-theme-name-footer h4 {
+.ROOTEDinfooter h4 {
     font-family: 'JazzScript1-Regular';
     font-size: 37px;
     color: #ee9836;
     padding-top: 3rem;
 }
-.website-theme-name-footer a {
+.ROOTEDinfooter a {
 	font-size:17px;
     color: white;
 }
-.website-theme-name-footer a:hover {
+.ROOTEDinfooter a:hover {
     color: #ee9836;
 }
-.website-theme-name-footer a:focus {
+.ROOTEDinfooter a:focus {
     color: #ee9836;
 }
-.website-theme-name-footer a:active {
+.ROOTEDinfooter a:active {
     color: #ee9836;
 }
-.website-theme-name-footer section div {
+.ROOTEDinfooter section div {
     color: white;
     font-family: 'FuturaLTW01-LightOblique';
     font-size: 16px;
@@ -143,21 +143,21 @@ and (max-width : 500px) {
 }
 @media only screen 
 and (max-width : 767px) {
-/* Styles */ .website-theme-name-footer-section {
+/* Styles */ .ROOTEDinfooter-section {
     width: 100%;
     padding: 0 1rem 0 1rem!important;
     text-align: center;
 }
-.website-theme-name-footer-li {
+.ROOTEDinfooter-li {
     justify-content: center;
 }
 }
-.website-theme-name-waitr-footer-contain {
+.ROOTEDinwaitr-footer-contain {
     padding-left: 10px;
     text-decoration: none!important;
 	font-size: 17px!important;
 }
-.website-theme-name-footer .container .row:first-child {
+.ROOTEDinfooter .container .row:first-child {
     padding: 29px 10% 15px 10%;
 }
 /*misc */

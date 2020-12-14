@@ -28,8 +28,8 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$website_theme_name_comment_count = get_comments_number();
-			if ( '1' === $website_theme_name_comment_count ) {
+			$ROOTEDin_comment_count = get_comments_number();
+			if ( '1' === $ROOTEDin_comment_count ) {
 				printf(
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'website-theme-name' ),
@@ -38,8 +38,8 @@ if ( post_password_required() ) {
 			} else {
 				printf( 
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $website_theme_name_comment_count, 'comments title', 'website-theme-name' ) ),
-					number_format_i18n( $website_theme_name_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $ROOTEDin_comment_count, 'comments title', 'website-theme-name' ) ),
+					number_format_i18n( $ROOTEDin_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			}

@@ -14,7 +14,7 @@
 		
 	</header><!-- .entry-header -->
 
-	<?php website_theme_name_post_thumbnail(); ?>
+	<?php ROOTEDin_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

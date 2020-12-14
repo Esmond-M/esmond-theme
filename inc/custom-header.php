@@ -14,33 +14,33 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses website_theme_name_header_style()
+ * @uses ROOTEDin_header_style()
  */
-function website_theme_name_custom_header_setup() {
+function ROOTEDin_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'website_theme_name_custom_header_args',
+			'ROOTEDin_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'website_theme_name_header_style',
+				'wp-head-callback'   => 'ROOTEDin_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'website_theme_name_custom_header_setup' );
+add_action( 'after_setup_theme', 'ROOTEDin_custom_header_setup' );
 
-if ( ! function_exists( 'website_theme_name_header_style' ) ) :
+if ( ! function_exists( 'ROOTEDin_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see website_theme_name_custom_header_setup().
+	 * @see ROOTEDin_custom_header_setup().
 	 */
-	function website_theme_name_header_style() {
+	function ROOTEDin_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

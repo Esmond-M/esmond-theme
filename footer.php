@@ -11,7 +11,7 @@
 
 ?>
 
-<footer id="colophon" class="site-footer website-theme-name-footer">
+<footer id="colophon" class="site-footer ROOTEDinfooter">
 		<div class="container"><div class="row"><div class="col-md-4 col-sm-4 col-xs-12"><section><div class="contact-location"><div class="hours-title"><h4>location</h4></div><div class="address">9702 Greenwell Springs Rd</div><div class="city-state">Baton Rouge, LA</div><div class="zip">70814</div></div></section></div><div class="col-md-4 col-sm-4 col-xs-12"><section><div class="hours"><div class="hours-title"><h4>hours</h4></div><div class="days">
                         Mon - Sun                    </div><div style="position:relative;left:-6px;"class="from-to">
                         11:00 AM - 11:00 PM                    </div></div></section></div><div class="col-md-4 col-sm-4 col-xs-12">
@@ -20,7 +20,7 @@
 					<div class="social-links social-icons-holder social-square">
 						<a title="Wrookies Instagram" class="contact-icon" href="https://www.instagram.com/wrookiesbilliards/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 						<a title="Wrookies Facebook" class="contact-icon" href="https://facebook.com/wrookiesbilliards/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-						<a title="Wrookies Waitr" class="website-theme-name-waitr-footer-contain" href="https://waitrapp.com/restaurants/la/baton-rouge/wrookies/18643" target="_blank"><span class="icon-wrookies-waitr-logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a></div>
+						<a title="Wrookies Waitr" class="ROOTEDinwaitr-footer-contain" href="https://waitrapp.com/restaurants/la/baton-rouge/wrookies/18643" target="_blank"><span class="icon-wrookies-waitr-logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a></div>
 				</div></section>
 				<section><div class="contact-us"><div class="contact-us-title"><h4>contact us</h4></div>
 					<a title="Wrookies Phone" href="tel:+12252566994" id="contact_us_v3_section_phone_link">(225)-256-6994</a><p>

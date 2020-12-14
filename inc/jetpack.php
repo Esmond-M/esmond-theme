@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function website_theme_name_jetpack_setup() {
+function ROOTEDin_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'website_theme_name_infinite_scroll_render',
+			'render'    => 'ROOTEDin_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function website_theme_name_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'website-theme-name-style',
+				'stylesheet' => 'ROOTEDinstyle',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,12 +48,12 @@ function website_theme_name_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'website_theme_name_jetpack_setup' );
+add_action( 'after_setup_theme', 'ROOTEDin_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function website_theme_name_infinite_scroll_render() {
+function ROOTEDin_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
