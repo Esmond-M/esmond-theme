@@ -137,15 +137,7 @@ function ROOTEDin_widgets_init() {
 add_action( 'widgets_init', 'ROOTEDin_widgets_init' );
 
 function ROOTEDin_google_tag_manager() {
-    echo '<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143357052-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag(\'js\', new Date());
-
-  gtag(\'config\', \'UA-143357052-2\');
-</script>';
+    echo '';
  
 }
 add_action( 'wp_head', 'ROOTEDin_google_tag_manager', 1 );
