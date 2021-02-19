@@ -136,19 +136,11 @@ function ROOTEDin_widgets_init() {
 }
 add_action( 'widgets_init', 'ROOTEDin_widgets_init' );
 
-function wrookies_google_tag_manager() {
-    echo '<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143357052-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag(\'js\', new Date());
-
-  gtag(\'config\', \'UA-143357052-2\');
-</script>';
+function ROOTEDin_google_tag_manager() {
+    echo '';
  
 }
-add_action( 'wp_head', 'wrookies_google_tag_manager', 1 );
+add_action( 'wp_head', 'ROOTEDin_google_tag_manager', 1 );
 
 /**
  * Enqueue scripts and styles.
