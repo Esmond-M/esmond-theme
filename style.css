@@ -90,11 +90,11 @@ header#masthead {
 }
 @media only screen 
 and (max-width : 500px) {
-/* Styles */ .wrookies-openbtn {
+/* Styles */ .ROOTEDin-openbtn {
     padding-right: 5px;
     padding-left: 5px;
 }
-.wrookies-openbtn {
+.ROOTEDin-openbtn {
     border-right: none;
 }
 }

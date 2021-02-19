@@ -23,11 +23,11 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-<div class="wrookies-fixedheader-placeholder"></div>
+<div class="ROOTEDin-fixedheader-placeholder"></div>
 	<header id="masthead" class="site-header">
-		<button class="wrookies-openbtn"><i class="fas fa-bars"></i> Menu</button>
+		<button class="ROOTEDin-openbtn"><i class="fas fa-bars"></i> Menu</button>
 		<div id="mySidenav" class="sidenav">
-			<a href="javascript:void(0)" class="wrookies-closebtn">Close <i class="fa fa-times" aria-hidden="true"></i></a>
+			<a href="javascript:void(0)" class="ROOTEDin-closebtn">Close <i class="fa fa-times" aria-hidden="true"></i></a>
 			<?php 
 			wp_nav_menu(
 				array(

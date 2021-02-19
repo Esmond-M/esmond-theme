@@ -18,13 +18,13 @@
 			<div class="find-us"><section>
 				<div class="social"><div class="social-title"><h4>find us on...</h4></div>
 					<div class="social-links social-icons-holder social-square">
-						<a title="Wrookies Instagram" class="contact-icon" href="https://www.instagram.com/wrookiesbilliards/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-						<a title="Wrookies Facebook" class="contact-icon" href="https://facebook.com/wrookiesbilliards/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-						<a title="Wrookies Waitr" class="ROOTEDinwaitr-footer-contain" href="https://waitrapp.com/restaurants/la/baton-rouge/wrookies/18643" target="_blank"><span class="icon-wrookies-waitr-logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a></div>
+						<a title="ROOTEDin Instagram" class="contact-icon" href="https://www.instagram.com/ROOTEDinbilliards/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						<a title="ROOTEDin Facebook" class="contact-icon" href="https://facebook.com/ROOTEDinbilliards/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+						<a title="ROOTEDin Waitr" class="ROOTEDinwaitr-footer-contain" href="https://waitrapp.com/restaurants/la/baton-rouge/ROOTEDin/18643" target="_blank"><span class="icon-ROOTEDin-waitr-logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a></div>
 				</div></section>
 				<section><div class="contact-us"><div class="contact-us-title"><h4>contact us</h4></div>
-					<a title="Wrookies Phone" href="tel:+12252566994" id="contact_us_v3_section_phone_link">(225)-256-6994</a><p>
-					<a title="Wrookies Email" href="mailto:comments@wrookies.com">comments@wrookies.com</a></p></div></section></div></div></div></div></footer><!-- #colophon -->
+					<a title="ROOTEDin Phone" href="tel:+12252566994" id="contact_us_v3_section_phone_link">(225)-256-6994</a><p>
+					<a title="ROOTEDin Email" href="mailto:comments@ROOTEDin.com">comments@ROOTEDin.com</a></p></div></section></div></div></div></div></footer><!-- #colophon -->
 <?php wp_footer(); ?>
 </body>
 </html>

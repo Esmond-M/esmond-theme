@@ -11,7 +11,7 @@ jQuery(window).scroll(function() {
 		     background: 'white' ,
 		     top: '0'
         });
-	  jQuery('.wrookies-fixedheader-placeholder').css({
+	  jQuery('.ROOTEDin-fixedheader-placeholder').css({
              display: 'block'
         });
     } else {
@@ -19,18 +19,18 @@ jQuery(window).scroll(function() {
             position: 'relative',
 	       
         });
-	  jQuery('.wrookies-fixedheader-placeholder').css({
+	  jQuery('.ROOTEDin-fixedheader-placeholder').css({
              display: 'none'
         });		
     }
 });
-	jQuery( ".wrookies-closebtn" ).click(function() {
+	jQuery( ".ROOTEDin-closebtn" ).click(function() {
    jQuery('#mySidenav').css({
              width: '0px'
         }); 
 });
 	
-		jQuery( ".wrookies-openbtn" ).click(function() {
+		jQuery( ".ROOTEDin-openbtn" ).click(function() {
    jQuery('#mySidenav').css({
              width: '250px'
         }); 
