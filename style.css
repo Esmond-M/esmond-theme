@@ -15,17 +15,53 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 /*--------------------------------------------------------------
 # Header & Nav
 --------------------------------------------------------------*/
-header#masthead {
+.site-header #primary-menu {
+	max-width: 1200px;
+    width: 100%;
+	margin: auto;
+}
+.site-header  {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-	width: 100%;
-	flex-wrap:wrap;
-	position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
 }
-.home header#masthead {
-    border-bottom: none;
+.site-header #primary-menu ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
 }
-header#masthead {
-    border-bottom: 2px solid black;
+.site-header #primary-menu {
+    margin: 0;
+    padding: 0;
+}
+.site-header #primary-menu li {
+    list-style-type: none;
+	padding: 10px;
+	font-weight: 500;
+	font-size: 18px;
+	color: black;
+}
+.site-header #primary-menu li a{
+	font-weight: 500;
+	font-size: 18px;
+	color: black;
+}
+.site-header #primary-menu li a:hover {
+	color: blue;
 }
 .site-branding {
 	margin: auto;
@@ -40,27 +76,14 @@ header#masthead {
     margin: auto;
 }
 
-#primary-menu {
-    margin: 0;
-    padding: 0;
-}
-#primary-menu li {
-    list-style-type: none;
-    width: 100%;
+
+.emTheme-openbtn{
+	display: none;
 }
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    background-color: #f4f7f6;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 4px;
-}
+	display: none;
 
+}
 .sidenav a {
     padding: 8px 8px 8px 29px;
     text-decoration: none;
@@ -83,6 +106,37 @@ header#masthead {
 .sidenav a:active {
    color:#ee9836;
 	text-decoration:none;
+}
+@media only screen 
+and (max-width : 1199px) {
+
+.site-header #primary-menu {
+	display: none;
+}	
+.emTheme-openbtn{
+	display: block;
+}
+.sidenav {
+	display: block;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #f4f7f6;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 4px;
+}
+#mobile-menu {
+    margin: 0;
+    padding: 0;
+}
+#mobile-menu li {
+    list-style-type: none;
+    width: 100%;
+}
 }
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}

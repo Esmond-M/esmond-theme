@@ -23,21 +23,9 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-<div class="emTheme-fixedheader-placeholder"></div>
+
 	<header id="masthead" class="site-header">
-		<button class="emTheme-openbtn"><i class="fas fa-bars"></i> Menu</button>
-		<div id="mySidenav" class="sidenav">
-			<a href="javascript:void(0)" class="emTheme-closebtn">Close <i class="fa fa-times" aria-hidden="true"></i></a>
-			<?php 
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-</div><!-- #site-navigation -->
-		<div class="site-branding">
+	<div class="site-branding">
 		 <?php       
 
      $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -45,12 +33,33 @@
      if ( has_custom_logo() ) {
            $custom_logo_image = esc_url( $logo[0] );
      } else {
-            $custom_logo_image = get_template_directory_uri() . '/inc/images/logo/site logo transparent.png';
+            $custom_logo_image = get_template_directory_uri() . '/img/logo-placeholder-image.png';
      }
      ?>
      <a href="<?php echo home_url(); ?>"><img class="site-branding-img" src="<?php echo  $custom_logo_image; ?>" alt="Logo" class="logo-img"></a> 
 			
 		
 		</div><!-- .site-branding -->
+		<?php 
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+	
+
+	<button class="emTheme-openbtn"><i class="fas fa-bars"></i> Menu</button>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="emTheme-closebtn">Close <i class="fa fa-times" aria-hidden="true"></i></a>
+			<?php 
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'mobile-menu',
+				)
+			);
+			?>
 
 	</header><!-- #masthead -->
