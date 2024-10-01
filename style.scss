@@ -70,7 +70,7 @@ $base-small-paragraph-font-size: 15px;
 # Hero Layouts
 --------------------------------------------------------------*/
 
-.ROOTEDinhomepage-hero {
+.emThemehomepage-hero {
   min-height: 997px;
   max-height: fit-content;
   display: flex;
@@ -87,13 +87,13 @@ $base-small-paragraph-font-size: 15px;
   animation: fadeIn 1s cubic-bezier(0.44, 0.13, 0.48, 0.87);
 }
 
-.ROOTEDinhero-inner {
+.emThemehero-inner {
   padding-top: 277px;
   padding-right: 42rem;
   text-align: left;
 }
 
-.ROOTEDinhero-subtitle {
+.emThemehero-subtitle {
   color: white;
   font-family: Rubik;
   height: auto;
@@ -116,7 +116,7 @@ $base-small-paragraph-font-size: 15px;
   visibility: visible;
 }
 
-.ROOTEDinbtn {
+.emThemebtn {
   background-color: #ffffff;
   border-radius: 28px;
   display: inline-block;
@@ -144,7 +144,7 @@ $base-small-paragraph-font-size: 15px;
 # About Us
 --------------------------------------------------------------*/
 
-.ROOTEDinbtn-two {
+.emThemebtn-two {
   background-color: #ffffff;
   border-radius: 28px;
   border: 2px solid #b4e4fd;
@@ -163,12 +163,12 @@ $base-small-paragraph-font-size: 15px;
   &:hover {}
 }
 
-.ROOTEDinthree-icons-row {
+.emThemethree-icons-row {
   height: 124px;
   background: $base-heading-color;
 }
 
-.ROOTEDinwrapper-three-icons-row {
+.emThemewrapper-three-icons-row {
   width: 100%;
   max-width: 1066px;
   margin: auto;
@@ -178,12 +178,12 @@ $base-small-paragraph-font-size: 15px;
   justify-content: center;
 }
 
-.ROOTEDinspecial-icons {
+.emThemespecial-icons {
   padding-left: 115px;
   padding-right: 44px;
 }
 
-.ROOTEDinspecial-icons-link {
+.emThemespecial-icons-link {
   padding-left: 36px;
   color: white;
   text-decoration: none;
@@ -195,7 +195,7 @@ $base-small-paragraph-font-size: 15px;
   font-size: 20px;
 }
 
-.ROOTEDindivider {
+.emThemedivider {
   display: inline-block;
   width: 0;
   height: 1em;
@@ -203,30 +203,30 @@ $base-small-paragraph-font-size: 15px;
   margin: auto;
 }
 
-.ROOTEDinaboutus-section {
+.emThemeaboutus-section {
   display: flex;
 }
 
-.ROOTEDinaboutus-right {
+.emThemeaboutus-right {
   width: 50%;
   padding-top: 118px;
   padding-bottom: 97px;
   padding-right: 27rem;
 }
 
-.ROOTEDinaboutus-left {
+.emThemeaboutus-left {
   margin: auto;
   width: 50%;
 }
 
-.ROOTEDinh2-aboutus {
+.emThemeh2-aboutus {
   font-size: 36px;
   color: $base-heading-color;
   text-align: left;
   margin-top: 0;
 }
 
-.ROOTEDinaboutus-right p {
+.emThemeaboutus-right p {
   font-family: Rubik;
   letter-spacing: 0px;
   font-weight: 400;
@@ -236,7 +236,7 @@ $base-small-paragraph-font-size: 15px;
   line-height: 28px;
 }
 
-.ROOTEDinaboutus-profile {
+.emThemeaboutus-profile {
   margin: auto;
   display: block;
 }
@@ -245,11 +245,11 @@ $base-small-paragraph-font-size: 15px;
 # Treatments
 --------------------------------------------------------------*/
 
-.ROOTEDintreatment-section {
+.emThemetreatment-section {
   background: #f0f8ff;
 }
 
-.ROOTEDintreatment-section-h2 {
+.emThemetreatment-section-h2 {
   font-size: 36px;
   color: $base-heading-color;
   text-align: center;
@@ -259,7 +259,7 @@ $base-small-paragraph-font-size: 15px;
   margin-bottom: 0;
 }
 
-.ROOTEDintreatment-section p {
+.emThemetreatment-section p {
   font-family: Rubik;
   letter-spacing: 0px;
   font-weight: 400;
@@ -274,7 +274,7 @@ $base-small-paragraph-font-size: 15px;
   padding-bottom: 66px;
 }
 
-.ROOTEDinwrapper-treatment-icons-row {
+.emThemewrapper-treatment-icons-row {
   width: 100%;
   max-width: 1265px;
   margin: auto;
@@ -292,14 +292,14 @@ $base-small-paragraph-font-size: 15px;
   }
 }
 
-.ROOTEDintreatment-icons {
+.emThemetreatment-icons {
   height: 253px;
   border-radius: 50%;
   padding: 25px;
   background: white;
 }
 
-.ROOTEDintreatment-links {
+.emThemetreatment-links {
   white-space: nowrap;
   text-align: center;
   text-decoration: none;
@@ -311,7 +311,7 @@ $base-small-paragraph-font-size: 15px;
   padding-top: 21px;
 }
 
-.ROOTEDintreatment-sublinks {
+.emThemetreatment-sublinks {
   white-space: nowrap;
   text-align: center;
   text-decoration: none;
@@ -328,9 +328,9 @@ $base-small-paragraph-font-size: 15px;
 ----------------------------------------------------------------
 */
 
-.ROOTEDinreview-section {}
+.emThemereview-section {}
 
-.ROOTEDinreview-section-h2 {
+.emThemereview-section-h2 {
   text-align: center;
   padding-top: 60px;
   font-size: 36px;
@@ -339,7 +339,7 @@ $base-small-paragraph-font-size: 15px;
   margin: 0;
 }
 
-.ROOTEDinreview-section-subtitle {
+.emThemereview-section-subtitle {
   font-family: Rubik;
   letter-spacing: 0px;
   font-weight: 400;
@@ -354,27 +354,27 @@ $base-small-paragraph-font-size: 15px;
   padding-bottom: 100px;
 }
 
-.ROOTEDinreview-section-flex {
+.emThemereview-section-flex {
   display: flex;
   justify-content: center;
   padding-bottom: 47px;
 }
 
-.ROOTEDinreview-left {
+.emThemereview-left {
   width: 50%;
 }
 
-.ROOTEDinreview-img {
+.emThemereview-img {
   display: block;
   text-align: center;
   margin: auto;
 }
 
-.ROOTEDinreview-right {
+.emThemereview-right {
   width: 50%;
 }
 
-.ROOTEDinreview-section-description {
+.emThemereview-section-description {
   font-family: Rubik;
   letter-spacing: 0px;
   font-weight: 400;
@@ -392,13 +392,13 @@ $base-small-paragraph-font-size: 15px;
 ----------------------------------------------------------------
 */
 
-.ROOTEDinmeet-team-section {
+.emThememeet-team-section {
   background: url(/wp-content/themes/website-theme-name/inc/images/team-background.png);
   background-size: cover;
   background-position: left;
 }
 
-.ROOTEDinmeet-team-section-h2 {
+.emThememeet-team-section-h2 {
   text-align: center;
   padding-top: 100px;
   margin: 0;
@@ -407,7 +407,7 @@ $base-small-paragraph-font-size: 15px;
   font-family: Poppins;
 }
 
-.ROOTEDinmeet-team-section-subtitle {
+.emThememeet-team-section-subtitle {
   font-family: Rubik;
   letter-spacing: 0px;
   font-weight: 400;
@@ -422,7 +422,7 @@ $base-small-paragraph-font-size: 15px;
   padding-bottom: 66px;
 }
 
-.ROOTEDinwrapper-meet-team-icons-row {
+.emThemewrapper-meet-team-icons-row {
   width: 100%;
   max-width: 1265px;
   margin: auto;
@@ -440,14 +440,14 @@ $base-small-paragraph-font-size: 15px;
   }
 }
 
-.ROOTEDinmeet-team-icons {
+.emThememeet-team-icons {
   height: 265px;
   width: 265px;
   border-radius: 50%;
   background-size: cover !important;
 }
 
-.ROOTEDinmeet-team-links {
+.emThememeet-team-links {
   white-space: nowrap;
   text-align: center;
   text-decoration: none;
@@ -460,7 +460,7 @@ $base-small-paragraph-font-size: 15px;
   font-size: 13px;
 }
 
-.ROOTEDinmeet-team-sublinks {
+.emThememeet-team-sublinks {
   white-space: nowrap;
   text-align: center;
   text-decoration: none;
@@ -478,7 +478,7 @@ $base-small-paragraph-font-size: 15px;
 ----------------------------------------------------------------
 */
 
-.ROOTEDinphoto-gallery-section-h2 {
+.emThemephoto-gallery-section-h2 {
   text-align: center;
   margin-top: 0;
   padding-top: 51px;
@@ -489,12 +489,12 @@ $base-small-paragraph-font-size: 15px;
   font-family: Poppins;
 }
 
-.ROOTEDinphoto-gallery-section-row {
+.emThemephoto-gallery-section-row {
   display: flex;
   flex-wrap: wrap;
 }
 
-.ROOTEDinphoto-gallery-section-imgs {
+.emThemephoto-gallery-section-imgs {
   height: 216px;
   width: 20%;
   background-size: cover !important;
@@ -505,11 +505,11 @@ $base-small-paragraph-font-size: 15px;
 ----------------------------------------------------------------
 */
 
-.ROOTEDinfooter {
+.emThemefooter {
   background: $base-heading-color;
 }
 
-.ROOTEDinfooter-wrapper {
+.emThemefooter-wrapper {
   padding-bottom: 5rem;
   display: block;
   display: flex;
@@ -520,7 +520,7 @@ $base-small-paragraph-font-size: 15px;
   margin: auto;
 }
 
-.ROOTEDinfooter div {
+.emThemefooter div {
   padding-right: 49px;
   color: white;
   font-family: Rubik;
@@ -528,21 +528,21 @@ $base-small-paragraph-font-size: 15px;
   font-weight: 400;
 }
 
-.ROOTEDinfooter-section {
+.emThemefooter-section {
   width: 25%;
 }
 
-.ROOTEDinfooter div:last-of-type {
+.emThemefooter div:last-of-type {
   padding-right: 0px;
 }
 
-.ROOTEDinfooter-ul {
+.emThemefooter-ul {
   list-style-type: none;
   margin: 0;
   padding-left: 0;
 }
 
-.ROOTEDinfooter-li {
+.emThemefooter-li {
   display: flex;
   color: white;
   align-items: baseline;
@@ -560,7 +560,7 @@ $base-small-paragraph-font-size: 15px;
   }
 }
 
-span.ROOTEDinfooter-ul-span {
+span.emThemefooter-ul-span {
   padding-right: 13px;
 }
 

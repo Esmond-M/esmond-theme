@@ -12,7 +12,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-if ( ! function_exists( 'ROOTEDin_setup' ) ) :
+if ( ! function_exists( 'emTheme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,7 +20,7 @@ if ( ! function_exists( 'ROOTEDin_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function ROOTEDin_setup() {
+	function emTheme_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -75,7 +75,7 @@ if ( ! function_exists( 'ROOTEDin_setup' ) ) :
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'ROOTEDin_custom_background_args',
+				'emTheme_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -102,7 +102,7 @@ if ( ! function_exists( 'ROOTEDin_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'ROOTEDin_setup' );
+add_action( 'after_setup_theme', 'emTheme_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -111,17 +111,17 @@ add_action( 'after_setup_theme', 'ROOTEDin_setup' );
  *
  * @global int $content_width
  */
-function ROOTEDin_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'ROOTEDin_content_width', 640 );
+function emTheme_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'emTheme_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'ROOTEDin_content_width', 0 );
+add_action( 'after_setup_theme', 'emTheme_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function ROOTEDin_widgets_init() {
+function emTheme_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'website-theme-name' ),
@@ -134,34 +134,34 @@ function ROOTEDin_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'ROOTEDin_widgets_init' );
+add_action( 'widgets_init', 'emTheme_widgets_init' );
 
-function ROOTEDin_google_tag_manager() {
+function emTheme_google_tag_manager() {
     echo '';
  
 }
-add_action( 'wp_head', 'ROOTEDin_google_tag_manager', 1 );
+add_action( 'wp_head', 'emTheme_google_tag_manager', 1 );
 
 /**
  * Enqueue scripts and styles.
  */
-function ROOTEDin_scripts() {
+function emTheme_scripts() {
     $ss_version = rand( 1, 99999999999 );
 	$stable_version = '1.20';
-	wp_enqueue_style( 'ROOTEDinstyle', get_stylesheet_uri(), array(), $ss_version );
-	wp_style_add_data( 'ROOTEDinstyle', 'rtl', 'replace' );
+	wp_enqueue_style( 'emThemestyle', get_stylesheet_uri(), array(), $ss_version );
+	wp_style_add_data( 'emThemestyle', 'rtl', 'replace' );
 	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' , array(), $stable_version);
 	wp_enqueue_style('font-awesome-official-css', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css');
 	wp_enqueue_style('font-awesome-official-v4shim-css', 'https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css');
-    wp_enqueue_style( 'ROOTEDin-slider-css', get_template_directory_uri() . '/css/ROOTEDin-slider.css' , array(), $ss_version );
-	wp_enqueue_script( 'ROOTEDin-general-js', get_template_directory_uri() . '/js/general.min.js', array(), $stable_version, true );
+    wp_enqueue_style( 'emTheme-slider-css', get_template_directory_uri() . '/css/emTheme-slider.css' , array(), $ss_version );
+	wp_enqueue_script( 'emTheme-general-js', get_template_directory_uri() . '/js/general.min.js', array(), $stable_version, true );
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), $stable_version, true);
 
 	if (is_page(128)) {
 		wp_enqueue_style( 'test-css', get_template_directory_uri() . '/css/test-css.css' , array(), $ss_version );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'ROOTEDin_scripts' );
+add_action( 'wp_enqueue_scripts', 'emTheme_scripts' );
 
 /**
  * Implement the Custom Header feature.

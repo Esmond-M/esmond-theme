@@ -11,7 +11,7 @@ jQuery(window).scroll(function() {
 		     background: 'white' ,
 		     top: '0'
         });
-	  jQuery('.ROOTEDin-fixedheader-placeholder').css({
+	  jQuery('.emTheme-fixedheader-placeholder').css({
              display: 'block'
         });
     } else {
@@ -19,18 +19,18 @@ jQuery(window).scroll(function() {
             position: 'relative',
 	       
         });
-	  jQuery('.ROOTEDin-fixedheader-placeholder').css({
+	  jQuery('.emTheme-fixedheader-placeholder').css({
              display: 'none'
         });		
     }
 });
-	jQuery( ".ROOTEDin-closebtn" ).click(function() {
+	jQuery( ".emTheme-closebtn" ).click(function() {
    jQuery('#mySidenav').css({
              width: '0px'
         }); 
 });
 	
-		jQuery( ".ROOTEDin-openbtn" ).click(function() {
+		jQuery( ".emTheme-openbtn" ).click(function() {
    jQuery('#mySidenav').css({
              width: '250px'
         }); 
