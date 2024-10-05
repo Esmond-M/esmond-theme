@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main em-page-content">
 
 		<section class="error-404 not-found">
     <div class="blog-content pt60">

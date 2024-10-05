@@ -310,7 +310,7 @@ final class EMTHEME_Theme_Class {
 		$theme_version = EMTHEME_THEME_VERSION;
 		$nonCache_version = rand( 1, 99999999999 );
 		// Enqueue Main style.
-		wp_enqueue_style( 'emTheme-style', $dir . 'style.min.css', false, $theme_version );
+		//wp_enqueue_style( 'emTheme-style', $dir . 'style.min.css', false, $theme_version );
 		wp_enqueue_style( 'emThemestyle', get_stylesheet_uri(), array(), $nonCache_version );
 		wp_style_add_data( 'emThemestyle', 'rtl', 'replace' );
 		wp_enqueue_style('font-awesome-official-css', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css');
@@ -351,7 +351,7 @@ final class EMTHEME_Theme_Class {
 
 		$nonCache_version = rand( 1, 99999999999 );
 
-		wp_enqueue_script( 'emTheme-general-js', $dir . 'general.min.js', array(), $theme_version, true );
+		wp_enqueue_script( 'emTheme-general-js', $dir . 'general.js', array(), $theme_version, true );
 		wp_enqueue_script('bootstrap-js', $dir . 'bootstrap.min.js', $main_script_dependencies, $theme_version, true);
 
 		array_push( $main_script_dependencies, 'emTheme-main' );
