@@ -43,9 +43,6 @@ final class EMTHEME_Theme_Class {
 		// Define theme constants.
 		$this->emTheme_constants();
 
-		// Load required files.
-		$this->emTheme_has_setup();
-
 		// Load framework classes.
 		add_action( 'after_setup_theme', array( 'EMTHEME_Theme_Class', 'classes' ), 4 );
 
@@ -108,48 +105,6 @@ final class EMTHEME_Theme_Class {
 		define( 'EMTHEME_INC_DIR', EMTHEME_THEME_DIR . '/inc/' );
 		define( 'EMTHEME_INC_DIR_URI', EMTHEME_THEME_URI . '/inc/' );
 
-	}
-
-	/*
-	 * Load all core theme function files
-	 *
-	 * @since 1.0.0emTheme_has_setup
-	*/
-	public static function emTheme_has_setup() {
-
-		$dir = EMTHEME_INC_DIR;
-	/*
-		require_once $dir . 'helpers.php';
-		require_once $dir . 'header-content.php';
-		require_once $dir . 'emTheme-strings.php';
-		require_once $dir . 'emTheme-svg.php';
-		require_once $dir . 'emTheme-theme-icons.php';
-		require_once $dir . 'template-helpers.php';
-		require_once $dir . 'customizer/controls/typography/webfonts.php';
-		require_once $dir . 'walker/init.php';
-		require_once $dir . 'walker/menu-walker.php';
-		require_once $dir . 'third/class-gutenberg.php';
-		require_once $dir . 'third/class-elementor.php';
-		require_once $dir . 'third/class-beaver-themer.php';
-		require_once $dir . 'third/class-bbpress.php';
-		require_once $dir . 'third/class-buddypress.php';
-		require_once $dir . 'third/class-lifterlms.php';
-		require_once $dir . 'third/class-learndash.php';
-		require_once $dir . 'third/class-sensei.php';
-		require_once $dir . 'third/class-social-login.php';
-		require_once $dir . 'third/class-amp.php';
-		require_once $dir . 'third/class-pwa.php';
-
-		// WooCommerce.
-		if ( EMTHEME_WOOCOMMERCE_ACTIVE ) {
-			require_once $dir . 'woocommerce/woocommerce-config.php';
-		}
-
-		// Easy Digital Downloads.
-		if ( EMTHEME_EDD_ACTIVE ) {
-			require_once $dir . 'edd/edd-config.php';
-		}
- */
 	}
 
 
