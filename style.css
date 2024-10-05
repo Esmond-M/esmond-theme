@@ -162,12 +162,13 @@ and (max-width : 500px) {
 .emThemefooter {
 	background: black;
 }
-.emThemefooter h4 {
-    font-family: 'JazzScript1-Regular';
-    font-size: 37px;
-    color: #ee9836;
-    padding-top: 3rem;
+.emThemefooter .copy-right {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
 }
+
 .emThemefooter a {
 	font-size:17px;
     color: white;
@@ -181,11 +182,7 @@ and (max-width : 500px) {
 .emThemefooter a:active {
     color: #ee9836;
 }
-.emThemefooter section div {
-    color: white;
-    font-family: 'FuturaLTW01-LightOblique';
-    font-size: 16px;
-}
+
 .social-links .contact-icon {
     font-size: 20px;
 }
