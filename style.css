@@ -216,6 +216,10 @@ and (max-width : 767px) {
     color: black;
     text-align: center;
 }
+.error-404 .page-content {
+    text-align: center;
+}
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
