@@ -97,8 +97,6 @@ final class EMTHEME_Theme_Class {
 	 */
 	public static function emTheme_constants() {
 
-	
-
 		// Theme version.
 		define( 'EMTHEME_THEME_VERSION', '3.6.0' );
 
@@ -344,7 +342,6 @@ final class EMTHEME_Theme_Class {
 
 	}
 
-	
 
 	/**
 	 * Load front-end scripts
@@ -356,21 +353,20 @@ final class EMTHEME_Theme_Class {
 		// Define dir.
 		$dir           = EMTHEME_CSS_DIR_URI;
 		$theme_version = EMTHEME_THEME_VERSION;
-		$ss_version = rand( 1, 99999999999 );
-		$stable_version = '1.20';
+		$nonCache_version = rand( 1, 99999999999 );
 		// Enqueue Main style.
 		wp_enqueue_style( 'emTheme-style', $dir . 'style.min.css', false, $theme_version );
-		wp_enqueue_style( 'emThemestyle', get_stylesheet_uri(), array(), $ss_version );
+		wp_enqueue_style( 'emThemestyle', get_stylesheet_uri(), array(), $nonCache_version );
 		wp_style_add_data( 'emThemestyle', 'rtl', 'replace' );
 		wp_enqueue_style('font-awesome-official-css', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css');
 		wp_enqueue_style('font-awesome-official-v4shim-css', 'https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css');
 			
 		if (is_page(128)) {
-			wp_enqueue_style( 'test-css', $dir . '/css/test-css.css' , array(), $ss_version );
+			wp_enqueue_style( 'test-css', $dir . 'test-css.css' , array(), $nonCache_version );
 		}
-		wp_enqueue_style('bootstrap', $dir . '/css/bootstrap.min.css' , array(), $stable_version);
+		wp_enqueue_style('bootstrap', $dir . 'bootstrap.min.css' , array(), $theme_version);
 
-		wp_enqueue_style( 'emTheme-slider-css', $dir . '/css/emTheme-slider.css' , array(), $ss_version );
+		//wp_enqueue_style( 'emTheme-slider-css', $dir . 'emTheme-slider.css' , array(), $nonCache_version );
 	}
 
 	/**
@@ -386,8 +382,6 @@ final class EMTHEME_Theme_Class {
 		// Get current theme version.
 		$theme_version = EMTHEME_THEME_VERSION;
 
-	
-
 		// Main script dependencies.
 		$main_script_dependencies = array( 'jquery' );
 
@@ -400,16 +394,11 @@ final class EMTHEME_Theme_Class {
 		 * Load Theme Scripts.
 		 */
 
-		// Theme script.
+		$nonCache_version = rand( 1, 99999999999 );
 
-		$ss_version = rand( 1, 99999999999 );
-		$stable_version = '1.20';
+		wp_enqueue_script( 'emTheme-general-js', $dir . 'general.min.js', array(), $theme_version, true );
+		wp_enqueue_script('bootstrap-js', $dir . 'bootstrap.min.js', $main_script_dependencies, $theme_version, true);
 
-
-		wp_enqueue_script( 'emTheme-general-js', $dir . '/js/general.min.js', array(), $stable_version, true );
-		wp_enqueue_script('bootstrap-js', $dir . '/js/bootstrap.min.js', array('jquery'), $stable_version, true);
-
-		wp_enqueue_script( 'emTheme-main', $dir . 'theme.min.js', $main_script_dependencies, $theme_version, true );
 		array_push( $main_script_dependencies, 'emTheme-main' );
 
 	}
