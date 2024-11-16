@@ -319,8 +319,6 @@ final class EMTHEME_Theme_Class {
 		if (is_page(128)) {
 			wp_enqueue_style( 'test-css', $dir . 'test-css.css' , array(), $nonCache_version );
 		}
-		wp_enqueue_style('bootstrap', $dir . 'bootstrap.min.css' , array(), $theme_version);
-
 		//wp_enqueue_style( 'emTheme-slider-css', $dir . 'emTheme-slider.css' , array(), $nonCache_version );
 	}
 
