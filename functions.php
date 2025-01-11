@@ -23,7 +23,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
+require_once __DIR__ . '/lib/custom-post-types.php';
+//require_once __DIR__ . '/lib/custom-taxonomies.php';
+//require_once __DIR__ . '/lib/custom-post-meta.php';
 // Core Constants.
 define( 'EMTHEME_THEME_DIR', get_template_directory() );
 define( 'EMTHEME_THEME_URI', get_template_directory_uri() );
