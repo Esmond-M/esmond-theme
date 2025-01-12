@@ -23,9 +23,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-require_once __DIR__ . '/lib/custom-post-types.php';
-//require_once __DIR__ . '/lib/custom-taxonomies.php';
-//require_once __DIR__ . '/lib/custom-post-meta.php';
+
 // Core Constants.
 define( 'EMTHEME_THEME_DIR', get_template_directory() );
 define( 'EMTHEME_THEME_URI', get_template_directory_uri() );
@@ -62,25 +60,21 @@ final class EMTHEME_Theme_Class {
 			/** Non Admin actions */
 		} else {
 			// Load theme js.
-			add_action( 'wp_enqueue_scripts', array( 'EMTHEME_Theme_Class', 'theme_js' ) );
+			add_action( 'wp_enqueue_scripts',  [$this, 'theme_js' ]  );
 
 			// Load theme CSS.
-			add_action( 'wp_enqueue_scripts', array( 'EMTHEME_Theme_Class', 'theme_css' ) );
+			add_action( 'wp_enqueue_scripts',  [$this, 'theme_css' ] );
 
-			// Load his file in last.
-			add_action( 'wp_enqueue_scripts', array( 'EMTHEME_Theme_Class', 'custom_style_css' ), 9999 );
-
+		
 			// Add a pingback url auto-discovery header for singularly identifiable articles.
-			add_action( 'wp_head', array( 'EMTHEME_Theme_Class', 'pingback_header' ), 1 );
-
+			add_action( 'wp_head',  [$this, 'pingback_header' ] , 1 );
 			// Add meta viewport tag to header.
-			add_action( 'wp_head', array( 'EMTHEME_Theme_Class', 'meta_viewport' ), 1 );
+			add_action( 'wp_head',   [$this, 'meta_viewport' ] , 1 );
 
 			// Add an X-UA-Compatible header.
-			add_filter( 'wp_headers', array( 'EMTHEME_Theme_Class', 'x_ua_compatible_headers' ) );
+			add_filter( 'wp_headers',  [$this, 'x_ua_compatible_headers' ] );
 
-			// Outputs custom CSS to the head.
-			add_action( 'wp_head', array( 'EMTHEME_Theme_Class', 'custom_css' ), 9999 );
+
 
 
 			add_filter( 'emTheme_enqueue_generated_files', '__return_false' );
@@ -480,3 +474,7 @@ final class EMTHEME_Theme_Class {
 }
 
 new EMTHEME_Theme_Class();
+require_once __DIR__ . '/lib/EMTHEME_class_custom_post_types.php';
+require_once __DIR__ . '/lib/EMTHEME_class_custom_post_meta.php';
+//require_once __DIR__ . '/lib/custom-taxonomies.php';
+//require_once __DIR__ . '/lib/custom-post-meta.php';
