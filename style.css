@@ -177,7 +177,47 @@ i.fab.fa-github {
     margin-bottom: 7px
 }
 
+/*
+porfolio section
 
+*/
+#em-portfolio-back-top.em-portfolio-hide {
+    display: none
+}
+
+#em-portfolio-back-top:hover {
+    background: #000
+}
+
+.em-modal-inner {
+    position: relative;
+    margin: 10px;
+    overflow: auto;
+}
+.em-modal-inner img{
+    transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    width: 100%;    
+}
+.em-modal-inner .em-modal-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    height: 100%;
+    opacity: 0;
+    background: rgba(1, 1, 1, .8);
+    text-align: center;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    z-index: 52;
+}
+.em-modal-container .em-modal:hover .em-modal-caption{
+        opacity: 1;
+}
 
 /*--------------------------------------------------------------
 >>> Page content
@@ -1816,7 +1856,8 @@ embed,iframe,object {
 }
 
 .em-portfolio-contact-section {
-    position: relative
+    position: relative;
+    padding: 0 0 500px 0px;
 }
 
 #em-portfolio-contact-section .em-portfolio-contact-overlay {
@@ -1986,35 +2027,48 @@ embed,iframe,object {
     font-size: 20px
 }
 
-#em-portfolio-back-top.em-portfolio-hide {
-    display: none
+.em-modal-container {
+    max-width: 100%;
+    margin: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-#em-portfolio-back-top:hover {
-    background: #000
+.em-modal-container .em-modal {
+    width: 33%;
+    padding: 20px;
 }
-
 .odometer.odometer-auto-theme,.odometer.odometer-theme-default {
     display: block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom:1;*display: inline;
+    vertical-align: auto;
+    zoom:1;
+    display: inline;
     position: relative
 }
 
 .odometer.odometer-auto-theme .odometer-digit,.odometer.odometer-theme-default .odometer-digit {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom:1;*display: inline;
+    vertical-align: auto;
+    zoom:1;
+    display: inline;
     position: relative
 }
 
 .odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,.odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    *zoom:1;*display: inline;
+    vertical-align: auto;
+    zoom:1;
+    display: inline;
     visibility: hidden
 }
 
