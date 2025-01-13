@@ -15,11 +15,11 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
 
             add_action(
                 'add_meta_boxes',
-                [$this, 'emCustomThemePostTitleHideMetabox']
+                [$this, 'EMTHEME_theme_icon_class_metabox']
             );
             add_action(
                 'save_post',
-                [$this, 'emCustomThemePostTitleHiddenSaveMetaboxes']
+                [$this, 'EMTHEME_theme_icon_class_save_metabox']
             );
     
         }
@@ -30,14 +30,14 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
 
         @return void
          */
-        public function emCustomThemePostTitleHideMetabox()
+        public function EMTHEME_theme_icon_class_metabox()
         {
-            $screens = ['post', 'page'];
+            $screens = ['esmond-services']; // post type to display one
             foreach ($screens as $screen) {
                 add_meta_box(
-                    'em_metaboxbox_id',    // Unique ID
+                    'em_icon_class_metaboxbox_id',    // Unique ID
                     'Icon class text',  // Box title
-                    array($this, 'emCustomThemePostTitleHideHtml'),
+                    array($this, 'EMTHEME_theme_icon_class_html'),
                     $screen,                  // Post type
                     'normal',
                     'high'
@@ -51,12 +51,12 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
 
         @return callable
          */
-        public function emCustomThemePostTitleHideHtml($post)
+        public function EMTHEME_theme_icon_class_html($post)
         {
             $meta = get_post_meta($post->ID, 'services_post_icon_class_value', true);
             wp_nonce_field(
-                'post_title_hidden_control_meta_box',
-                'post_title_hidden_control_meta_box_nonce'
+                'icon_class_control_metabox',
+                'icon_class_control_metabox_nonce'
             ); // adding nonce to meta box.
             ?>
             <div class="post_meta_extras">
@@ -83,7 +83,7 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
 
         @return integer
          */
-        public function emCustomThemePostTitleHiddenSaveMetaboxes($post_id)
+        public function EMTHEME_theme_icon_class_save_metabox($post_id)
         {
             /*
             * We need to verify this came from the
@@ -92,12 +92,12 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
             *  other times. Add as many nonces, as you
             * have metaboxes.
                */
-            if (!isset($_POST['post_title_hidden_control_meta_box_nonce'])
+            if (!isset($_POST['icon_class_control_metabox_nonce'])
                 || !wp_verify_nonce(
                     sanitize_key(
-                        $_POST['post_title_hidden_control_meta_box_nonce']
+                        $_POST['icon_class_control_metabox_nonce']
                     ),
-                    'post_title_hidden_control_meta_box'
+                    'icon_class_control_metabox'
                 )
             ) { // Input var okay.
                 return $post_id;
@@ -136,11 +136,6 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
                 esc_attr($services_post_icon_class_value)
             );
         }
-
-
-
-
-
 
     }// Closing bracket for classes
 }
