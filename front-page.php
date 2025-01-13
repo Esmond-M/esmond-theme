@@ -24,12 +24,57 @@
             <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/esmond-m-a17244129/"><i class="fab fa-linkedin"></i></a>
          </li>
          <li>
-            <a rel="noopener noreferrer" target="_blank" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/"><img class="upwork-svg-icon" src="<?php echo get_stylesheet_directory_uri() ?>\img\svg\upwork.svg" alt="Esmond Upwork Portfolio"></a>
+            <a rel="noopener noreferrer" target="_blank" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/"><img class="upwork-svg-icon" src="<?php echo get_stylesheet_directory_uri(); ?>\img\svg\upwork.svg" alt="Esmond Upwork Portfolio"></a>
          </li>
          <li>
             <a rel="noopener noreferrer" target="_blank" href="https://github.com/Esmond-M"><i class="fab fa-github"></i></a>
          </li>
       </ul>
+   </section>
+   <section class="em-portfolio-about-us-section-second">
+   <div class="em-portfolio-about-sec wow zoomIn" data-wow-duration="1s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: zoomIn;">
+		
+			<div class="em-portfolio-content">			<h2 id="about" class="em-portfolio-section-title">About</h2><p style="color: black; text-align: center;font-size:17px;"><strong>I work with different web agencies on a contract/full-time basis. I have quite a bit of experience collaborating with both different team members and clients to complete projects. I am currently working in the “LAMP/WordPress” stack but am branching out to learn more JavaScript frameworks like React for example. If you wish to contact me please message me through my email at esmondmccain@gmail.com or through <a class="gen-link" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/">upwork</a>.</strong></p>
+</div>
+<div class="em-portfolio-progress-bar-sec">
+							<div class="em-portfolio-progress em-portfolio-progress-count1">
+						<h6>WORDPRESS THEME DEVELOPMENT</h6>
+						<div class="em-portfolio-progress-bar">
+							<div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
+								100%							</div>
+						</div>
+					</div>
+									<div class="em-portfolio-progress em-portfolio-progress-count2">
+						<h6>WORDPRESS PLUGIN DEVELOPMENT</h6>
+						<div class="em-portfolio-progress-bar">
+							<div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
+								100%							</div>
+						</div>
+					</div>
+									<div class="em-portfolio-progress em-portfolio-progress-count3">
+						<h6>PHP &amp; BACKEND DEVELOPMENT</h6>
+						<div class="em-portfolio-progress-bar">
+							<div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
+								100%							</div>
+						</div>
+					</div>
+									<div class="em-portfolio-progress em-portfolio-progress-count4">
+						<h6>FRONTEND DEVELOPMENT</h6>
+						<div class="em-portfolio-progress-bar">
+							<div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
+								100%							</div>
+						</div>
+					</div>
+									<div class="em-portfolio-progress em-portfolio-progress-count5">
+						<h6>TEAM COLLABORATION</h6>
+						<div class="em-portfolio-progress-bar">
+							<div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
+								100%							</div>
+						</div>
+					</div>
+						</div>
+					</div>
+
    </section>
    <section id="em-portfolio-portfolio-section" class="em-portfolio-section">
       <h2 id="portfolio" class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.2s" style="visibility: visible; animation-duration: 0.2s; animation-name: fadeInUp;">Portfolio</h2>
