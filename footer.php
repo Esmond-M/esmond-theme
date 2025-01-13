@@ -31,7 +31,7 @@
 	</div><!-- .footer-widgets -->
 <?php endif; ?>
 
-<div class="copy-right"><?php echo date("Y"); ?> Esmond. All Rights Reserved.</div>
+<div class="copy-right">© <?php echo date("Y"); ?> Esmond. All Rights Reserved.</div>
 </footer><!-- #colophon -->
 <?php wp_footer(); ?>
 </body>
