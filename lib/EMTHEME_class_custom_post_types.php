@@ -93,7 +93,7 @@ if (!class_exists('EMTHEME_theme_custom_post_types_Class')) {
 					'with_front' => true,
 				),
 				'query_var'             => true,
-				'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+				'supports'              => array( 'title', 'excerpt' ),
 				'taxonomies'            => array( 'category' ),
 				'show_in_graphql'       => false,
 			);
