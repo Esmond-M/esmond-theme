@@ -1859,7 +1859,14 @@ embed,iframe,object {
     position: relative;
     padding: 0 0 500px 0px;
 }
-
+.em-portfolio-contact-section .em-portfolio-contact-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .3);
+}
 #em-portfolio-contact-section .em-portfolio-contact-overlay {
     position: absolute;
     left: 0;

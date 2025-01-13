@@ -161,6 +161,7 @@
    </section>
 
    <section class="em-portfolio-contact-section" style="background-image: url('<?php echo get_stylesheet_directory_uri() . "/img/bg.jpg"?>');">
+   <div class="em-portfolio-contact-overlay"></div>
    </section>
 </article>
 <?php get_footer(); ?>
