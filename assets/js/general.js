@@ -10,7 +10,6 @@ jQuery(window).scroll(function() {
              position: 'fixed' ,
              zIndex:'1000' ,
 		     width:'100%' ,
-		     background: 'white' ,
 		     top: '0'
         });
 	  jQuery('.emTheme-fixedheader-placeholder').css({
@@ -38,7 +37,7 @@ jQuery(window).scroll(function() {
                 }); 
 });
 
-
+/*
 //Added padding if page content is not bigger than height of monitor
 var div = jQuery(".em-page-content").height();
 var win = jQuery(window).height();
@@ -46,5 +45,5 @@ var win = jQuery(window).height();
 if ( win <= 1080 ) {
     jQuery(".em-page-content").addClass('em-padding');
 }
-
+*/
 });
