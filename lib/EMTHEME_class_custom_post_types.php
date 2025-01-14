@@ -23,7 +23,7 @@ if (!class_exists('EMTHEME_theme_custom_post_types_Class')) {
 			 */
 		
 			$labels = array(
-				'name'          => esc_html__( 'esmond-portfolio', 'esmond-portfolio' ),
+				'name'          => esc_html__( ' EM portfolio', 'esmond-portfolio' ),
 				'singular_name' => esc_html__( 'esmond-portfolio', 'esmond-portfolio' ),
 			);
 		
@@ -52,7 +52,7 @@ if (!class_exists('EMTHEME_theme_custom_post_types_Class')) {
 					'with_front' => true,
 				),
 				'query_var'             => true,
-				'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+				'supports'              => array( 'title',  'thumbnail'),
 				'taxonomies'            => array( 'category' ),
 				'show_in_graphql'       => false,
 			);
