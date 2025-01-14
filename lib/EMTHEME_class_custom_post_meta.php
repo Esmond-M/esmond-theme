@@ -62,7 +62,7 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
          */
         public function EMTHEME_theme_icon_class_html($post)
         {
-            $meta = get_post_meta($post->ID, 'services_post_icon_class_value', true);
+            $get_services_post_icon_class = get_post_meta($post->ID, 'services_post_icon_class_value', true);
             wp_nonce_field(
                 'services_post_metabox',
                 'services_post_metabox_nonce'
@@ -74,8 +74,8 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
                                type="text"
                                name="services_post_icon_class_value"
                                value="<?php 
-							   if (is_string($meta) ) {
-                             	echo $meta;
+							   if (is_string($get_services_post_icon_class) ) {
+                             	echo $get_services_post_icon_class;
                                }?>"
                             />
 
@@ -177,8 +177,8 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
          */
         public function EMTHEME_theme_url_link_html($post)
         {
-            $meta = get_post_meta($post->ID, 'portfolio_post_url_link_value', true);
-            $meta2 = get_post_meta($post->ID, 'portfolio_post_popup_target_class_value', true);
+            $get_portfolio_post_url_link = get_post_meta($post->ID, 'portfolio_post_url_link_value', true);
+            $get_portfolio_post_popup_target_class = get_post_meta($post->ID, 'portfolio_post_popup_target_class_value', true);
             wp_nonce_field(
                 'portfolio_post_metabox',
                 'portfolio_post_metabox_nonce'
@@ -190,8 +190,8 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
                                type="text"
                                name="portfolio_post_url_link_value"
                                value="<?php 
-							   if (is_string($meta) ) {
-                             	echo $meta;
+							   if (is_string($get_portfolio_post_url_link) ) {
+                             	echo $get_portfolio_post_url_link;
                                }?>"
                             />
 
@@ -202,8 +202,8 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
                                type="text"
                                name="portfolio_post_popup_target_class_value"
                                value="<?php 
-							   if (is_string($meta2) ) {
-                             	echo $meta2;
+							   if (is_string($get_portfolio_post_popup_target_class) ) {
+                             	echo $get_portfolio_post_popup_target_class;
                                }?>"
                             />
 
