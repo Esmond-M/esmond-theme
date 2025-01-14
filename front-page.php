@@ -94,26 +94,42 @@
 	</div>
 
 	  <div class="em-modal-container"  >
-		<?php
-		for ($x = 0; $x <= 5; $x++) {
-       $category = "react";
-			if ($x % 2 == 0) {
-				$category = "wordpress";
-           
-			  }
-
-			?>
-			
-			<div class="em-modal number-here mix <?php echo $category;?>">
+     <?php
+            $portfolio_post_args = array(
+            	'post_type' => 'esmond-portfolio',
+            	'post_status' => 'publish',
+            	'posts_per_page' => 8,
+            	'orderby'   => 'date',
+                   'order' => 'ASC',
+            
+            );
+            
+            // Variable to call WP_Query.
+            $portfolio_post_the_query = new WP_Query($portfolio_post_args);
+            if ( $portfolio_post_the_query->have_posts() ) :
+            	// Start the Loop
+            	while ( $portfolio_post_the_query->have_posts() ) : $portfolio_post_the_query->the_post();
+            		// Start the Loop
+            		$portfolio_query_count = 1;
+            
+            			$title = get_the_title();
+            			$excerpt = get_the_excerpt();
+            			$post_id = get_the_ID();
+                     $portfolio_featuredimg = get_the_post_thumbnail_url();
+                     $portfolio_category = get_the_category($post_id);
+            			$portfolio_post_url_link_value = get_post_meta($post_id, 'portfolio_post_url_link_value', true);
+                     $portfolio_post_popup_target_id_value = get_post_meta($post_id, 'portfolio_post_popup_target_id_value', true);
+            			?>
+ 			<div class="em-modal modal-<?php echo $portfolio_query_count;?> mix <?php echo $portfolio_category[1]->name;;?>">
 				<div class="em-modal-inner">
-					<img src="https://esmondmccain.com/wp-content/uploads/2020/01/awc-inc.png"/>
+					<img src="<?php echo $portfolio_featuredimg;?>"/>
 					<div class="em-modal-caption">
-						<h4>AWC, Inc</h4>
+						<h4><?php echo $title;?></h4>
 						<div class="em-modal-btn-contain">
-						<a class="em-portfolio-portfolio-link" href="https://www.awc-inc.com/" target="_blank" rel="noopener noreferrer">
+						<a class="em-portfolio-portfolio-link" href="<?php echo $portfolio_post_url_link_value;?>" target="_blank" rel="noopener noreferrer">
 						<button type="button">Visit</button>
 					    </a>
-						<a id="" class="em-portfolio-portfolio-image" style="cursor: pointer;">
+						<a id="<?php echo $portfolio_post_popup_target_id_value;?>" class="em-portfolio-portfolio-image" style="cursor: pointer;">
 						<button class="port-detail-btn" type="button">Details</button>
 					    </a>
 						</div>
@@ -121,11 +137,18 @@
 					</div>
 				</div>	
 			</div>
-		<?php
-		  }
-		
-		?>
-
+         <?php
+            $portfolio_query_count + 1;
+            endwhile;
+            else:
+            // If no posts match this query, output this text.
+            	_e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+            endif; 
+            
+            // If no posts match this query, output this text. 
+            wp_reset_postdata();
+            
+            ?> 
 	  </div>
    </section>
    <section id="em-portfolio-featured-post-section" class="em-portfolio-section">
