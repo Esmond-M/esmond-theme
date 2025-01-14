@@ -6,20 +6,17 @@ var fixmeTop = jQuery('.site-header').offset().top;
 jQuery(window).scroll(function() {
     var currentScroll = jQuery(window).scrollTop();
     if (currentScroll >= fixmeTop) {
-      jQuery('.site-header').css({
-             position: 'fixed' ,
-             zIndex:'1000' ,
-		     width:'100%' ,
-		     top: '0'
-        });
+      jQuery( ".site-header" ).last().addClass( "scroll-with" );
+
 	  jQuery('.emTheme-fixedheader-placeholder').css({
              display: 'block'
         });
-    } else {
-        jQuery('.site-header').css({
-            position: 'relative',
-	       
-        });
+    } 
+    else {
+
+        if (jQuery('.scroll-with').length ) {
+            jQuery( ".site-header" ).last().removeClass(  );
+        }
 	  jQuery('.emTheme-fixedheader-placeholder').css({
              display: 'none'
         });		

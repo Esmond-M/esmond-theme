@@ -20,9 +20,6 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     width: 100%;
 	margin: auto;
 }
-.admin-bar .site-header {
-    top: 32px!important;
-}
 .site-header  {
     display: -webkit-box;
     display: -moz-box;
@@ -35,6 +32,18 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     width: 100%;
     background: #343a40;
     border-top: 2px solid #ee3b24;
+    position: relative;
+}
+.site-header.scroll-with {
+    position: fixed;
+    z-index:1000;
+    width:100%;
+    top: 0;    
+
+}
+.admin-bar .site-header.scroll-with {
+    top: 32px;    
+
 }
 .site-header #primary-menu {
     display: -webkit-box;
