@@ -37,9 +37,23 @@ jQuery(window).scroll(function() {
                 }); 
 });
 
-
-
-var containerEl = document.querySelector('.em-modal-container');
+jQuery(".about").click(function() {
+    jQuery('html, body').animate({
+        scrollTop: jQuery("#about").offset().top
+    }, 2000);
+});
+jQuery(".portfolio").click(function() {
+    jQuery('html, body').animate({
+        scrollTop: jQuery("#portfolio").offset().top
+    }, 2000);
+});
+jQuery(".services").click(function() {
+    jQuery('html, body').animate({
+        scrollTop: jQuery("#services").offset().top
+    }, 2000);
+});
+var containerEl = document.querySelector
+('.em-modal-container');
 
 var mixer = mixitup(containerEl);
 
