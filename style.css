@@ -20,6 +20,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     width: 100%;
 	margin: auto;
 }
+.admin-bar .site-header {
+    top: 32px!important;
+}
 .site-header  {
     display: -webkit-box;
     display: -moz-box;
@@ -943,12 +946,12 @@ embed,iframe,object {
     color: #ee3b24
 }
 
-.em-portfolio-section {
+#em-portfolio-portfolio-section {
     padding: 60px 0;
     background: #f6f6f6;
 }
-.em-portfolio-section .controls {
-    margin: auto;
+#em-portfolio-portfolio-section .controls {
+    margin: auto auto 30px auto;
     text-align: center;
 }
 button.control {
@@ -960,11 +963,50 @@ button.control {
     background: transparent;
     color: #444;
     font-size: 15px;
+	position: relative;
 }
 
 button.control.mixitup-control-active {
     background: #ee3b24;
     color: white;
+
+}
+button.control:hover{
+	background: #ee3b24;
+    color: white;
+}
+button.control.mixitup-control-active:before{
+    content: "";
+    bottom: -8px;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    border-color: #ee3b24 transparent transparent transparent;
+    border-width: 8px 10px 0;
+    border-style: solid;
+    margin-left: -10px;
+    transition: all .3s ease-in-out .2s;
+    -moz-transition: all .3s ease-in-out .2s;
+    -webkit-transition: all .3s ease-in-out .2s;
+}
+button.control:before{
+    content: "";
+    bottom: 0px;
+    opacity: 0;
+    transition: all .3s ease-in-out .2s;
+    -moz-transition: all .3s ease-in-out .2s;
+    -webkit-transition: all .3s ease-in-out .2s;
+}
+button.control:hover:before{
+    content: "";
+    bottom: -8px;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    border-color: #ee3b24 transparent transparent transparent;
+    border-width: 8px 10px 0;
+    border-style: solid;
+    margin-left: -10px;
 }
 .em-portfolio-section-title {
     text-align: center;
@@ -1339,7 +1381,8 @@ button.control.mixitup-control-active {
 }
 
 #em-portfolio-featured-post-section {
-    background: #f6f6f6
+    padding: 60px 0;
+    background: white;
 }
 
 .em-portfolio-featured-post-wrap {
@@ -1356,6 +1399,7 @@ button.control.mixitup-control-active {
 
 .em-portfolio-featured-post {
     width: 33%;
+    padding: 20px;
     text-align: center
 }
 
@@ -1956,10 +2000,13 @@ button.control.mixitup-control-active {
 
 .em-portfolio-contact-section {
     position: relative;
-    padding: 0 0 500px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .em-portfolio-contact-section .em-portfolio-contact-overlay {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     right: 0;
@@ -1974,16 +2021,33 @@ button.control.mixitup-control-active {
     bottom: 0;
     background: rgba(0,0,0,.3)
 }
-
+h2.em-contact-section-title {
+    text-align: center;
+    font-family: roboto condensed, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    padding: 60px 0 0px 0;
+    color: white;
+    z-index: 4;
+}
 #em-portfolio-contact-section .em-portfolio-container {
     position: relative
 }
 
 .em-portfolio-contact-form {
-    float: left;
-    width: 46%
+    width: 50%;
+    margin: auto;
 }
-
+.em-portfolio-contact-form .gform_legacy_markup_wrapper .top_label {
+	color: white;
+}
+.em-portfolio-contact-form .gform_legacy_markup_wrapper {
+    margin-bottom: 0px;
+    margin-top: 16px;
+    max-width: 100%;
+}
 .em-portfolio-contact-form input[type=text],.em-portfolio-contact-form input[type=email],.em-portfolio-contact-form input[type=url],.em-portfolio-contact-form input[type=password],.em-portfolio-contact-form input[type=search],.em-portfolio-contact-form input[type=number],.em-portfolio-contact-form input[type=tel],.em-portfolio-contact-form input[type=range],.em-portfolio-contact-form input[type=date],.em-portfolio-contact-form input[type=month],.em-portfolio-contact-form input[type=week],.em-portfolio-contact-form input[type=time],.em-portfolio-contact-form input[type=datetime],.em-portfolio-contact-form input[type=datetime-local],.em-portfolio-contact-form input[type=color],.em-portfolio-contact-form textarea {
     width: 100%;
     background: rgba(0,0,0,.2);
@@ -1999,7 +2063,7 @@ button.control.mixitup-control-active {
 }
 
 .em-portfolio-contact-address {
-    float: right;
+
     width: 46%
 }
 

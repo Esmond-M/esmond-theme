@@ -12,7 +12,7 @@
       <div id="em-portfolio-inner-contain">
       </div>
    </section>
-   <section class="em-portfolio-about-us-section">
+   <section id="about" class="em-portfolio-about-us-section">
       <div class="upwork-btn-area">
          <a target="_blank" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/">
          <button class="upwork-btn">upwork reviews</button>		</a>
@@ -85,7 +85,7 @@
 <section class="test-section">
 
 			</section>	
-   <section id="em-portfolio-portfolio-section" class="em-portfolio-section">
+   <section id="em-portfolio-portfolio-section" >
       <h2 id="portfolio" class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.2s" style="visibility: visible; animation-duration: 0.2s; animation-name: fadeInUp;">Portfolio</h2>
 	  <div class="controls">
 				<button type="button" class="control mixitup-control-active" data-filter="all">All</button>
@@ -151,7 +151,7 @@
             ?> 
 	  </div>
    </section>
-   <section id="em-portfolio-featured-post-section" class="em-portfolio-section">
+   <section id="em-portfolio-featured-post-section" >
       <div class="em-portfolio-container">
       <h2 id="services" class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-name: fadeInUp;">
          Services
@@ -201,7 +201,13 @@
    </section>
 
    <section class="em-portfolio-contact-section" style="background-image: url('<?php echo get_stylesheet_directory_uri() . "/img/bg.jpg"?>');">
-   <div class="em-portfolio-contact-overlay"></div>
+
+   <div class="em-portfolio-contact-overlay"> 
+        <h2 class="em-contact-section-title wow fadeInUp" data-wow-duration="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-name: fadeInUp;">Contact</h2>
+        <div class="em-portfolio-contact-form">
+         <?php echo do_shortcode( '[gravityform id="1" title="false" description="false" ajax="true"]' );?>
+        </div> 
+   </div>
    </section>
 </article>
 <?php get_footer(); ?>
