@@ -310,7 +310,12 @@ porfolio section
 .em-modal-visit-a {
     padding-right: 1rem
 }
-
+.em-modal-visitbtn:hover {
+    background: coral;
+}
+.em-modal-closebtn:hover {
+    background: coral;
+}
 /*--------------------------------------------------------------
 >>> Page content
 ----------------------------------------------------------------
@@ -2056,6 +2061,9 @@ h2.em-contact-section-title {
     margin-bottom: 0px;
     margin-top: 16px;
     max-width: 100%;
+}
+#gform_submit_button_1:hover {
+    background: coral;
 }
 .em-portfolio-contact-form input[type=text],.em-portfolio-contact-form input[type=email],.em-portfolio-contact-form input[type=url],.em-portfolio-contact-form input[type=password],.em-portfolio-contact-form input[type=search],.em-portfolio-contact-form input[type=number],.em-portfolio-contact-form input[type=tel],.em-portfolio-contact-form input[type=range],.em-portfolio-contact-form input[type=date],.em-portfolio-contact-form input[type=month],.em-portfolio-contact-form input[type=week],.em-portfolio-contact-form input[type=time],.em-portfolio-contact-form input[type=datetime],.em-portfolio-contact-form input[type=datetime-local],.em-portfolio-contact-form input[type=color],.em-portfolio-contact-form textarea {
     width: 100%;
