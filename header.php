@@ -28,7 +28,7 @@
 		<?php 
 			wp_nav_menu(
 				array(
-					'menu'            =>17,
+					'menu'            =>8,
 					'container'            => '',
 					'container_class'      => '',
 					'container_id'         => '',
