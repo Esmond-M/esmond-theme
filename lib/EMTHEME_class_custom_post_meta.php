@@ -178,7 +178,7 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
         public function EMTHEME_theme_url_link_html($post)
         {
             $get_portfolio_post_url_link = get_post_meta($post->ID, 'portfolio_post_url_link_value', true);
-            $get_portfolio_post_popup_target_class = get_post_meta($post->ID, 'portfolio_post_popup_target_class_value', true);
+            $get_portfolio_post_popup_target_id = get_post_meta($post->ID, 'portfolio_post_popup_target_id_value', true);
             wp_nonce_field(
                 'portfolio_post_metabox',
                 'portfolio_post_metabox_nonce'
@@ -198,12 +198,12 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
                     </label>
                 </p>
                 <p>
-				<label>Popup target class <input
+				<label>Popup target ID <input
                                type="text"
-                               name="portfolio_post_popup_target_class_value"
+                               name="portfolio_post_popup_target_id_value"
                                value="<?php 
-							   if (is_string($get_portfolio_post_popup_target_class) ) {
-                             	echo $get_portfolio_post_popup_target_class;
+							   if (is_string($get_portfolio_post_popup_target_id) ) {
+                             	echo $get_portfolio_post_popup_target_id;
                                }?>"
                             />
 
@@ -267,7 +267,7 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
             /* Ok to save */
 
             $portfolio_post_url_link_value = $_POST['portfolio_post_url_link_value']; // Input var okay.
-            $portfolio_post_popup_target_class_value = $_POST['portfolio_post_popup_target_class_value']; // Input var okay.
+            $portfolio_post_popup_target_id_value = $_POST['portfolio_post_popup_target_id_value']; // Input var okay.
             update_post_meta(
                 $post_id,
                 'portfolio_post_url_link_value',
@@ -275,8 +275,8 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
             );
             update_post_meta(
                 $post_id,
-                'portfolio_post_popup_target_class_value',
-                esc_attr($portfolio_post_popup_target_class_value)
+                'portfolio_post_popup_target_id_value',
+                esc_attr($portfolio_post_popup_target_id_value)
             );
         }
 
