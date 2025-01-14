@@ -869,9 +869,28 @@ embed,iframe,object {
 }
 
 .em-portfolio-section {
-    padding: 60px 0
+    padding: 60px 0;
+    background: #f6f6f6;
+}
+.em-portfolio-section .controls {
+    margin: auto;
+    text-align: center;
+}
+button.control {
+    border-radius: 30px;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    border: 1px solid #aaa;
+    background: transparent;
+    color: #444;
+    font-size: 15px;
 }
 
+button.control.mixitup-control-active {
+    background: #ee3b24;
+    color: white;
+}
 .em-portfolio-section-title {
     text-align: center;
     font-family: roboto condensed,sans-serif;
@@ -2055,7 +2074,7 @@ embed,iframe,object {
 
 .em-modal-container .em-modal {
     width: 33%;
-    padding: 20px;
+    padding: 0px;
 }
 .odometer.odometer-auto-theme,.odometer.odometer-theme-default {
     display: block;

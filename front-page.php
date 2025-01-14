@@ -98,7 +98,7 @@
             $portfolio_post_args = array(
             	'post_type' => 'esmond-portfolio',
             	'post_status' => 'publish',
-            	'posts_per_page' => 8,
+            	'posts_per_page' => 9,
             	'orderby'   => 'date',
                    'order' => 'ASC',
             
@@ -120,7 +120,7 @@
             			$portfolio_post_url_link_value = get_post_meta($post_id, 'portfolio_post_url_link_value', true);
                      $portfolio_post_popup_target_id_value = get_post_meta($post_id, 'portfolio_post_popup_target_id_value', true);
             			?>
- 			<div class="em-modal modal-<?php echo $portfolio_query_count;?> mix <?php echo $portfolio_category[1]->name;;?>">
+ 			<div class="em-modal modal-<?php echo $portfolio_query_count;?> mix <?php echo strtolower($portfolio_category[1]->name);?>">
 				<div class="em-modal-inner">
 					<img src="<?php echo $portfolio_featuredimg;?>"/>
 					<div class="em-modal-caption">
