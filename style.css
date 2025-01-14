@@ -223,6 +223,81 @@ porfolio section
 .em-modal-container .em-modal:hover .em-modal-caption{
         opacity: 1;
 }
+.em-modal-btn-contain {
+    position: relative;
+    top: 50%;
+}
+.em-modal-btn-contain button {
+ font-weight:700;
+ font-size:18px;
+}
+.em-modal-btn-contain .em-portfolio-portfolio-link button{
+	background:#ee3b24;
+}
+
+.em-modal-btn-contain .em-portfolio-portfolio-image button{
+	background:brown;
+}
+.em-modal-btn-contain .em-portfolio-portfolio-link button:hover{
+	background:coral;
+}
+.em-modal-btn-contain .em-portfolio-portfolio-image button:hover{
+	background:coral;
+}
+.em-modal-caption h4 {
+    color: #fff;
+    margin: 15% 0 10px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 61px;
+    width: 100%;
+    left: 0;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    padding: 0 15px;
+}
+.em-modal-text1 {
+    font-weight: 700;
+    color: #000
+}
+
+.em-modal-text2 {
+    font-weight: 700;
+    color: #ee3b24
+}
+
+.em-modal-text2 a {
+    color: #3289b5
+}
+
+.em-modal-text2 a:hover,a:focus,a:active {
+    color: #3289b5;
+    text-decoration: underline
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem
+}
+
+.em-modal-content {
+    padding: 1rem;
+    font-weight: 700
+}
+
+.em-modal-closebtn {
+    background: brown
+}
+
+.modal-footer {
+    font-weight: 700
+}
+
+.em-modal-visit-a {
+    padding-right: 1rem
+}
 
 /*--------------------------------------------------------------
 >>> Page content
