@@ -89,8 +89,8 @@
       <h2 id="portfolio" class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.2s" style="visibility: visible; animation-duration: 0.2s; animation-name: fadeInUp;">Portfolio</h2>
 	  <div class="controls">
 				<button type="button" class="control mixitup-control-active" data-filter="all">All</button>
-				<button type="button" class="control" data-toggle=".react">React</button>
-				<button type="button" class="control" data-toggle=".wordpress">WordPress</button>
+				<button type="button" class="control" data-filter=".react">React</button>
+				<button type="button" class="control" data-filter=".wordpress">WordPress</button>
 	</div>
 
 	  <div class="em-modal-container"  >
