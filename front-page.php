@@ -81,13 +81,30 @@
          </div>
       </div>
    </section>
+
+<section class="test-section">
+
+			</section>	
    <section id="em-portfolio-portfolio-section" class="em-portfolio-section">
       <h2 id="portfolio" class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.2s" style="visibility: visible; animation-duration: 0.2s; animation-name: fadeInUp;">Portfolio</h2>
-	  <div class="em-modal-container">
+	  <div class="controls">
+				<button type="button" class="control mixitup-control-active" data-filter="all">All</button>
+				<button type="button" class="control" data-toggle=".react">React</button>
+				<button type="button" class="control" data-toggle=".wordpress">WordPress</button>
+	</div>
+
+	  <div class="em-modal-container"  >
 		<?php
 		for ($x = 0; $x <= 5; $x++) {
+       $category = "react";
+			if ($x % 2 == 0) {
+				$category = "wordpress";
+           
+			  }
+
 			?>
-			<div class="em-modal number-here">
+			
+			<div class="em-modal number-here mix <?php echo $category;?>">
 				<div class="em-modal-inner">
 					<img src="https://esmondmccain.com/wp-content/uploads/2020/01/awc-inc.png"/>
 					<div class="em-modal-caption">

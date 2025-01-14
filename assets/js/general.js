@@ -37,6 +37,12 @@ jQuery(window).scroll(function() {
                 }); 
 });
 
+
+
+var containerEl = document.querySelector('.em-modal-container');
+
+var mixer = mixitup(containerEl);
+
 /*
 //Added padding if page content is not bigger than height of monitor
 var div = jQuery(".em-page-content").height();
