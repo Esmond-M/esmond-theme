@@ -1782,6 +1782,7 @@ and (max-width : 962px) {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, .3);
+    padding: 0 20px;
 }
 #em-portfolio-contact-section .em-portfolio-contact-overlay {
     position: absolute;
@@ -2266,7 +2267,6 @@ and (max-width : 760px) {
     .em-portfolio-contact-form {
         float: none;
         width: auto;
-        margin-bottom: 30px
     }
 
     .em-portfolio-contact-address {
@@ -2432,7 +2432,7 @@ and (max-width : 760px) {
 */
 
 .emThemefooter {
-	background: black;
+	background: #343a40;
 }
 .emThemefooter .copy-right {
     color: white;
