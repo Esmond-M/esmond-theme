@@ -237,7 +237,7 @@ porfolio section
 }
 .em-modal-btn-contain {
     position: relative;
-    top: 50%;
+    top: 39%;
 }
 .em-modal-btn-contain button {
  font-weight:700;
@@ -261,7 +261,7 @@ porfolio section
     margin: 15% 0 10px;
     font-weight: 400;
     position: absolute;
-    bottom: 61px;
+    bottom: 1%;
     width: 100%;
     left: 0;
     transition: all .5s ease-in-out;
@@ -316,6 +316,7 @@ porfolio section
 .em-modal-closebtn:hover {
     background: coral;
 }
+
 /*--------------------------------------------------------------
 >>> Page content
 ----------------------------------------------------------------
@@ -1338,6 +1339,7 @@ button.control:hover:before{
     justify-content: center;
     max-width: 1170px;
     margin: auto;
+    padding: 0 10px;
 }
 
 .em-portfolio-about-sec h2.em-portfolio-section-title {
@@ -1610,7 +1612,15 @@ button.control:hover:before{
     -webkit-transform: translate(0,0);
     transform: translate(0,0)
 }
-
+@media only screen 
+and (max-width : 962px) {
+.em-portfolio-content {
+	width:100%;
+}
+.em-portfolio-about-sec {
+	margin-bottom: 40px
+}
+}
 #em-portfolio-service-post-section {
     position: relative;
     padding: 60px 0;
@@ -1660,260 +1670,6 @@ button.control:hover:before{
     padding-left: 80px;
     padding-right: 20px
 }
-
-.em-portfolio-service-excerpt h6 {
-    font-weight: 500;
-    margin-bottom: 6px
-}
-
-.em-portfolio-service-excerpt h6 a {
-    color: inherit
-}
-
-.em-portfolio-service-excerpt h6 a:hover {
-    color: #ee3b24
-}
-
-.em-portfolio-team-member-wrap {
-    margin-left: -2%
-}
-
-.em-portfolio-team-member {
-    width: 23%;
-    margin-left: 2%;
-    float: left;
-    text-align: center
-}
-
-.em-portfolio-team-member-image {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 10px
-}
-
-.em-portfolio-team-social-id {
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    bottom: 0;
-    padding: 10px;
-    background: #fff
-}
-
-.em-portfolio-team-social-id a {
-    display: inline-block;
-    color: #ee3b24;
-    margin: 0 10px;
-    font-size: 16px;
-    line-height: 1
-}
-
-.em-portfolio-team-member-excerpt {
-    position: absolute;
-    left: -100%;
-    top: 0;
-    width: 100%;
-    bottom: 0;
-    background: rgba(0,0,0,.5);
-    color: #fff;
-    padding: 30px;
-    transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    color: #fff!important
-}
-
-.em-portfolio-team-member:hover .em-portfolio-team-member-excerpt {
-    left: 0%
-}
-
-.em-portfolio-team-member-excerpt-wrap {
-    display: table;
-    width: 100%;
-    height: 100%
-}
-
-.em-portfolio-team-member-excerpt-wrap span {
-    display: table-cell;
-    vertical-align: middle
-}
-
-.em-portfolio-team-member h6 {
-    text-transform: uppercase;
-    font-weight: 500;
-    position: relative;
-    padding-bottom: 10px
-}
-
-.em-portfolio-team-member h6 a {
-    text-decoration: none;
-    color: inherit
-}
-
-.em-portfolio-team-member h6 a:hover {
-    color: #ee3b24
-}
-
-.em-portfolio-team-member h6:after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    left: 50%;
-    margin-left: -25px;
-    height: 2px;
-    background: #ee3b24;
-    bottom: -2px
-}
-
-#em-portfolio-counter-section {
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    background-attachment: fixed;
-    background-size: cover
-}
-
-#em-portfolio-counter-section .em-portfolio-counter-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,.2)
-}
-
-.em-portfolio-counter-section {
-    position: relative
-}
-
-#em-portfolio-counter-section .em-portfolio-container {
-    position: relative
-}
-
-.em-portfolio-counter-wrap {
-    margin-left: -3%
-}
-
-.em-portfolio-counter {
-    float: left;
-    width: 22%;
-    margin-left: 3%;
-    text-align: center
-}
-
-.em-portfolio-counter-count {
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 15px;
-    font-family: roboto condensed,sans-serif;
-    letter-spacing: 3px
-}
-
-.em-portfolio-counter-icon {
-    display: inline-block;
-    font-size: 22px;
-    color: #ee3b24;
-    position: relative
-}
-
-.em-portfolio-counter-icon:after {
-    content: "";
-    position: absolute;
-    left: 100%;
-    height: 2px;
-    width: 50px;
-    background: #ee3b24;
-    top: 50%;
-    margin-top: -1px;
-    margin-left: 10px
-}
-
-.em-portfolio-counter-icon:before {
-    content: "";
-    position: absolute;
-    right: 100%;
-    height: 2px;
-    width: 50px;
-    background: #ee3b24;
-    top: 50%;
-    margin-top: -1px;
-    margin-right: 10px
-}
-
-.em-portfolio-counter-title {
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 15px
-}
-
-.hs_client_logo_slider img {
-    padding: 0 20px
-}
-
-#em-portfolio-testimonial-section {
-    background: #f6f6f6;
-    padding: 60px 0 100px
-}
-
-.em-portfolio-testimonial-wrap {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center
-}
-
-.em-portfolio-testimonial-wrap .bx-wrapper .bx-viewport {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: 0;
-    left: 0;
-    background: 0 0
-}
-
-.em-portfolio-testimonial-wrap .bx-wrapper img {
-    height: 100px;
-    width: 100px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    border: 1px solid #ee3b24;
-    padding: 2px;
-    transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out
-}
-
-.em-portfolio-testimonial-excerpt {
-    line-height: 2
-}
-
-.em-portfolio-testimonial-excerpt .fa-quote-left {
-    margin-right: 8px;
-    font-size: 30px;
-    color: #d6d6d6
-}
-
-.em-portfolio-testimonial-wrap .bx-wrapper {
-    margin-bottom: 0
-}
-
-.em-portfolio-testimonial-wrap .bx-wrapper .bx-pager,.em-portfolio-testimonial-wrap .bx-wrapper .bx-controls-auto {
-    bottom: -70px
-}
-
-.em-portfolio-testimonial-wrap .bx-wrapper .bx-pager.bx-default-pager a {
-    height: 4px;
-    width: 25px;
-    border-radius: 0;
-    margin: 0 1px;
-    background: #d6d6d6
-}
-
-.em-portfolio-testimonial-wrap .bx-wrapper .bx-pager.bx-default-pager a:hover,.em-portfolio-testimonial-wrap .bx-wrapper .bx-pager.bx-default-pager a.active {
-    background: #ee3b24
-}
-
 .em-portfolio-blog-post {
     width: 50%;
     float: left;
@@ -2232,249 +1988,24 @@ h2.em-contact-section-title {
     width: 33%;
     padding: 0px;
 }
-.odometer.odometer-auto-theme,.odometer.odometer-theme-default {
-    display: block;
-    vertical-align: middle;
-    vertical-align: auto;
-    zoom:1;
-    display: inline;
-    position: relative
+@media only screen 
+and (max-width : 1199px) {
+.em-modal-container .em-modal-caption{
+        opacity: 1;
 }
-
-.odometer.odometer-auto-theme .odometer-digit,.odometer.odometer-theme-default .odometer-digit {
-    display: inline-block;
-    vertical-align: middle;
-    vertical-align: auto;
-    zoom:1;
-    display: inline;
-    position: relative
 }
-
-.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,.odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
-    display: inline-block;
-    vertical-align: middle;
-    vertical-align: auto;
-    zoom:1;
-    display: inline;
-    visibility: hidden
+@media only screen 
+and (max-width : 1020px) {
+.em-modal-container .em-modal {
+    width: 50%;
 }
-
-.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,.odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
-    text-align: left;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden
 }
-
-.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,.odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
-    display: block
+@media only screen 
+and (max-width : 760px) {
+.em-modal-container .em-modal {
+    width: 100%;
 }
-
-.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,.odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {
-    display: block;
-    -webkit-backface-visibility: hidden
 }
-
-.odometer.odometer-auto-theme .odometer-digit .odometer-value,.odometer.odometer-theme-default .odometer-digit .odometer-value {
-    display: block;
-    -webkit-transform: translateZ(0)
-}
-
-.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,.odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value {
-    position: absolute
-}
-
-.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,.odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
-    -webkit-transition: -webkit-transform 2s;
-    -moz-transition: -moz-transform 2s;
-    -ms-transition: -ms-transform 2s;
-    -o-transition: -o-transform 2s;
-    transition: transform 2s
-}
-
-.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner,.odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%)
-}
-
-.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,.odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner {
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%)
-}
-
-.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,.odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
-    -webkit-transition: -webkit-transform 2s;
-    -moz-transition: -moz-transform 2s;
-    -ms-transition: -ms-transform 2s;
-    -o-transition: -o-transform 2s;
-    transition: transform 2s;
-    -webkit-transform: translateY(0);
-    -moz-transf0000orm: tr0anslateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0)
-}
-
-.odometer.odometer-auto-theme .odometer-value,.odometer.odometer-theme-default .odometer-value {
-    text-align: center
-}
-
-.em-portfolio-toggle-menu {
-    display: none
-}
-
-.woocommerce ul.products li.product a.woocommerce-loop-product__link {
-    color: inherit
-}
-
-.woocommerce ul.products li.product .woocommerce-loop-category__title,.woocommerce ul.products li.product .woocommerce-loop-product__title,.woocommerce ul.products li.product h3 {
-    font-size: 18px;
-    margin: 0 0 10px;
-    padding: 0
-}
-
-.woocommerce ul.products li.product .price {
-    font-size: 16px;
-    color: inherit
-}
-
-.woocommerce div.product p.price,.woocommerce div.product span.price {
-    font-size: 22px;
-    color: inherit
-}
-
-.woocommerce ul.products li.product .price ins {
-    margin-left: 5px
-}
-
-.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button {
-    background: #ee3b24;
-    color: #fff;
-    border-radius: 0;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 13px
-}
-
-.woocommerce .woocommerce-error .button,.woocommerce .woocommerce-info .button,.woocommerce .woocommerce-message .button,.woocommerce-page .woocommerce-error .button,.woocommerce-page .woocommerce-info .button,.woocommerce-page .woocommerce-message .button {
-    background: #000
-}
-
-.woocommerce ul.products li.product .button {
-    margin-top: 0
-}
-
-.woocommerce #respond input#submit:hover,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button:hover {
-    background: #000;
-    color: #fff
-}
-
-.woocommerce nav.woocommerce-pagination ul {
-    border: 0;
-    margin: 0
-}
-
-.woocommerce .woocommerce-pagination ul.page-numbers li,.woocommerce-page .woocommerce-pagination ul.page-numbers li {
-    border: 0;
-    margin: 0 3px
-}
-
-.woocommerce nav.woocommerce-pagination ul li a,.woocommerce nav.woocommerce-pagination ul li span {
-    display: inline-block;
-    background: #ee3b24;
-    padding: 10px;
-    color: #fff;
-    line-height: 1;
-    border: 0
-}
-
-.woocommerce nav.woocommerce-pagination ul li a:focus,.woocommerce nav.woocommerce-pagination ul li a:hover,.woocommerce nav.woocommerce-pagination ul li span.current {
-    background: #000;
-    color: #fff
-}
-
-.woocommerce #respond input#submit.alt,.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce input.button.alt {
-    background: #ee3b24;
-    color: #fff
-}
-
-.woocommerce #respond input#submit.alt:hover,.woocommerce a.button.alt:hover,.woocommerce button.button.alt:hover,.woocommerce input.button.alt:hover {
-    background: #000;
-    color: #fff
-}
-
-.woocommerce #respond input#submit.disabled,.woocommerce #respond input#submit:disabled,.woocommerce #respond input#submit:disabled[disabled],.woocommerce a.button.disabled,.woocommerce a.button:disabled,.woocommerce a.button:disabled[disabled],.woocommerce button.button.disabled,.woocommerce button.button:disabled,.woocommerce button.button:disabled[disabled],.woocommerce input.button.disabled,.woocommerce input.button:disabled,.woocommerce input.button:disabled[disabled] {
-    color: #fff
-}
-
-.woocommerce #respond input#submit.disabled:hover,.woocommerce #respond input#submit:disabled:hover,.woocommerce #respond input#submit:disabled[disabled]:hover,.woocommerce a.button.disabled:hover,.woocommerce a.button:disabled:hover,.woocommerce a.button:disabled[disabled]:hover,.woocommerce button.button.disabled:hover,.woocommerce button.button:disabled:hover,.woocommerce button.button:disabled[disabled]:hover,.woocommerce input.button.disabled:hover,.woocommerce input.button:disabled:hover,.woocommerce input.button:disabled[disabled]:hover {
-    color: #fff;
-    background: #333
-}
-
-.woocommerce #respond input#submit.alt.disabled,.woocommerce #respond input#submit.alt.disabled:hover,.woocommerce #respond input#submit.alt:disabled,.woocommerce #respond input#submit.alt:disabled:hover,.woocommerce #respond input#submit.alt:disabled[disabled],.woocommerce #respond input#submit.alt:disabled[disabled]:hover,.woocommerce a.button.alt.disabled,.woocommerce a.button.alt.disabled:hover,.woocommerce a.button.alt:disabled,.woocommerce a.button.alt:disabled:hover,.woocommerce a.button.alt:disabled[disabled],.woocommerce a.button.alt:disabled[disabled]:hover,.woocommerce button.button.alt.disabled,.woocommerce button.button.alt.disabled:hover,.woocommerce button.button.alt:disabled,.woocommerce button.button.alt:disabled:hover,.woocommerce button.button.alt:disabled[disabled],.woocommerce button.button.alt:disabled[disabled]:hover,.woocommerce input.button.alt.disabled,.woocommerce input.button.alt.disabled:hover,.woocommerce input.button.alt:disabled,.woocommerce input.button.alt:disabled:hover,.woocommerce input.button.alt:disabled[disabled],.woocommerce input.button.alt:disabled[disabled]:hover {
-    background: #ee3b24
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs li {
-    border: 0;
-    border-radius: 0;
-    margin: 0
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs li::before,.woocommerce div.product .woocommerce-tabs ul.tabs li::after {
-    display: none
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
-    background: #ee3b24;
-    color: #fff
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs li a {
-    padding: 12px 0;
-    text-transform: uppercase
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs::before {
-    border-color: #eee
-}
-
-.woocommerce div.product div.images .flex-control-thumbs {
-    margin-top: 10px
-}
-
-.select2-container--default .select2-selection--single,.select2-container--default .select2-search--dropdown .select2-search__field {
-    border-radius: 0;
-    border: 1px solid #eee
-}
-
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: 46px
-}
-
-.select2-container .select2-selection--single,.select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: 46px
-}
-
-.select2-dropdown {
-    border-color: #eee
-}
-
-.select2-container--default .select2-selection--single .select2-selection__rendered,.select2-container--default .select2-results__option--highlighted[aria-selected],.select2-container--default .select2-results__option--highlighted[data-selected] {
-    outline: 0
-}
-
 @media screen and (max-width: 1180px) {
     .em-portfolio-container {
         width:auto;
@@ -2637,10 +2168,6 @@ h2.em-contact-section-title {
     .em-portfolio-about-sec,.em-portfolio-progress-bar-sec {
         width: auto;
         float: none
-    }
-
-    .em-portfolio-about-sec {
-        margin-bottom: 40px
     }
 
     .em-portfolio-featured-post {
@@ -4013,10 +3540,6 @@ button,input[type=button],input[type=reset],input[type=submit] {
     line-height: 46px;
     height: 46px
 }
-
-button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]:hover {
-}
-
 button:focus,input[type=button]:focus,input[type=reset]:focus,input[type=submit]:focus,button:active,input[type=button]:active,input[type=reset]:active,input[type=submit]:active {
     outline: 0
 }
