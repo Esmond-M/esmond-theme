@@ -36,17 +36,17 @@ jQuery(document).ready(function($) {
     jQuery(".about").click(function() {
         jQuery('html, body').animate({
             scrollTop: jQuery("#about").offset().top
-        }, 2000);
+        }, 500);
     });
     jQuery(".portfolio").click(function() {
         jQuery('html, body').animate({
             scrollTop: jQuery("#portfolio").offset().top
-        }, 2000);
+        }, 500);
     });
     jQuery(".services").click(function() {
         jQuery('html, body').animate({
             scrollTop: jQuery("#services").offset().top
-        }, 2000);
+        }, 500);
     });
     var containerEl = document.querySelector('.em-modal-container');
 
