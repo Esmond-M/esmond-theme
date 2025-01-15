@@ -79,6 +79,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     -webkit-transition: all .3s ease-in-out;
 }
 .site-header #primary-menu li a:hover {
+	cursor:pointer;
 	color: #ee3b24;
 	padding-bottom:5px;
      border-bottom: 2px solid #ee3b24;
@@ -86,7 +87,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
 }
-
+.site-header #primary-menu li:hover {
+	cursor:pointer;
+}
 .site-branding {
 	margin: auto;
 	display: block;
