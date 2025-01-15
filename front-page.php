@@ -82,9 +82,6 @@
       </div>
    </section>
 
-<section class="test-section">
-
-			</section>	
    <section id="em-portfolio-portfolio-section" >
       <h2 id="portfolio" class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.2s" style="visibility: visible; animation-duration: 0.2s; animation-name: fadeInUp;">Portfolio</h2>
 	  <div class="controls">
