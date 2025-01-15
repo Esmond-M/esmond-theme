@@ -3,7 +3,7 @@
    get_header(); 
    
    ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("em-page-content"); ?>>
 	
 <section>
 	<div class="entry-content">

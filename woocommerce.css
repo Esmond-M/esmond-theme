@@ -7,7 +7,7 @@ WooCommerce styles override
 /**
  * Shop tables
  */
-table.shop_table_responsive thead {
+ table.shop_table_responsive thead {
 	display: none;
 }
 
@@ -94,7 +94,6 @@ ul.products li.product .button {
 
 	ul.products li.product {
 		width: 30.79667%;
-		float: left;
 		margin-right: 3.8%;
 	}
 
