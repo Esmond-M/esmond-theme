@@ -1818,7 +1818,12 @@ h2.em-contact-section-title {
 .validation_message ,.gfield_validation_message {
     background: white;
 }
-
+.gform_confirmation_wrapper{
+	text-align:center;
+	font-size:25px;
+    color:white;
+    padding:10px 10px 100px 10px;
+}
 .gform_validation_errors {
     background: white;    
 }
@@ -3204,7 +3209,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	color: white;
 }
 
 select {
