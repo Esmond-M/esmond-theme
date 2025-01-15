@@ -2504,12 +2504,14 @@ and (max-width : 767px) {
     padding: 29px 10% 15px 10%;
 }
 /*misc */
-.error404 .page-header {
-    color: black;
+section#em-404 {
     text-align: center;
+     padding:20px;
 }
-.error-404 .page-content {
-    text-align: center;
+
+section#em-404 {
+    font-size:25px;
+    
 }
 
 /*--------------------------------------------------------------
