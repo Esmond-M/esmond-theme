@@ -1792,6 +1792,7 @@ and (max-width : 962px) {
     bottom: 0;
     background: rgba(0,0,0,.3)
 }
+
 h2.em-contact-section-title {
     text-align: center;
     font-family: roboto condensed, sans-serif;
@@ -1811,6 +1812,17 @@ h2.em-contact-section-title {
     width: 50%;
     margin: auto;
 }
+.validation_message ,.gfield_validation_message {
+    background: white;
+}
+
+.gform_validation_errors {
+    background: white;    
+}
+.em-portfolio-contact-form .gform_legacy_markup_wrapper li.gfield.gfield_error{
+    background-color: white;       
+    padding:10px
+ }
 .em-portfolio-contact-form .gform_legacy_markup_wrapper .top_label {
 	color: white;
 }
