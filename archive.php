@@ -8,9 +8,11 @@
  */
 
 get_header();
+header("Location: /");
+die();
 ?>
 
-	<main id="primary" class="site-main em-page-content">
+	<main id="primary" class="archive-esmond site-main em-page-content">
 
 		<?php if ( have_posts() ) : ?>
 
