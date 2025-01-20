@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package website-theme-name
+ * @package esmond-theme-portfolio
  */
 
 /**
@@ -182,11 +182,11 @@ if ( ! function_exists( 'emTheme_woocommerce_cart_link' ) ) {
 	 */
 	function emTheme_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'website-theme-name' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'esmond-theme-portfolio' ); ?>">
 			<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'website-theme-name' ),
+				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'esmond-theme-portfolio' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>

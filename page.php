@@ -12,7 +12,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'website-theme-name' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'esmond-theme-portfolio' ),
 				'after'  => '</div>',
 			)
 		);

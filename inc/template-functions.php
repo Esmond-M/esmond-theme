@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package website-theme-name
+ * @package esmond-theme-portfolio
  */
 
 /**

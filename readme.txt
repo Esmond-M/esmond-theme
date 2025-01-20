@@ -1,4 +1,4 @@
-=== website-theme-name ===
+=== esmond-theme-portfolio ===
 
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -10,7 +10,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called website-theme-name.
+A starter theme called esmond-theme-portfolio.
 
 == Description ==
 
@@ -26,7 +26,7 @@ This is a theme to work on my skills.
 
 = Does this theme support any plugins? =
 
-website-theme-name includes support for WooCommerce and for Infinite Scroll in Jetpack.
+esmond-theme-portfolio includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
