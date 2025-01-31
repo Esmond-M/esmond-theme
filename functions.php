@@ -93,13 +93,14 @@ final class EMTHEME_Theme_Class {
 		// Theme version.
 		define( 'EMTHEME_THEME_VERSION', '3.6.0' );
 
+		define( 'EMTHEME_LIB_DIR_URI', EMTHEME_THEME_DIR .'/lib/');
+
 		// Javascript and CSS Paths.
 		define( 'EMTHEME_JS_DIR_URI', EMTHEME_THEME_URI . '/assets/js/' );
 		define( 'EMTHEME_CSS_DIR_URI', EMTHEME_THEME_URI . '/assets/css/' );
 
 		// Include Paths.
 		define( 'EMTHEME_INC_DIR', EMTHEME_THEME_DIR . '/inc/' );
-		define( 'EMTHEME_INC_DIR_URI', EMTHEME_THEME_URI . '/inc/' );
 
 	}
 
@@ -121,8 +122,8 @@ final class EMTHEME_Theme_Class {
 	 * @since   1.0.0
 	 */
 	public static function theme_setup() {
-		$dir = EMTHEME_INC_DIR;
-
+		$dir_Include = EMTHEME_INC_DIR;
+		$dir_Lib = EMTHEME_LIB_DIR_URI;
 		// Load text domain.
 		load_theme_textdomain( 'emTheme', EMTHEME_THEME_DIR . '/languages' );
 
@@ -232,36 +233,47 @@ final class EMTHEME_Theme_Class {
 		/**
 		 * Implement the Custom Header feature.
 		 */
-		require $dir . 'custom-header.php';
+		require $dir_Include . 'custom-header.php';
 
 		/**
 		 * Custom template tags for this theme.
 		 */
-		require $dir . 'template-tags.php';
+		require $dir_Include . 'template-tags.php';
 
 		/**
 		 * Functions which enhance the theme by hooking into WordPress.
 		 */
-		require $dir . 'template-functions.php';
+		require $dir_Include . 'template-functions.php';
 
 		/**
 		 * Customizer additions.
 		 */
-		require $dir . 'customizer.php';
+		require $dir_Include . 'customizer.php';
+
+
+		/**
+		 * Custom post types.
+		 */
+		require_once $dir_Lib . 'EMTHEME_class_custom_post_types.php';
+		require_once $dir_Lib . 'EMTHEME_class_custom_post_meta.php';
+		//require_once __DIR__ . '/lib/custom-taxonomies.php';
+		//require_once __DIR__ . '/lib/custom-post-meta.php';
+
 
 		/**
 		 * Load Jetpack compatibility file.
 		 */
 		if ( defined( 'JETPACK__VERSION' ) ) {
-			require $dir . 'jetpack.php';
+			require $dir_Include . 'jetpack.php';
 		}
 
 		/**
 		 * Load WooCommerce compatibility file.
 		 */
 		if ( class_exists( 'WooCommerce' ) ) {
-			require $dir . 'woocommerce.php';
+			require $dir_Include . 'woocommerce.php';
 		}
+
 
 	}
 
@@ -475,7 +487,3 @@ final class EMTHEME_Theme_Class {
 }
 
 new EMTHEME_Theme_Class();
-require_once __DIR__ . '/lib/EMTHEME_class_custom_post_types.php';
-require_once __DIR__ . '/lib/EMTHEME_class_custom_post_meta.php';
-//require_once __DIR__ . '/lib/custom-taxonomies.php';
-//require_once __DIR__ . '/lib/custom-post-meta.php';
