@@ -122,8 +122,8 @@ final class EMTHEME_Theme_Class {
 	 * @since   1.0.0
 	 */
 	public static function theme_setup() {
-		$dir_Include = EMTHEME_INC_DIR;
-		$dir_Lib = EMTHEME_LIB_DIR_URI;
+		$dir_include = EMTHEME_INC_DIR;
+		$dir_lib = EMTHEME_LIB_DIR_URI;
 		// Load text domain.
 		load_theme_textdomain( 'emTheme', EMTHEME_THEME_DIR . '/languages' );
 
@@ -233,29 +233,29 @@ final class EMTHEME_Theme_Class {
 		/**
 		 * Implement the Custom Header feature.
 		 */
-		require $dir_Include . 'custom-header.php';
+		require $dir_include . 'custom-header.php';
 
 		/**
 		 * Custom template tags for this theme.
 		 */
-		require $dir_Include . 'template-tags.php';
+		require $dir_include . 'template-tags.php';
 
 		/**
 		 * Functions which enhance the theme by hooking into WordPress.
 		 */
-		require $dir_Include . 'template-functions.php';
+		require $dir_include . 'template-functions.php';
 
 		/**
 		 * Customizer additions.
 		 */
-		require $dir_Include . 'customizer.php';
+		require $dir_include . 'customizer.php';
 
 
 		/**
 		 * Custom post types.
 		 */
-		require_once $dir_Lib . 'EMTHEME_class_custom_post_types.php';
-		require_once $dir_Lib . 'EMTHEME_class_custom_post_meta.php';
+		require_once $dir_lib . 'EMTHEME_class_custom_post_types.php';
+		require_once $dir_lib . 'EMTHEME_class_custom_post_meta.php';
 		//require_once __DIR__ . '/lib/custom-taxonomies.php';
 		//require_once __DIR__ . '/lib/custom-post-meta.php';
 
@@ -264,14 +264,14 @@ final class EMTHEME_Theme_Class {
 		 * Load Jetpack compatibility file.
 		 */
 		if ( defined( 'JETPACK__VERSION' ) ) {
-			require $dir_Include . 'jetpack.php';
+			require $dir_include . 'jetpack.php';
 		}
 
 		/**
 		 * Load WooCommerce compatibility file.
 		 */
 		if ( class_exists( 'WooCommerce' ) ) {
-			require $dir_Include . 'woocommerce.php';
+			require $dir_include . 'woocommerce.php';
 		}
 
 
