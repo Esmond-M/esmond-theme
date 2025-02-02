@@ -241,11 +241,6 @@ final class EMTHEME_Theme_Class {
 		require $dir_include . 'template-tags.php';
 
 		/**
-		 * Functions which enhance the theme by hooking into WordPress.
-		 */
-		require $dir_include . 'template-functions.php';
-
-		/**
 		 * Customizer additions.
 		 */
 		require $dir_include . 'customizer.php';
