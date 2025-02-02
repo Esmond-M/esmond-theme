@@ -315,8 +315,8 @@ final class EMTHEME_Theme_Class {
 		// Enqueue Main style.
 		//wp_enqueue_style( 'emTheme-style', $dir . 'style.min.css', false, $theme_version );
 		wp_enqueue_style( 'emThemestyle', get_stylesheet_uri(), array(), $nonCache_version );
-		wp_enqueue_style( 'animatecss', get_stylesheet_directory_uri() ."/assets/css/animatecss.min.css", array(), $theme_version );
-		wp_enqueue_style( 'gfont-css', get_stylesheet_directory_uri() ."/assets/css/gfont-css.min.css", array(), $theme_version );
+		wp_enqueue_style( 'animatecss', get_stylesheet_directory_uri() ."/assets/css/animate.css", array(), $theme_version );
+		wp_enqueue_style( 'gfont-css', get_stylesheet_directory_uri() ."/assets/css/g-fonts.css", array(), $theme_version );
 		wp_style_add_data( 'emThemestyle', 'rtl', 'replace' );
 		wp_enqueue_style('font-awesome-official-css', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css');
 		wp_enqueue_style('font-awesome-official-v4shim-css', 'https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css');
