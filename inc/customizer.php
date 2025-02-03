@@ -1,8 +1,8 @@
 <?php
 /**
- * website-theme-name Theme Customizer
+ * esmond-theme-portfolio Theme Customizer
  *
- * @package website-theme-name
+ * @package esmond-theme-portfolio
  */
 
 /**

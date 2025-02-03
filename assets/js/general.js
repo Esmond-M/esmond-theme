@@ -1,7 +1,5 @@
 jQuery(document).ready(function($) {
 
-
-    // For the sideanv mobile view	
     var fixmeTop = jQuery('.site-header').offset().top;
     jQuery(window).scroll(function() {
         var currentScroll = jQuery(window).scrollTop();
@@ -21,18 +19,6 @@ jQuery(document).ready(function($) {
             });
         }
     });
-    jQuery(".emTheme-closebtn").click(function() {
-        jQuery('#mySidenav').css({
-            width: '0px'
-        });
-    });
-
-    jQuery(".emTheme-openbtn").click(function() {
-        jQuery('#mySidenav').css({
-            width: '250px'
-        });
-    });
-
     jQuery(".about").click(function() {
         jQuery('html, body').animate({
             scrollTop: jQuery("#about").offset().top

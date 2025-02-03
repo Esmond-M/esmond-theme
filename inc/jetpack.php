@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package website-theme-name
+ * @package esmond-theme-portfolio
  */
 
 /**

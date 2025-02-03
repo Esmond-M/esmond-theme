@@ -1,13 +1,13 @@
 /*!
-Theme Name: website theme
+Theme Name: Esmond
 Theme URI: https://esmondmccain.com/
 Author: Esmond Mccain
 Author URI: https://esmondmccain.com/
-Description: website theme.
-Version: 1.1.0
+Description: Esmond theme for personal portfolio.
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: website-theme-name
+Text Domain: esmond-theme-portfolio
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 */
@@ -2504,12 +2504,14 @@ and (max-width : 767px) {
     padding: 29px 10% 15px 10%;
 }
 /*misc */
-.error404 .page-header {
-    color: black;
+section#em-404 {
     text-align: center;
+     padding:20px;
 }
-.error-404 .page-content {
-    text-align: center;
+
+section#em-404 {
+    font-size:25px;
+    
 }
 
 /*--------------------------------------------------------------
