@@ -353,8 +353,8 @@ final class EMTHEME_Theme_Class {
 
 		$nonCache_version = rand( 1, 99999999999 );
 
-		wp_enqueue_script( 'emTheme-general-js', $dir . 'general.js', array(), $nonCache_version, true );
-		wp_enqueue_script( 'mixitup--js', $dir . 'mixitup.min.js', array(), $theme_version, true );
+		wp_enqueue_script( 'emTheme-general', $dir . 'general.js', array(), $nonCache_version, true );
+		wp_enqueue_script( 'mixitup', $dir . 'mixitup.min.js', array(), $theme_version, true );
 
 		array_push( $main_script_dependencies, 'emTheme-main' );
 	}
