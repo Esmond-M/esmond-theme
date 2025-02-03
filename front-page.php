@@ -105,10 +105,9 @@
             $portfolio_post_the_query = new WP_Query($portfolio_post_args);
             if ( $portfolio_post_the_query->have_posts() ) :
             	// Start the Loop
+               $portfolio_query_count = 1;
             	while ( $portfolio_post_the_query->have_posts() ) : $portfolio_post_the_query->the_post();
             		// Start the Loop
-            		$portfolio_query_count = 1;
-            
             			$title = get_the_title();
             			$excerpt = get_the_excerpt();
             			$post_id = get_the_ID();
@@ -135,7 +134,7 @@
 				</div>	
 			</div>
          <?php
-            $portfolio_query_count + 1;
+            $portfolio_query_count++;
             endwhile;
             else:
             // If no posts match this query, output this text.
@@ -168,22 +167,23 @@
             $services_post_the_query = new WP_Query($services_post_args);
             if ( $services_post_the_query->have_posts() ) :
             	// Start the Loop
+               $services_query_count = 1;
             	while ( $services_post_the_query->have_posts() ) : $services_post_the_query->the_post();
             		// Start the Loop
-            		$services_query_count = 1;
+
             
             			$title = get_the_title();
             			$excerpt = get_the_excerpt();
             			$post_id = get_the_ID();
             			$meta = get_post_meta($post_id, 'services_post_icon_class_value', true);
             			?>
-         <div class="em-portfolio-featured-post em-portfolio-featured-post<?php echo $services_query_count;?> wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0s; animation-name: fadeInLeft;">
+         <div class="em-portfolio-featured-post em-portfolio-featured-post-<?php echo $services_query_count;?> wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0s; animation-name: fadeInLeft;">
             <div class="em-portfolio-featured-icon"><i class="<?php echo $meta; ?>"></i></div>
             <h3><?php echo $title; ?></h3>
             <div class="em-portfolio-featured-excerpt"><?php echo get_the_excerpt(); ?></div>
          </div>
          <?php
-            $services_query_count + 1;
+            $services_query_count++;
             endwhile;
             else:
             // If no posts match this query, output this text.
