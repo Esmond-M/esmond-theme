@@ -29,7 +29,7 @@
 			wp_nav_menu(
 				array(
 					'menu'            =>16,
-					'container'            => '',
+					'container'            => 'ul',
 					'container_class'      => '',
 					'container_id'         => '',
 					'container_aria_label' => '',
