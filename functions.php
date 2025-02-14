@@ -138,7 +138,7 @@ final class EMTHEME_Theme_Class {
 		// Register navigation menus.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'emTheme' ),
+				'primary_menu' => esc_html__( 'Primary', 'emTheme' ),
 				'topbar_menu' => esc_html__( 'Top Bar', 'emTheme' ),
 				'main_menu'   => esc_html__( 'Main', 'emTheme' ),
 				'footer_menu' => esc_html__( 'Footer', 'emTheme' ),

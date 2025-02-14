@@ -28,7 +28,7 @@
 		<?php 
 			wp_nav_menu(
 				array(
-					'menu'            =>8,
+					'menu'                 => 8,
 					'container'            => 'ul',
 					'container_class'      => '',
 					'container_id'         => '',
@@ -45,7 +45,7 @@
 					'item_spacing'         => 'preserve',
 					'depth'                => 0,
 					'walker'               => '',
-					'theme_location' => 'primary',
+					'theme_location' => 'primary_menu',
 				)
 			);
 			?>
