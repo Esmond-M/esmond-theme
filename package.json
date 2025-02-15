@@ -12,4 +12,7 @@
     "@wordpress/scripts": "^12.1.0",
     "dir-archiver": "^1.1.1"
   },
+  "scripts": {
+    "watch": "sass --watch sass/style.scss style.min.css --no-source-map"
+  }
 }
