@@ -8,8 +8,36 @@
     "WordPress",
     "Theme"
   ],
+  "files": [
+    "/assets",
+    "/img",
+    "/inc",
+    "/languages",
+    "/page-templates",
+    "/react-projects",
+    "/sass",
+    "/template-parts",
+    "404.php",
+    "archive.php",
+    "comments.php",
+    "footer.php",
+    "front-page.php",
+    "functions.php",
+    "header.php",
+    "header-404.php",
+    "index.php",
+    "page.php",
+    "page-196.php",
+    "page-199.php",
+    "screenshot.jpg",
+    "search.php",
+    "sidebar.php",
+    "single.php",
+    "style.css",
+    "style.min.css"
+  ],
   "devDependencies": {
-    "@wordpress/scripts": "^12.1.0",
+    "@wordpress/scripts": "^12.6.1",
     "dir-archiver": "^1.1.1"
   },
   "scripts": {
