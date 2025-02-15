@@ -158,22 +158,7 @@ final class EMTHEME_Theme_Class {
 		// Enable support for Post Thumbnails on posts and pages.
 		add_theme_support( 'post-thumbnails' );
 
-		/**
-		 * Enable support for header image
-		 */
-		add_theme_support(
-			'custom-header',
-			apply_filters(
-				'emTheme_custom_header_args',
-				array(
-					'width'       => 2000,
-					'height'      => 1200,
-					'flex-height' => true,
-					'video'       => true,
-					'video-active-callback' => '__return_true'
-				)
-			)
-		);
+
 
 		/**
 		 * Enable support for site logo
@@ -229,11 +214,6 @@ final class EMTHEME_Theme_Class {
 
 		// Declare support for selective refreshing of widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-
-		/**
-		 * Implement the Custom Header feature.
-		 */
-		require $dir_include . 'custom-header.php';
 
 		/**
 		 * Custom template tags for this theme.
