@@ -292,18 +292,11 @@ final class EMTHEME_Theme_Class {
 		$dir           = EMTHEME_CSS_DIR_URI;
 		$theme_version = EMTHEME_THEME_VERSION;
 		$nonCache_version = rand( 1, 99999999999 );
-		// Enqueue Main style.
-		//wp_enqueue_style( 'emTheme-style', $dir . 'style.min.css', false, $theme_version );
-		wp_enqueue_style( 'emThemestyle', get_stylesheet_uri(), array(), $nonCache_version );
-		wp_enqueue_style( 'animatecss', get_stylesheet_directory_uri() ."/assets/css/animate.css", array(), $theme_version );
+		wp_enqueue_style( 'emTheme', get_stylesheet_directory_uri() ."/style.min.css", array(), $nonCache_version );
 		wp_enqueue_style( 'gfont-css', get_stylesheet_directory_uri() ."/assets/css/g-fonts.css", array(), $theme_version );
-		wp_style_add_data( 'emThemestyle', 'rtl', 'replace' );
+		wp_style_add_data( 'emTheme', 'rtl', 'replace' );
 		wp_enqueue_style('font-awesome-official-css', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css');
 		wp_enqueue_style('font-awesome-official-v4shim-css', 'https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css');
-			
-		if (is_page(128)) {
-			wp_enqueue_style( 'test-css', $dir . 'test-css.css' , array(), $nonCache_version );
-		}
 	}
 
 	/**
