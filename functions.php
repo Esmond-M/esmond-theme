@@ -123,7 +123,6 @@ final class EMTHEME_Theme_Class {
 	 */
 	public static function theme_setup() {
 		$dir_include = EMTHEME_INC_DIR;
-		$dir_lib = EMTHEME_LIB_DIR_URI;
 		// Load text domain.
 		load_theme_textdomain( 'emTheme', EMTHEME_THEME_DIR . '/languages' );
 
@@ -229,11 +228,8 @@ final class EMTHEME_Theme_Class {
 		/**
 		 * Custom post types.
 		 */
-		require_once $dir_lib . 'EMTHEME_class_custom_post_types.php';
-		require_once $dir_lib . 'EMTHEME_class_custom_post_meta.php';
-		//require_once __DIR__ . '/lib/custom-taxonomies.php';
-		//require_once __DIR__ . '/lib/custom-post-meta.php';
-
+		require_once $dir_include . '/classes/EMTHEME_class_custom_post_types.php';
+		require_once $dir_include . '/classes/EMTHEME_class_custom_post_meta.php';
 
 		/**
 		 * Load Jetpack compatibility file.
