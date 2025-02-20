@@ -197,14 +197,5 @@
       </div>
    </section>
 
-   <section class="em-portfolio-contact-section" style="background-image: url('<?php echo get_stylesheet_directory_uri() . "/img/bg.jpg"?>');">
-
-   <div class="em-portfolio-contact-overlay"> 
-        <h2 class="em-contact-section-title wow fadeInUp" data-wow-duration="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-name: fadeInUp;">Contact</h2>
-        <div class="em-portfolio-contact-form">
-         <?php echo do_shortcode( '[gravityform id="1" title="false" description="false" ajax="true"]' );?>
-        </div> 
-   </div>
-   </section>
 </article>
 <?php get_footer(); ?>
