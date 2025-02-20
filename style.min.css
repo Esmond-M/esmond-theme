@@ -1347,6 +1347,9 @@ button.control:hover:before {
   margin: auto;
   padding: 0 10px;
 }
+.em-portfolio-about-sec a:hover {
+  text-decoration: underline;
+}
 
 .em-portfolio-about-sec h2.em-portfolio-section-title {
   text-align: center;
