@@ -157,7 +157,7 @@
             $services_post_args = array(
             	'post_type' => 'esmond-services',
             	'post_status' => 'publish',
-            	'posts_per_page' => 3,
+            	'posts_per_page' => 6,
             	'orderby'   => 'date',
                    'order' => 'ASC',
             
