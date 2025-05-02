@@ -300,6 +300,13 @@ porfolio section
   font-weight: 700;
 }
 
+.em-modal-content a {
+  color:#3289b5;
+}
+.em-modal-content a:hover {
+  color:#3289b5;
+  text-decoration:underline;
+}
 .em-modal-closebtn {
   background: brown;
 }
@@ -1347,6 +1354,9 @@ button.control:hover:before {
   margin: auto;
   padding: 0 10px;
 }
+.em-portfolio-about-sec a:hover {
+  text-decoration: underline;
+}
 
 .em-portfolio-about-sec h2.em-portfolio-section-title {
   text-align: center;
@@ -1407,6 +1417,9 @@ button.control:hover:before {
 #em-portfolio-featured-post-section {
   padding: 60px 0;
   background: white;
+}
+#em-portfolio-featured-post-section .em-portfolio-section-title {
+  margin: 0 auto 0;
 }
 
 .em-portfolio-featured-post-wrap {
@@ -1766,128 +1779,6 @@ button.control:hover:before {
 }
 
 .em-portfolio-blog-date .fa {
-  margin-right: 8px;
-}
-
-#em-portfolio-contact-section {
-  color: #fff;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.em-portfolio-contact-section {
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.em-portfolio-contact-section .em-portfolio-contact-overlay {
-  position: relative;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 0 20px;
-}
-
-#em-portfolio-contact-section .em-portfolio-contact-overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-h2.em-contact-section-title {
-  text-align: center;
-  font-family: roboto condensed, sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 2.5em;
-  padding: 60px 0 0px 0;
-  color: white;
-  z-index: 4;
-}
-
-#em-portfolio-contact-section .em-portfolio-container {
-  position: relative;
-}
-
-.em-portfolio-contact-form {
-  width: 50%;
-  margin: auto;
-}
-
-.validation_message, .gfield_validation_message {
-  background: white;
-}
-
-.gform_confirmation_wrapper {
-  text-align: center;
-  font-size: 25px;
-  color: white;
-  padding: 10px 10px 100px 10px;
-}
-
-.gform_validation_errors {
-  background: white;
-}
-
-.em-portfolio-contact-form .gform_legacy_markup_wrapper li.gfield.gfield_error {
-  background-color: white;
-  padding: 10px;
-}
-
-.em-portfolio-contact-form .gform_legacy_markup_wrapper .top_label {
-  color: white;
-}
-
-.em-portfolio-contact-form .gform_legacy_markup_wrapper {
-  margin-bottom: 0px;
-  margin-top: 16px;
-  max-width: 100%;
-}
-
-#gform_submit_button_1:hover {
-  background: coral;
-}
-
-.em-portfolio-contact-form input[type=text], .em-portfolio-contact-form input[type=email], .em-portfolio-contact-form input[type=url], .em-portfolio-contact-form input[type=password], .em-portfolio-contact-form input[type=search], .em-portfolio-contact-form input[type=number], .em-portfolio-contact-form input[type=tel], .em-portfolio-contact-form input[type=range], .em-portfolio-contact-form input[type=date], .em-portfolio-contact-form input[type=month], .em-portfolio-contact-form input[type=week], .em-portfolio-contact-form input[type=time], .em-portfolio-contact-form input[type=datetime], .em-portfolio-contact-form input[type=datetime-local], .em-portfolio-contact-form input[type=color], .em-portfolio-contact-form textarea {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-}
-
-.em-portfolio-contact-form input[type=submit] {
-  width: 100%;
-}
-
-.em-portfolio-contact-form textarea {
-  height: 100px;
-}
-
-.em-portfolio-contact-address {
-  width: 46%;
-}
-
-.em-portfolio-contact-address ul {
-  margin: 0 0 25px;
-  padding: 0;
-  list-style: none;
-}
-
-.em-portfolio-contact-address ul li {
-  margin-bottom: 10px;
-}
-
-.em-portfolio-contact-address ul li .fa {
   margin-right: 8px;
 }
 
@@ -3438,10 +3329,6 @@ textarea {
 a {
   color: #ee3b24;
   text-decoration: none;
-}
-
-a:visited {
-  color: #ee3b24;
 }
 
 a:hover, a:focus, a:active {
