@@ -96,7 +96,7 @@
             	'post_type' => 'esmond-portfolio',
             	'post_status' => 'publish',
             	'posts_per_page' => 9,
-            	'orderby'   => 'date',
+            	'orderby'   => 'menu_order',
                    'order' => 'ASC',
             
             );
