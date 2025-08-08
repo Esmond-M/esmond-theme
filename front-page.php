@@ -8,29 +8,33 @@
       </div>
       <!-- .entry-content -->
    </section>
-   <section id="em-portfolio-home-slider-section">
+   <section id="em-portfolio-hero-section">
       <div id="em-portfolio-inner-contain">
       </div>
    </section>
-   <section id="about" class="em-portfolio-about-us-section">
+   <header id="about" class="em-portfolio-about-us-section">
       <div class="upwork-btn-area">
          <a target="_blank" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/">
          <button class="upwork-btn">upwork reviews</button>		</a>
       </div>
       <h1 class="em-name"><b>Esmond MCcain</b></h1>
-      <div class="em-heading-h4 em-site-font-color">Full-stack Web Developer</div>
-      <ul class="em-social-icons">
-         <li>
-            <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/esmond-m-a17244129/"><i class="fab fa-linkedin"></i></a>
-         </li>
-         <li>
-            <a rel="noopener noreferrer" target="_blank" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/"><img class="upwork-svg-icon" src="<?php echo get_stylesheet_directory_uri(); ?>\img\svg\upwork.svg" alt="Esmond Upwork Portfolio"></a>
-         </li>
-         <li>
-            <a rel="noopener noreferrer" target="_blank" href="https://github.com/Esmond-M"><i class="fab fa-github"></i></a>
-         </li>
-      </ul>
-   </section>
+      <p class="em-heading-h4 em-site-font-color">Full-stack Web Developer</p>
+      <nav aria-label="Social links">
+         <ul class="em-social-icons">
+            <li>
+               <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/esmond-m-a17244129/"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+               <a rel="noopener noreferrer" target="_blank" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/">
+                  <img class="upwork-svg-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/svg/upwork.svg" alt="Esmond Upwork Portfolio">
+               </a>
+            </li>
+            <li>
+               <a rel="noopener noreferrer" target="_blank" href="https://github.com/Esmond-M"><i class="fab fa-github"></i></a>
+            </li>
+         </ul>
+      </nav>
+   </header>
    <section class="em-portfolio-about-us-section-second">
       <div class="em-portfolio-about-sec wow zoomIn" data-wow-duration="1s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: zoomIn;">
          <div class="em-portfolio-content">
