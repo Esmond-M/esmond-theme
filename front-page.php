@@ -1,7 +1,6 @@
 <?php
    get_header(); 
-   
-   ?>
+?>
 <main id="post-<?php the_ID(); ?>" <?php post_class("em-page-content"); ?> >
    <section>
       <div class="entry-content">
@@ -42,46 +41,24 @@
             <p style="color: black; text-align: center;font-size:17px;"><strong>I work with different web agencies on a contract/full-time basis. I have ample experience collaborating with both different team members and clients to complete projects. I am currently working in the “LAMP/WordPress” stack but am branching out to learn more JavaScript frameworks like React for example. If you wish to contact me please message me through my email at <a href="mailto:esmondmccain@gmail.com">esmondmccain@gmail.com</a> or through <a class="gen-link" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/">upwork</a>.</strong></p>
          </div>
          <div class="em-portfolio-progress-bar-sec">
-            <div class="em-portfolio-progress em-portfolio-progress-count1">
-               <h6>WORDPRESS THEME DEVELOPMENT</h6>
+         <?php
+         $skills = [
+            'WORDPRESS THEME DEVELOPMENT',
+            'WORDPRESS PLUGIN DEVELOPMENT',
+            'PHP & BACKEND DEVELOPMENT',
+            'FRONTEND DEVELOPMENT',
+            'TEAM COLLABORATION'
+         ];
+         foreach ($skills as $skill) : ?>
+            <div class="em-portfolio-progress">
+               <h3><?php echo $skill; ?></h3>
                <div class="em-portfolio-progress-bar">
                   <div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
-                     100%							
+                     100%
                   </div>
                </div>
             </div>
-            <div class="em-portfolio-progress em-portfolio-progress-count2">
-               <h6>WORDPRESS PLUGIN DEVELOPMENT</h6>
-               <div class="em-portfolio-progress-bar">
-                  <div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
-                     100%							
-                  </div>
-               </div>
-            </div>
-            <div class="em-portfolio-progress em-portfolio-progress-count3">
-               <h6>PHP &amp; BACKEND DEVELOPMENT</h6>
-               <div class="em-portfolio-progress-bar">
-                  <div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
-                     100%							
-                  </div>
-               </div>
-            </div>
-            <div class="em-portfolio-progress em-portfolio-progress-count4">
-               <h6>FRONTEND DEVELOPMENT</h6>
-               <div class="em-portfolio-progress-bar">
-                  <div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
-                     100%							
-                  </div>
-               </div>
-            </div>
-            <div class="em-portfolio-progress em-portfolio-progress-count5">
-               <h6>TEAM COLLABORATION</h6>
-               <div class="em-portfolio-progress-bar">
-                  <div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
-                     100%							
-                  </div>
-               </div>
-            </div>
+         <?php endforeach; ?>
          </div>
       </div>
    </section>
@@ -168,10 +145,10 @@
       <div class="em-portfolio-featured-post-wrap em-portfolio-clearfix">
          <?php
             $services_post_args = array(
-            	'post_type' => 'esmond-services',
-            	'post_status' => 'publish',
-            	'posts_per_page' => 6,
-            	'orderby'   => 'date',
+                'post_type' => 'esmond-services',
+                'post_status' => 'publish',
+                'posts_per_page' => 6,
+                'orderby'   => 'date',
                    'order' => 'ASC',
             
             );
@@ -179,17 +156,17 @@
             // Variable to call WP_Query.
             $services_post_the_query = new WP_Query($services_post_args);
             if ( $services_post_the_query->have_posts() ) :
-            	// Start the Loop
+                // Start the Loop
                $services_query_count = 1;
-            	while ( $services_post_the_query->have_posts() ) : $services_post_the_query->the_post();
-            		// Start the Loop
+                while ( $services_post_the_query->have_posts() ) : $services_post_the_query->the_post();
+                    // Start the Loop
 
             
-            			$title = get_the_title();
-            			$excerpt = get_the_excerpt();
-            			$post_id = get_the_ID();
-            			$meta = get_post_meta($post_id, 'services_post_icon_class_value', true);
-            			?>
+                        $title = get_the_title();
+                        $excerpt = get_the_excerpt();
+                        $post_id = get_the_ID();
+                        $meta = get_post_meta($post_id, 'services_post_icon_class_value', true);
+                        ?>
          <div class="em-portfolio-featured-post em-portfolio-featured-post-<?php echo $services_query_count;?> wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0s; animation-name: fadeInLeft;">
             <div class="em-portfolio-featured-icon"><i class="<?php echo $meta; ?>"></i></div>
             <div class="em-heading-h3"><?php echo $title; ?></div>
@@ -200,7 +177,7 @@
             endwhile;
             else:
             // If no posts match this query, output this text.
-            	_e( 'Sorry, no posts matched your criteria.', 'esmond-theme-portfolio' );
+                _e( 'Sorry, no posts matched your criteria.', 'esmond-theme-portfolio' );
             endif; 
             
             // If no posts match this query, output this text. 
