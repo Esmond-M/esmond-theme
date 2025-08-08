@@ -97,6 +97,24 @@
 
 /* Controls
 ---------------------------------------------------------------------- */
+/* Match h3 styles */
+.em-heading-h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Match h4 styles */
+.em-heading-h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 /*--------------------------------------------------------------
 >>>About us
 ----------------------------------------------------------------
@@ -300,13 +318,6 @@ porfolio section
   font-weight: 700;
 }
 
-.em-modal-content a {
-  color:#3289b5;
-}
-.em-modal-content a:hover {
-  color:#3289b5;
-  text-decoration:underline;
-}
 .em-modal-closebtn {
   background: brown;
 }
@@ -3329,6 +3340,10 @@ textarea {
 a {
   color: #ee3b24;
   text-decoration: none;
+}
+
+a:visited {
+  color: #ee3b24;
 }
 
 a:hover, a:focus, a:active {

@@ -18,7 +18,7 @@
          <button class="upwork-btn">upwork reviews</button>		</a>
       </div>
       <h1 class="em-name"><b>Esmond MCcain</b></h1>
-      <h4 class="em-site-font-color">Full-stack Web Developer</h4>
+      <div class="em-heading-h4 em-site-font-color">Full-stack Web Developer</div>
       <ul class="em-social-icons">
          <li>
             <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/esmond-m-a17244129/"><i class="fab fa-linkedin"></i></a>
@@ -83,69 +83,78 @@
    </section>
 
    <section id="em-portfolio-portfolio-section" >
-      <h2 id="portfolio" class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.2s" style="visibility: visible; animation-duration: 0.2s; animation-name: fadeInUp;">Portfolio</h2>
-	  <div class="controls">
-				<button type="button" class="control mixitup-control-active" data-filter="all">All</button>
-				<button type="button" class="control" data-filter=".react">React</button>
-				<button type="button" class="control" data-filter=".wordpress">WordPress</button>
-	</div>
+      <h2 id="portfolio" class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.2s">Portfolio</h2>
+      <div class="controls">
+         <button type="button" class="control mixitup-control-active" data-filter="all">All</button>
+         <button type="button" class="control" data-filter=".react">React</button>
+         <button type="button" class="control" data-filter=".wordpress">WordPress</button>
+      </div>
 
-	  <div class="em-modal-container"  >
-     <?php
-            $portfolio_post_args = array(
-            	'post_type' => 'esmond-portfolio',
-            	'post_status' => 'publish',
-            	'posts_per_page' => 9,
-            	'orderby'   => 'menu_order',
-                   'order' => 'ASC',
-            
-            );
-            
-            // Variable to call WP_Query.
-            $portfolio_post_the_query = new WP_Query($portfolio_post_args);
-            if ( $portfolio_post_the_query->have_posts() ) :
-            	// Start the Loop
-               $portfolio_query_count = 1;
-            	while ( $portfolio_post_the_query->have_posts() ) : $portfolio_post_the_query->the_post();
-            		// Start the Loop
-            			$title = get_the_title();
-            			$excerpt = get_the_excerpt();
-            			$post_id = get_the_ID();
-                     $portfolio_featuredimg = get_the_post_thumbnail_url();
-                     $portfolio_category = get_the_category($post_id);
-            			$portfolio_post_url_link_value = get_post_meta($post_id, 'portfolio_post_url_link_value', true);
-                     $portfolio_post_popup_target_id_value = get_post_meta($post_id, 'portfolio_post_popup_target_id_value', true);
-            			?>
- 			<div class="em-modal modal-<?php echo $portfolio_query_count;?> mix <?php echo strtolower($portfolio_category[1]->name);?>">
-				<div class="em-modal-inner">
-					<img src="<?php echo $portfolio_featuredimg;?>"/>
-					<div class="em-modal-caption">
-						<h4><?php echo $title;?></h4>
-						<div class="em-modal-btn-contain">
-						<a class="em-portfolio-portfolio-link" href="<?php echo $portfolio_post_url_link_value;?>" target="_blank" rel="noopener noreferrer">
-						<button type="button">Visit</button>
-					    </a>
-						<a id="<?php echo $portfolio_post_popup_target_id_value;?>" class="em-portfolio-portfolio-image" style="cursor: pointer;">
-						<button class="port-detail-btn" type="button">Details</button>
-					    </a>
-						</div>
-
-					</div>
-				</div>	
-			</div>
+      <div class="em-modal-container">
          <?php
-            $portfolio_query_count++;
+         // Portfolio Query Arguments
+         $portfolio_post_args = array(
+            'post_type'      => 'esmond-portfolio',
+            'post_status'    => 'publish',
+            'posts_per_page' => 9,
+            'orderby'        => 'menu_order',
+            'order'          => 'ASC',
+         );
+
+         // Run Query
+         $portfolio_post_the_query = new WP_Query($portfolio_post_args);
+
+         // Check for posts
+         if ($portfolio_post_the_query->have_posts()) :
+            $portfolio_query_count = 1;
+            while ($portfolio_post_the_query->have_posts()) : $portfolio_post_the_query->the_post();
+
+               // Gather post data
+               $title      = get_the_title();
+               $excerpt    = get_the_excerpt();
+               $post_id    = get_the_ID();
+               $featured_img = get_the_post_thumbnail_url();
+               $categories = get_the_category($post_id);
+               $category   = !empty($categories[1]->name) ? strtolower($categories[1]->name) : '';
+               $url_link   = get_post_meta($post_id, 'portfolio_post_url_link_value', true);
+               $popup_id   = get_post_meta($post_id, 'portfolio_post_popup_target_id_value', true);
+
+               // Output portfolio item
+               ?>
+               <div class="em-modal modal-<?php echo $portfolio_query_count; ?> mix <?php echo esc_attr($category); ?>">
+                  <div class="em-modal-inner">
+                     <?php if ($featured_img): ?>
+                        <img src="<?php echo esc_url($featured_img); ?>" alt="<?php echo esc_attr($title); ?>" />
+                     <?php endif; ?>
+                     <div class="em-modal-caption">
+                        <div class="em-heading-h4"><?php echo esc_html($title); ?></div>
+                        <div class="em-modal-btn-contain">
+                           <?php if ($url_link): ?>
+                              <a class="em-portfolio-portfolio-link" href="<?php echo esc_url($url_link); ?>" target="_blank" rel="noopener noreferrer">
+                                 <button type="button">Visit</button>
+                              </a>
+                           <?php endif; ?>
+                           <?php if ($popup_id): ?>
+                              <a id="<?php echo esc_attr($popup_id); ?>" class="em-portfolio-portfolio-image" style="cursor: pointer;">
+                                 <button class="port-detail-btn" type="button">Details</button>
+                              </a>
+                           <?php endif; ?>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <?php
+               $portfolio_query_count++;
             endwhile;
-            else:
-            // If no posts match this query, output this text.
-            	_e( 'Sorry, no posts matched your criteria.', 'esmond-theme-portfolio' );
-            endif; 
-            
-            // If no posts match this query, output this text. 
-            wp_reset_postdata();
-            
-            ?> 
-	  </div>
+         else:
+            // No posts found
+            _e('Sorry, no posts matched your criteria.', 'esmond-theme-portfolio');
+         endif;
+
+         // Reset post data
+         wp_reset_postdata();
+         ?>
+      </div>
    </section>
    <section id="em-portfolio-featured-post-section" >
       <div class="em-portfolio-container">
@@ -179,7 +188,7 @@
             			?>
          <div class="em-portfolio-featured-post em-portfolio-featured-post-<?php echo $services_query_count;?> wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0s; animation-name: fadeInLeft;">
             <div class="em-portfolio-featured-icon"><i class="<?php echo $meta; ?>"></i></div>
-            <h3><?php echo $title; ?></h3>
+            <div class="em-heading-h3"><?php echo $title; ?></div>
             <div class="em-portfolio-featured-excerpt"><?php echo get_the_excerpt(); ?></div>
          </div>
          <?php
