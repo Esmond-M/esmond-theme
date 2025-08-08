@@ -2,7 +2,7 @@
    get_header(); 
    
    ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class("em-page-content"); ?> >
+<main id="post-<?php the_ID(); ?>" <?php post_class("em-page-content"); ?> >
    <section>
       <div class="entry-content">
       </div>
@@ -206,5 +206,5 @@
       </div>
    </section>
 
-</article>
+</main>
 <?php get_footer(); ?>
