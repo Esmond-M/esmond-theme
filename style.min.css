@@ -318,6 +318,13 @@ porfolio section
   font-weight: 700;
 }
 
+.em-modal-content a {
+  color:#3289b5;
+}
+.em-modal-content a:hover {
+  color:#3289b5;
+  text-decoration:underline;
+}
 .em-modal-closebtn {
   background: brown;
 }
@@ -337,6 +344,7 @@ porfolio section
 .em-modal-closebtn:hover {
   background: coral;
 }
+
 
 /*--------------------------------------------------------------
 >>> Page content

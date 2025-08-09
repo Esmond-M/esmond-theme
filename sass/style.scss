@@ -304,12 +304,19 @@ porfolio section
 .em-modal-content {
     padding: 1rem;
     font-weight: 700
+    a{
+       color:#3289b5;    
+    }
+    a:hover{
+       color:#3289b5;
+       text-decoration:underline; 
+    }
 }
 
 .em-modal-closebtn {
     background: brown
 }
-
+ 
 .modal-footer {
     font-weight: 700
 }
