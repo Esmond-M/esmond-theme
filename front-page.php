@@ -102,13 +102,15 @@
 
                // Output portfolio item
                ?>
-               <div class="em-modal modal-<?php echo $portfolio_query_count; ?> mix <?php echo esc_attr($category); ?>">
+              <article class="em-modal modal-<?php echo $portfolio_query_count; ?> mix <?php echo esc_attr($category); ?>">
                   <div class="em-modal-inner">
                      <?php if ($featured_img): ?>
-                        <img src="<?php echo esc_url($featured_img); ?>" alt="<?php echo esc_attr($title); ?>" />
+                        <figure>
+                           <img src="<?php echo esc_url($featured_img); ?>" alt="<?php echo esc_attr($title); ?>" />
+                        </figure>
                      <?php endif; ?>
                      <div class="em-modal-caption">
-                        <div class="em-heading-h4"><?php echo esc_html($title); ?></div>
+                        <h3><?php echo esc_html($title); ?></h3>
                         <div class="em-modal-btn-contain">
                            <?php if ($url_link): ?>
                               <a class="em-portfolio-portfolio-link" href="<?php echo esc_url($url_link); ?>" target="_blank" rel="noopener noreferrer">
@@ -123,7 +125,7 @@
                         </div>
                      </div>
                   </div>
-               </div>
+               </article>
                <?php
                $portfolio_query_count++;
             endwhile;
