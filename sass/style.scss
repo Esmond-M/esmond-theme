@@ -95,7 +95,24 @@
 ---------------------------------------------------------------------- */
 
 
+/* Match h3 styles */
+.em-heading-h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
+/* Match h4 styles */
+.em-heading-h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+ 
 
 /*--------------------------------------------------------------
 >>>About us
@@ -246,7 +263,7 @@ porfolio section
 .em-modal-btn-contain .em-portfolio-portfolio-image button:hover{
 	background:coral;
 }
-.em-modal-caption h4 {
+.em-modal-caption h3 {
     color: #fff;
     margin: 15% 0 10px;
     font-weight: 400;
@@ -287,12 +304,19 @@ porfolio section
 .em-modal-content {
     padding: 1rem;
     font-weight: 700
+    a{
+       color:#3289b5;    
+    }
+    a:hover{
+       color:#3289b5;
+       text-decoration:underline; 
+    }
 }
 
 .em-modal-closebtn {
     background: brown
 }
-
+ 
 .modal-footer {
     font-weight: 700
 }
@@ -1198,7 +1222,7 @@ button.control:hover:before{
     background: #000
 }
 
-#em-portfolio-home-slider-section {
+#em-portfolio-hero-section {
     background-image: url(https://esmondmccain.com/wp-content/uploads/2020/02/home-background.png);
 	background-size: cover;
     background-position: inherit;
@@ -1210,7 +1234,7 @@ button.control:hover:before{
     min-height: inherit;
 	
 }
-#em-portfolio-home-slider-section:before {
+#em-portfolio-hero-section:before {
     content: "";
     z-index: -1;
     position: absolute;
@@ -1221,11 +1245,11 @@ button.control:hover:before{
     background: rgba(0, 0, 0, .2);
 }
 
-#em-portfolio-home-slider-section .bx-wrapper {
+#em-portfolio-hero-section .bx-wrapper {
     margin: 0
 }
 
-#em-portfolio-home-slider-section .bx-wrapper .bx-viewport {
+#em-portfolio-hero-section .bx-wrapper .bx-viewport {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -1290,7 +1314,7 @@ button.control:hover:before{
     font-weight: 300
 }
 
-#em-portfolio-home-slider-section .bx-wrapper .bx-controls-direction a {
+#em-portfolio-hero-section .bx-wrapper .bx-controls-direction a {
     height: 60px;
     width: 42px;
     margin-top: -20px;
@@ -1299,16 +1323,16 @@ button.control:hover:before{
     border-radius: 1px
 }
 
-#em-portfolio-home-slider-section .bx-wrapper .bx-controls-direction a:hover {
+#em-portfolio-hero-section .bx-wrapper .bx-controls-direction a:hover {
     opacity: 1
 }
 
-#em-portfolio-home-slider-section .bx-wrapper .bx-prev {
+#em-portfolio-hero-section .bx-wrapper .bx-prev {
     background: url(images/prev.png) no-repeat center;
     left: 20px
 }
 
-#em-portfolio-home-slider-section .bx-wrapper .bx-next {
+#em-portfolio-hero-section .bx-wrapper .bx-next {
     background: url(images/next.png) no-repeat center;
     right: 20px
 }
@@ -1354,7 +1378,7 @@ button.control:hover:before{
     margin-bottom: 0
 }
 
-.em-portfolio-progress h6 {
+.em-portfolio-progress h3 {
     font-weight: 500;
     font-size: 16px
 }
@@ -2059,11 +2083,11 @@ and (max-width : 760px) {
         font-size: 16px
     }
 
-    #em-portfolio-home-slider-section {
+    #em-portfolio-hero-section {
         min-height: 0
     }
 
-    #em-portfolio-home-slider-section .bx-wrapper .bx-controls-direction a {
+    #em-portfolio-hero-section .bx-wrapper .bx-controls-direction a {
         display: none
     }
 
@@ -2474,7 +2498,7 @@ body {
 
 main {
 	display: block;
-	padding: 10px;
+	padding: 0px; 
 }
 
 

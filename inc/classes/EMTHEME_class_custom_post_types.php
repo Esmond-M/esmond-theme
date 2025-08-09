@@ -52,7 +52,7 @@ if (!class_exists('EMTHEME_theme_custom_post_types_Class')) {
 					'with_front' => true,
 				),
 				'query_var'             => true,
-				'supports'              => array( 'title',  'thumbnail'),
+				'supports'              => array( 'title',  'thumbnail', 'page-attributes'),
 				'taxonomies'            => array( 'category' ),
 				'show_in_graphql'       => false,
 			);
