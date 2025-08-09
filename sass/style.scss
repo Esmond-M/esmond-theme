@@ -7,7 +7,7 @@
     width: 100%;
 	margin: auto;
 }
-.site-header  {
+.site-header #site-navigation {
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -303,13 +303,13 @@ porfolio section
 
 .em-modal-content {
     padding: 1rem;
-    font-weight: 700
-    a{
-       color:#3289b5;    
-    }
-    a:hover{
+    font-weight: 700;
+    a {
+       color:#3289b5;  
+      &:hover {
        color:#3289b5;
        text-decoration:underline; 
+      }     
     }
 }
 
