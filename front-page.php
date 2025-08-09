@@ -142,7 +142,7 @@
 
    <section id="em-portfolio-featured-post-section">
       <div class="em-portfolio-container">
-      <h2 class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.5s">Services</h2>
+      <h2 id="services" class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.5s">Services</h2>
       <div class="em-portfolio-featured-post-wrap em-portfolio-clearfix">
          <?php
          $services_post_args = array(
