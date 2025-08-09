@@ -139,55 +139,41 @@
          ?>
       </div>
    </section>
-   <section id="em-portfolio-featured-post-section" >
+
+   <section id="em-portfolio-featured-post-section">
       <div class="em-portfolio-container">
-      <h2 id="services" class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.5s" style="visibility: visible; animation-duration: 0.5s; animation-name: fadeInUp;">
-         Services
-      </h2>
+      <h2 class="em-portfolio-section-title wow fadeInUp" data-wow-duration="0.5s">Services</h2>
       <div class="em-portfolio-featured-post-wrap em-portfolio-clearfix">
          <?php
-            $services_post_args = array(
-                'post_type' => 'esmond-services',
-                'post_status' => 'publish',
-                'posts_per_page' => 6,
-                'orderby'   => 'date',
-                   'order' => 'ASC',
-            
-            );
-            
-            // Variable to call WP_Query.
-            $services_post_the_query = new WP_Query($services_post_args);
-            if ( $services_post_the_query->have_posts() ) :
-                // Start the Loop
-               $services_query_count = 1;
-                while ( $services_post_the_query->have_posts() ) : $services_post_the_query->the_post();
-                    // Start the Loop
-
-            
-                        $title = get_the_title();
-                        $excerpt = get_the_excerpt();
-                        $post_id = get_the_ID();
-                        $meta = get_post_meta($post_id, 'services_post_icon_class_value', true);
-                        ?>
-         <div class="em-portfolio-featured-post em-portfolio-featured-post-<?php echo $services_query_count;?> wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0s" style="visibility: visible; animation-duration: 0.5s; animation-delay: 0s; animation-name: fadeInLeft;">
-            <div class="em-portfolio-featured-icon"><i class="<?php echo $meta; ?>"></i></div>
-            <div class="em-heading-h3"><?php echo $title; ?></div>
-            <div class="em-portfolio-featured-excerpt"><?php echo get_the_excerpt(); ?></div>
-         </div>
-         <?php
-            $services_query_count++;
+         $services_post_args = array(
+            'post_type'      => 'esmond-services',
+            'post_status'    => 'publish',
+            'posts_per_page' => 6,
+            'orderby'        => 'date',
+            'order'          => 'ASC',
+         );
+         $services_post_the_query = new WP_Query($services_post_args);
+         if ($services_post_the_query->have_posts()) :
+            $services_query_count = 1;
+            while ($services_post_the_query->have_posts()) : $services_post_the_query->the_post();
+               $title = get_the_title();
+               $meta  = get_post_meta(get_the_ID(), 'services_post_icon_class_value', true);
+               ?>
+               <article class="em-portfolio-featured-post em-portfolio-featured-post-<?php echo $services_query_count;?> wow fadeInLeft" data-wow-duration="0.5s">
+                  <div class="em-portfolio-featured-icon"><i class="<?php echo esc_attr($meta); ?>"></i></div>
+                  <h3 class="em-heading-h3"><?php echo esc_html($title); ?></h3>
+                  <div class="em-portfolio-featured-excerpt"><?php echo get_the_excerpt(); ?></div>
+               </article>
+               <?php
+               $services_query_count++;
             endwhile;
-            else:
-            // If no posts match this query, output this text.
-                _e( 'Sorry, no posts matched your criteria.', 'esmond-theme-portfolio' );
-            endif; 
-            
-            // If no posts match this query, output this text. 
-            wp_reset_postdata();
-            
-            ?> 
+         else:
+            _e('Sorry, no posts matched your criteria.', 'esmond-theme-portfolio');
+         endif;
+         wp_reset_postdata();
+         ?>
       </div>
+        </div>
    </section>
-
 </main>
 <?php get_footer(); ?>
