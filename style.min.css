@@ -7,7 +7,7 @@
   margin: auto;
 }
 
-.site-header {
+.site-header #site-navigation {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -317,14 +317,14 @@ porfolio section
   padding: 1rem;
   font-weight: 700;
 }
-
 .em-modal-content a {
-  color:#3289b5;
+  color: #3289b5;
 }
 .em-modal-content a:hover {
-  color:#3289b5;
-  text-decoration:underline;
+  color: #3289b5;
+  text-decoration: underline;
 }
+
 .em-modal-closebtn {
   background: brown;
 }
@@ -344,7 +344,6 @@ porfolio section
 .em-modal-closebtn:hover {
   background: coral;
 }
-
 
 /*--------------------------------------------------------------
 >>> Page content
