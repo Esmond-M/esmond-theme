@@ -1,40 +1,43 @@
-jQuery(document).ready(function($) {
+jQuery(function($) {
+    // Sticky header logic
+    var $header = $('.site-header');
+    var fixmeTop = $header.offset().top;
+    var $placeholder = $('.emTheme-fixedheader-placeholder');
 
-    var fixmeTop = jQuery('.site-header').offset().top;
-    jQuery(window).scroll(function() {
-        var currentScroll = jQuery(window).scrollTop();
+    $(window).on('scroll', function() {
+        var currentScroll = $(window).scrollTop();
         if (currentScroll >= fixmeTop) {
-            jQuery(".site-header").last().addClass("scroll-with");
-
-            jQuery('.emTheme-fixedheader-placeholder').css({
-                display: 'block'
-            });
+            $header.last().addClass('scroll-with');
+            $placeholder.show();
         } else {
-
-            if (jQuery('.scroll-with').length) {
-                jQuery(".site-header").removeClass('scroll-with');
-            }
-            jQuery('.emTheme-fixedheader-placeholder').css({
-                display: 'none'
-            });
+            $header.removeClass('scroll-with');
+            $placeholder.hide();
         }
     });
-    jQuery(".about").click(function() {
-        jQuery('html, body').animate({
-            scrollTop: jQuery("#about").offset().top
-        }, 500);
-    });
-    jQuery(".portfolio").click(function() {
-        jQuery('html, body').animate({
-            scrollTop: jQuery("#portfolio").offset().top
-        }, 500);
-    });
-    jQuery(".services").click(function() {
-        jQuery('html, body').animate({
-            scrollTop: jQuery("#services").offset().top
-        }, 500);
-    });
-    var containerEl = document.querySelector('.em-modal-container');
 
-    var mixer = mixitup(containerEl);
+    // Smooth scroll navigation
+    function smoothScrollTo(selector) {
+        var $target = $(selector);
+        if ($target.length) {
+            $('html, body').animate({
+                scrollTop: $target.offset().top
+            }, 500);
+        }
+    }
+
+    $('.about').on('click', function() {
+        smoothScrollTo('#about');
+    });
+    $('.portfolio').on('click', function() {
+        smoothScrollTo('#portfolio');
+    });
+    $('.services').on('click', function() {
+        smoothScrollTo('#services');
+    });
+
+    // Mixitup initialization
+    var containerEl = document.querySelector('.em-modal-container');
+    if (containerEl) {
+        mixitup(containerEl);
+    }
 });
