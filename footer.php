@@ -9,29 +9,30 @@
  * @package esmond-theme-portfolio
  */
 ?>
- <footer id="colophon" class="site-footer emThemefooter">
-<?php
- if ( is_active_sidebar( 'footer-one' ) || is_active_sidebar( 'footer-two' ) || is_active_sidebar( 'footer-three' ) ) : ?>
-	<div class="footer-widgets">
-		<?php if ( is_active_sidebar( 'footer-one' ) ) : ?>
-			<div class="footer-widget-area">
-				<?php dynamic_sidebar( 'footer-one' ); ?>
-			</div>
-		<?php endif; ?>
-		<?php if ( is_active_sidebar( 'footer-two' ) ) : ?>
-			<div class="footer-widget-area">
-				<?php dynamic_sidebar( 'footer-two' ); ?>
-			</div>
-		<?php endif; ?>
-		<?php if ( is_active_sidebar( 'footer-three' ) ) : ?>
-			<div class="footer-widget-area">
-				<?php dynamic_sidebar( 'footer-three' ); ?>
-			</div>
-		<?php endif; ?>
-	</div><!-- .footer-widgets -->
-<?php endif; ?>
+<footer id="colophon" class="site-footer emThemefooter" role="contentinfo">
+    <?php if ( is_active_sidebar( 'footer-one' ) || is_active_sidebar( 'footer-two' ) || is_active_sidebar( 'footer-three' ) ) : ?>
+        <aside class="footer-widgets" aria-label="Footer Widgets">
+            <?php if ( is_active_sidebar( 'footer-one' ) ) : ?>
+                <section class="footer-widget-area" aria-label="Footer Widget One">
+                    <?php dynamic_sidebar( 'footer-one' ); ?>
+                </section>
+            <?php endif; ?>
+            <?php if ( is_active_sidebar( 'footer-two' ) ) : ?>
+                <section class="footer-widget-area" aria-label="Footer Widget Two">
+                    <?php dynamic_sidebar( 'footer-two' ); ?>
+                </section>
+            <?php endif; ?>
+            <?php if ( is_active_sidebar( 'footer-three' ) ) : ?>
+                <section class="footer-widget-area" aria-label="Footer Widget Three">
+                    <?php dynamic_sidebar( 'footer-three' ); ?>
+                </section>
+            <?php endif; ?>
+        </aside>
+    <?php endif; ?>
 
-<div class="copy-right">© <?php echo date("Y"); ?> Esmond. All Rights Reserved.</div>
+    <div class="copy-right">
+        <small>© <?php echo date("Y"); ?> Esmond. All Rights Reserved.</small>
+    </div>
 </footer><!-- #colophon -->
 <?php wp_footer(); ?>
 </body>
