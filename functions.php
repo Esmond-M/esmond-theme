@@ -24,14 +24,60 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Core Constants.
-define( 'EMTHEME_THEME_DIR', get_template_directory() );
-define( 'EMTHEME_THEME_URI', get_template_directory_uri() );
+// ...existing code...
 
 /**
  * emThemeWP theme class
  */
 final class EMTHEME_Theme_Class {
+	/**
+	 * Get theme version
+	 */
+	public static function get_theme_version() {
+		return '3.6.0';
+	}
+
+	/**
+	 * Get theme directory
+	 */
+	public static function get_theme_dir() {
+		return get_template_directory();
+	}
+
+	/**
+	 * Get theme URI
+	 */
+	public static function get_theme_uri() {
+		return get_template_directory_uri();
+	}
+
+	/**
+	 * Get lib directory URI
+	 */
+	public static function get_lib_dir_uri() {
+		return self::get_theme_dir() . '/lib/';
+	}
+
+	/**
+	 * Get JS directory URI
+	 */
+	public static function get_js_dir_uri() {
+		return self::get_theme_uri() . '/assets/js/';
+	}
+
+	/**
+	 * Get CSS directory URI
+	 */
+	public static function get_css_dir_uri() {
+		return self::get_theme_uri() . '/assets/css/';
+	}
+
+	/**
+	 * Get inc directory
+	 */
+	public static function get_inc_dir() {
+		return self::get_theme_dir() . '/inc/';
+	}
 
 	/**
 	 * Main Theme Class Constructor
@@ -84,24 +130,10 @@ final class EMTHEME_Theme_Class {
 
 
 	/**
-	 * Define Constants
-	 *
-	 * @since   1.0.0
+	 * No longer needed: Define Constants
 	 */
 	public static function emTheme_constants() {
-
-		// Theme version.
-		define( 'EMTHEME_THEME_VERSION', '3.6.0' );
-
-		define( 'EMTHEME_LIB_DIR_URI', EMTHEME_THEME_DIR .'/lib/');
-
-		// Javascript and CSS Paths.
-		define( 'EMTHEME_JS_DIR_URI', EMTHEME_THEME_URI . '/assets/js/' );
-		define( 'EMTHEME_CSS_DIR_URI', EMTHEME_THEME_URI . '/assets/css/' );
-
-		// Include Paths.
-		define( 'EMTHEME_INC_DIR', EMTHEME_THEME_DIR . '/inc/' );
-
+		// Deprecated: constants removed in favor of static methods.
 	}
 
 
@@ -122,9 +154,9 @@ final class EMTHEME_Theme_Class {
 	 * @since   1.0.0
 	 */
 	public static function theme_setup() {
-		$dir_include = EMTHEME_INC_DIR;
-		// Load text domain.
-		load_theme_textdomain( 'emTheme', EMTHEME_THEME_DIR . '/languages' );
+	$dir_include = self::get_inc_dir();
+	// Load text domain.
+	load_theme_textdomain( 'emTheme', self::get_theme_dir() . '/languages' );
 
 		// Get globals.
 		global $content_width;
@@ -284,15 +316,15 @@ final class EMTHEME_Theme_Class {
 	 */
 	public static function theme_css() {
 
-		// Define dir.
-		$dir           = EMTHEME_CSS_DIR_URI;
-		$theme_version = EMTHEME_THEME_VERSION;
-		$nonCache_version = rand( 1, 99999999999 );
-		wp_enqueue_style( 'emTheme', get_stylesheet_directory_uri() ."/style.min.css", array(), $nonCache_version );
-		wp_enqueue_style( 'gfont-css', get_stylesheet_directory_uri() ."/assets/css/g-fonts.css", array(), $theme_version );
-		wp_style_add_data( 'emTheme', 'rtl', 'replace' );
-		wp_enqueue_style('font-awesome-official-css', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css');
-		wp_enqueue_style('font-awesome-official-v4shim-css', 'https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css');
+	// Define dir.
+	$dir           = self::get_css_dir_uri();
+	$theme_version = self::get_theme_version();
+	$nonCache_version = rand( 1, 99999999999 );
+	wp_enqueue_style( 'emTheme', get_stylesheet_directory_uri() . "/style.min.css", array(), $nonCache_version );
+	wp_enqueue_style( 'gfont-css', $dir . "g-fonts.css", array(), $theme_version );
+	wp_style_add_data( 'emTheme', 'rtl', 'replace' );
+	wp_enqueue_style('font-awesome-official-css', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css');
+	wp_enqueue_style('font-awesome-official-v4shim-css', 'https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css');
 	}
 
 	/**
@@ -302,11 +334,11 @@ final class EMTHEME_Theme_Class {
 	 */
 	public static function theme_js() {
 
-		// Get js directory uri.
-		$dir = EMTHEME_JS_DIR_URI;
+	// Get js directory uri.
+	$dir = self::get_js_dir_uri();
 
-		// Get current theme version.
-		$theme_version = EMTHEME_THEME_VERSION;
+	// Get current theme version.
+	$theme_version = self::get_theme_version();
 
 		// Main script dependencies.
 		$main_script_dependencies = array( 'jquery' );

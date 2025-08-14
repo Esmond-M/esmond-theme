@@ -2418,6 +2418,33 @@ section#em-404 {
     font-size:25px;
     
 }
+.em-404-hero-style {
+    min-height: 780px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+
+.em-404-hero-style::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.em-404-hero-style > * {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-weight: bold;
+}
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
