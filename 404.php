@@ -6,7 +6,7 @@
       <h1 id="em-404-title" class="em-name"><b>Oops! Page Not Found (404)</b></h1>
       <p>Sorry, the page you are looking for does not exist or has been moved.</p>
       <div class="em-404-actions">
-         <a href="/" class="upwork-btn">Return Home</a>
+         <a href="/" class="em-404-btn">Return Home</a>
       </div>
    </section>
 </main>

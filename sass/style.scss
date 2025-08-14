@@ -2445,7 +2445,33 @@ section#em-404 {
     color: #fff;
     font-weight: bold;
 }
+.em-404-btn {
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-shadow: 0 0 0 .2rem rgba(82,88,93,.5);
+    background-color: #343a40;
+    border-color: #343a40;
+    height: 39px;
+}
 
+.em-404-btn:hover {
+    background: #ee3b24;
+    color: white;
+}
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
