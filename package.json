@@ -53,6 +53,7 @@
     "start": "wp-scripts start",
     "test:e2e": "wp-scripts test-e2e",
     "test:unit": "wp-scripts test-unit-js",
-    "watch": "sass --watch sass/style.scss style.min.css --no-source-map"
+    "watch": "sass --watch sass/style.scss style.min.css --no-source-map",
+    "build:css": "sass sass/style.scss style.min.css --no-source-map --style=compressed"
   }
 } 
