@@ -111,17 +111,13 @@ final class EMTHEME_Theme_Class {
 			// Load theme CSS.
 			add_action( 'wp_enqueue_scripts',  [$this, 'theme_css' ] );
 
-		
 			// Add a pingback url auto-discovery header for singularly identifiable articles.
-			add_action( 'wp_head',  [$this, 'pingback_header' ] , 1 );
+			add_action( 'wp_head',  [$this, 'header_code' ] , 1 );
 			// Add meta viewport tag to header.
 			add_action( 'wp_head',   [$this, 'meta_viewport' ] , 1 );
 
 			// Add an X-UA-Compatible header.
 			add_filter( 'wp_headers',  [$this, 'x_ua_compatible_headers' ] );
-
-
-
 
 			add_filter( 'emTheme_enqueue_generated_files', '__return_false' );
 		}
@@ -285,8 +281,21 @@ final class EMTHEME_Theme_Class {
 	 *
 	 * @since 1.1.0
 	 */
-	public static function pingback_header() {
+	public static function header_code() {
+         //GA Tag
+		if($_SERVER['SERVER_NAME'] == "esmondmccain.com")
+		{
+			echo '<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-0N4NM0B59G"></script>
+			<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag(\'js\', new Date());
 
+			gtag(\'config\', \'G-0N4NM0B59G\');
+			</script>';
+		} 
+		//pingback_header
 		if ( is_singular() && pings_open() ) {
 			printf( '<link rel="pingback" href="%s">' . "\n", esc_url( get_bloginfo( 'pingback_url' ) ) );
 		}
