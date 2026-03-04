@@ -17,7 +17,8 @@
          <button class="upwork-btn">upwork reviews</button>		</a>
       </div>
       <h1 class="em-name"><b>Esmond MCcain</b></h1>
-      <p class="em-heading-h4 em-site-font-color">Full-stack Web Developer</p>
+      <p class="em-heading-h4 em-site-font-color">Full-Stack WordPress Developer</p>
+      <p class="em-site-tagline">Specializing in custom themes, plugins &amp; API integrations</p>
       <nav aria-label="Social links">
          <ul class="em-social-icons">
             <li>
@@ -40,25 +41,69 @@
             <h2 id="about" class="em-portfolio-section-title">About</h2>
             <p style="color: black; text-align: center;font-size:17px;"><strong>I work with web agencies on both contract and full-time engagements, bringing extensive experience in collaborating with teams and clients to deliver successful digital projects. My core expertise lies in the LAMP/WordPress stack, including custom theme and plugin development, API integrations, and performance optimization. I’m also expanding my skill set into modern technologies, learning PHP’s Laravel framework and JavaScript’s React library to broaden my full-stack capabilities. For inquiries, you can reach me at <a href="mailto:esmondmccain@gmail.com">esmondmccain@gmail.com</a> or via my <a class="gen-link" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/">Upwork profile</a>.</strong></p>
          </div>
-         <div class="em-portfolio-progress-bar-sec">
-         <?php
-         $skills = [
-            'WORDPRESS THEME DEVELOPMENT',
-            'WORDPRESS PLUGIN DEVELOPMENT',
-            'PHP & BACKEND DEVELOPMENT',
-            'FRONTEND DEVELOPMENT',
-            'TEAM COLLABORATION'
-         ];
-         foreach ($skills as $skill) : ?>
-            <div class="em-portfolio-progress">
-               <h3><?php echo $skill; ?></h3>
-               <div class="em-portfolio-progress-bar">
-                  <div class="em-portfolio-progress-bar-length" data-width="100" style="width: 100%; visibility: visible;">
-                     100%
+         <div class="em-expertise-stack-wrap">
+            <div class="em-core-expertise">
+               <h3 class="em-expertise-title">Core Expertise</h3>
+               <ul class="em-expertise-list">
+                  <li>
+                     <strong>WordPress Theme &amp; Gutenberg Development</strong>
+                     <span>Custom themes, Gutenberg blocks &amp; patterns, Elementor, PSD/Figma to WordPress, performance optimization</span>
+                  </li>
+                  <li>
+                     <strong>WordPress Plugin Development</strong>
+                     <span>Custom plugin architecture, WooCommerce extensions</span>
+                  </li>
+                  <li>
+                     <strong>API Integrations</strong>
+                     <span>REST APIs, third-party service integrations, webhook systems</span>
+                  </li>
+                  <li>
+                     <strong>Frontend Development</strong>
+                     <span>JavaScript, responsive UI, accessibility improvements</span>
+                  </li>
+                  <li>
+                     <strong>PHP Backend Development</strong>
+                     <span>PHP, MySQL, WordPress hooks &amp; filters</span>
+                  </li>
+                  <li>
+                     <strong>Accessibility &amp; Standards</strong>
+                     <span>WCAG 2.1 AA, Section 508, WAI-ARIA, Lighthouse / WAVE / Axe audits</span>
+                  </li>
+               </ul>
+            </div>
+            <div class="em-tech-stack">
+               <h3 class="em-expertise-title">Technologies</h3>
+               <div class="em-stack-grid">
+                  <div class="em-stack-group">
+                     <h4>Backend</h4>
+                     <ul>
+                        <li>PHP</li>
+                        <li>WordPress</li>
+                        <li>MySQL</li>
+                     </ul>
+                  </div>
+                  <div class="em-stack-group">
+                     <h4>Frontend</h4>
+                     <ul>
+                        <li>JavaScript</li>
+                        <li>HTML5</li>
+                        <li>CSS / SCSS</li>
+                     </ul>
+                  </div>
+                  <div class="em-stack-group">
+                     <h4>Tools</h4>
+                     <ul>
+                        <li>Git</li>
+                        <li>Elementor</li>
+                        <li>WooCommerce</li>
+                        <li>Advanced Custom Fields</li>
+                        <li>REST / GraphQL APIs</li>
+                        <li>Figma</li>
+                        <li>AWS &amp; Cloudflare</li>
+                     </ul>
                   </div>
                </div>
             </div>
-         <?php endforeach; ?>
          </div>
       </div>
    </section>
