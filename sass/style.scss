@@ -1413,6 +1413,98 @@ button.control:hover:before{
     transition: width 1s ease-out
 }
 
+/* Site tagline below job title */
+.em-site-tagline {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-top: -4px;
+    margin-bottom: 8px;
+}
+
+/* Core Expertise + Tech Stack */
+.em-expertise-stack-wrap {
+    width: 50%;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.em-expertise-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ee3b24;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #ee3b24;
+    padding-bottom: 6px;
+}
+
+.em-expertise-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin-bottom: 12px;
+        line-height: 1.4;
+
+        strong {
+            display: block;
+            font-size: 15px;
+            color: #222;
+        }
+
+        span {
+            font-size: 13px;
+            color: #666;
+        }
+    }
+}
+
+.em-stack-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.em-stack-group {
+    h4 {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #888;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            font-size: 14px;
+            color: #333;
+            padding: 3px 0;
+
+            &::before {
+                content: '▸ ';
+                color: #ee3b24;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .em-expertise-stack-wrap {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
 #em-portfolio-featured-post-section {
     padding: 60px 0;
     background: white;
