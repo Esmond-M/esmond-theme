@@ -46,8 +46,8 @@
                <h3 class="em-expertise-title">Core Expertise</h3>
                <ul class="em-expertise-list">
                   <li>
-                     <strong>WordPress Theme Development</strong>
-                     <span>Custom themes, Elementor customization, performance optimization</span>
+                     <strong>WordPress Theme &amp; Gutenberg Development</strong>
+                     <span>Custom themes, Gutenberg blocks &amp; patterns, Elementor, PSD/Figma to WordPress, performance optimization</span>
                   </li>
                   <li>
                      <strong>WordPress Plugin Development</strong>
@@ -64,6 +64,10 @@
                   <li>
                      <strong>PHP Backend Development</strong>
                      <span>PHP, MySQL, WordPress hooks &amp; filters</span>
+                  </li>
+                  <li>
+                     <strong>Accessibility &amp; Standards</strong>
+                     <span>WCAG 2.1 AA, Section 508, WAI-ARIA, Lighthouse / WAVE / Axe audits</span>
                   </li>
                </ul>
             </div>
@@ -92,7 +96,10 @@
                         <li>Git</li>
                         <li>Elementor</li>
                         <li>WooCommerce</li>
-                        <li>REST APIs</li>
+                        <li>Advanced Custom Fields</li>
+                        <li>REST / GraphQL APIs</li>
+                        <li>Figma</li>
+                        <li>AWS &amp; Cloudflare</li>
                      </ul>
                   </div>
                </div>
