@@ -1349,7 +1349,7 @@ button.control:hover:before{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     max-width: 1170px;
     margin: auto;
