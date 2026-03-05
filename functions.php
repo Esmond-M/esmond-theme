@@ -258,6 +258,7 @@ final class EMTHEME_Theme_Class {
 		 */
 		require_once $dir_include . '/classes/EMTHEME_class_custom_post_types.php';
 		require_once $dir_include . '/classes/EMTHEME_class_custom_post_meta.php';
+		require_once $dir_include . '/classes/EMTHEME_class_portfolio_order.php';
 
 		/**
 		 * Load Jetpack compatibility file.
