@@ -4036,6 +4036,25 @@ a:hover,a:active {
 	box-shadow: 0 2px 12px rgba(0, 0, 0, .45);
 }
 
+/* ── Home-only nav link on single post pages ─────────────────*/
+.em-back-home a {
+	display: inline-flex;
+	align-items: center;
+	gap: .4rem;
+	padding: .65rem 1.1rem;
+	color: #fff;
+	font-size: .85rem;
+	font-weight: 600;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color .2s;
+
+	&:hover {
+		color: #ee3b24;
+	}
+}
+
 /* ── Post content top padding (accounts for sticky nav) ───────
    When the header becomes sticky there is already a placeholder,
    but on page load the nav overlaps the content top edge.      */
