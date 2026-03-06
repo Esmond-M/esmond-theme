@@ -22,19 +22,27 @@
     <div class="emTheme-fixedheader-placeholder" aria-hidden="true"></div>
     <header id="masthead" class="site-header" role="banner">
         <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
-            <?php 
-                wp_nav_menu(
-                    array(
-                        'menu'                 => 8,
-                        'container'            => false,
-                        'menu_class'           => 'menu',
-                        'menu_id'              => 'primary-menu',
-                        'echo'                 => true,
-                        'fallback_cb'          => 'wp_page_menu',
-                        'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'theme_location'       => 'primary_menu',
-                    )
-                );
-            ?>
+            <?php if ( is_singular( array( 'post', 'esmond-portfolio', 'esmond-services' ) ) ) : ?>
+                <ul id="primary-menu" class="menu">
+                    <li class="menu-item em-back-home">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">← Home</a>
+                    </li>
+                </ul>
+            <?php else : ?>
+                <?php
+                    wp_nav_menu(
+                        array(
+                            'menu'           => 8,
+                            'container'      => false,
+                            'menu_class'     => 'menu',
+                            'menu_id'        => 'primary-menu',
+                            'echo'           => true,
+                            'fallback_cb'    => 'wp_page_menu',
+                            'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            'theme_location' => 'primary_menu',
+                        )
+                    );
+                ?>
+            <?php endif; ?>
         </nav>
     </header><!-- #masthead -->

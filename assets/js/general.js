@@ -40,4 +40,22 @@ jQuery(function($) {
     if (containerEl) {
         mixitup(containerEl);
     }
+
+    // Tap-to-toggle overlay on touch devices
+    if ('ontouchstart' in window) {
+        $(document).on('touchstart', function(e) {
+            var $card = $(e.target).closest('.em-modal');
+            if ($card.length) {
+                // If tapping a link/button inside an active card, let it act normally
+                if (!$(e.target).closest('a, button').length) {
+                    var wasActive = $card.hasClass('is-active');
+                    $('.em-modal').removeClass('is-active');
+                    if (!wasActive) $card.addClass('is-active');
+                    e.preventDefault();
+                }
+            } else {
+                $('.em-modal').removeClass('is-active');
+            }
+        });
+    }
 });

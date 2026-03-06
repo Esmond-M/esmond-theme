@@ -80,26 +80,33 @@
                         <li>PHP</li>
                         <li>WordPress</li>
                         <li>MySQL</li>
+                        <li>Node.js / Express</li>
+                        <li>SQLite</li>
                      </ul>
                   </div>
                   <div class="em-stack-group">
                      <h4>Frontend</h4>
                      <ul>
                         <li>JavaScript</li>
+                        <li>React</li>
+                        <li>jQuery</li>
                         <li>HTML5</li>
                         <li>CSS / SCSS</li>
+                        <li>Vite</li>
                      </ul>
                   </div>
                   <div class="em-stack-group">
                      <h4>Tools</h4>
                      <ul>
-                        <li>Git</li>
+                        <li>Git &amp; GitHub</li>
                         <li>Elementor</li>
                         <li>WooCommerce</li>
                         <li>Advanced Custom Fields</li>
                         <li>REST / GraphQL APIs</li>
                         <li>Figma</li>
                         <li>AWS &amp; Cloudflare</li>
+                        <li>Composer &amp; npm</li>
+                        <li>JWT Authentication</li>
                      </ul>
                   </div>
                </div>
@@ -122,7 +129,7 @@
          $portfolio_post_args = array(
             'post_type'      => 'esmond-portfolio',
             'post_status'    => 'publish',
-            'posts_per_page' => 11,
+            'posts_per_page' => 12,
             'orderby'        => 'menu_order',
             'order'          => 'ASC',
          );
@@ -141,7 +148,7 @@
                $post_id    = get_the_ID();
                $featured_img = get_the_post_thumbnail_url();
                $categories = get_the_category($post_id);
-               $category   = !empty($categories[1]->name) ? strtolower($categories[1]->name) : '';
+               $category   = !empty($categories) ? implode(' ', array_map(fn($cat) => strtolower($cat->name), $categories)) : '';
                $url_link   = get_post_meta($post_id, 'portfolio_post_url_link_value', true);
                $popup_id   = get_post_meta($post_id, 'portfolio_post_popup_target_id_value', true);
 
@@ -170,6 +177,7 @@
                         </div>
                      </div>
                   </div>
+                  <div class="em-modal-title"><h3><?php echo esc_html($title); ?></h3></div>
                </article>
                <?php
                $portfolio_query_count++;

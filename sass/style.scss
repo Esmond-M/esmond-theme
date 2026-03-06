@@ -234,6 +234,11 @@ porfolio section
     opacity: 0;
     background: rgba(1, 1, 1, .8);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
@@ -242,9 +247,16 @@ porfolio section
 .em-modal-container .em-modal:hover .em-modal-caption{
         opacity: 1;
 }
+.em-modal-caption h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
 .em-modal-btn-contain {
-    position: relative;
-    top: 39%;
+    position: static;
+    top: auto;
+    transform: none;
 }
 .em-modal-btn-contain button {
  font-weight:700;
@@ -263,18 +275,31 @@ porfolio section
 .em-modal-btn-contain .em-portfolio-portfolio-image button:hover{
 	background:coral;
 }
-.em-modal-caption h3 {
+/* title strip — mobile only, sits flush under the image */
+.em-modal-title {
+    background: #343a40;
+    padding: 8px 14px;
+    margin: 0 10px 10px;
+    text-align: center;
+}
+.em-modal-title h3 {
     color: #fff;
-    margin: 15% 0 10px;
-    font-weight: 400;
-    position: absolute;
-    bottom: 1%;
-    width: 100%;
-    left: 0;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    padding: 0 15px;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media (max-width: 760px) {
+    .em-modal-inner {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 761px) {
+    .em-modal-title {
+        display: none;
+    }
 }
 .em-modal-text1 {
     font-weight: 700;
@@ -2006,11 +2031,9 @@ and (max-width : 962px) {
     width: 33%;
     padding: 0px;
 }
-@media only screen 
-and (max-width : 1199px) {
-.em-modal-container .em-modal-caption{
-        opacity: 1;
-}
+/* tap-to-toggle overlay on touch devices */
+.em-modal-container .em-modal.is-active .em-modal-caption {
+    opacity: 1;
 }
 @media only screen 
 and (max-width : 1020px) {
@@ -2456,6 +2479,9 @@ and (max-width : 760px) {
     font-size: 18px;
     text-align: center;
     padding: 20px;
+    clear: both;
+    width: 100%;
+    display: block;
 }
 
 .emThemefooter a {
@@ -3991,3 +4017,365 @@ a:hover,a:active {
 }
 }
 @import "animate";
+
+/* ──────────────────────────────────────────────────────────────
+   Single Post Layout  (.em-single-post)
+   Applied via template-parts/content-post.php
+────────────────────────────────────────────────────────────── */
+
+/* ── Fix float layout on single/CPT post pages ────────────────
+   #primary is float:left globally; on single post pages we don't
+   want a sidebar float, so clear and reset the width.         */
+.single #primary,
+.single-esmond-portfolio #primary,
+.single-esmond-services #primary {
+	width: 100%;
+	float: none;
+}
+
+/* Prevent the floated #primary from pulling the footer up      */
+.single #colophon,
+.single-esmond-portfolio #colophon,
+.single-esmond-services #colophon {
+	clear: both;
+}
+
+/* ── Fixed header placeholder height ─────────────────────────
+   The JS shows this div when the header becomes sticky but never
+   sets a height, causing a scroll jump. Match the nav bar height. */
+.emTheme-fixedheader-placeholder {
+	display: none;
+	height: 48px;
+}
+
+/* ── Nav bar accent on single post pages ─────────────────────
+   Give the menu a slightly different look so it reads as a
+   "reading mode" context.                                      */
+.single .site-header #site-navigation,
+.single-esmond-portfolio .site-header #site-navigation,
+.single-esmond-services .site-header #site-navigation {
+	background: #1e2229;
+	border-top-color: #ee3b24;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, .45);
+}
+
+/* ── Home-only nav link on single post pages ─────────────────*/
+.em-back-home a {
+	display: inline-flex;
+	align-items: center;
+	gap: .4rem;
+	padding: .65rem 1.1rem;
+	color: #fff;
+	font-size: .85rem;
+	font-weight: 600;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color .2s;
+
+	&:hover {
+		color: #ee3b24;
+	}
+}
+
+/* ── Post content top padding (accounts for sticky nav) ───────
+   When the header becomes sticky there is already a placeholder,
+   but on page load the nav overlaps the content top edge.      */
+
+.em-single-post,
+.em-single-portfolio,
+.em-single-service {
+	max-width: 780px;
+	margin: 0 auto;
+	padding: 3.5rem 1.5rem 4rem;
+}
+
+/* Header */
+.em-post-header {
+	margin-bottom: 2rem;
+}
+
+.em-post-cats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .4rem;
+	margin-bottom: 1rem;
+}
+
+.em-cat-pill {
+	display: inline-block;
+	padding: .25rem .75rem;
+	background: #ee3b24;
+	color: #fff;
+	font-size: .75rem;
+	font-weight: 700;
+	letter-spacing: .06em;
+	text-transform: uppercase;
+	border-radius: 3px;
+	text-decoration: none;
+	transition: background .2s;
+
+	&:hover {
+		background: #c73120;
+		color: #fff;
+	}
+}
+
+.em-post-title {
+	font-size: clamp(1.6rem, 4vw, 2.4rem);
+	font-weight: 800;
+	line-height: 1.2;
+	color: #fff;
+	margin: .6rem 0 1rem;
+}
+
+.em-post-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .4rem .55rem;
+	font-size: .85rem;
+	color: #adb5bd;
+
+	a {
+		color: #adb5bd;
+		text-decoration: none;
+
+		&:hover {
+			color: #ee3b24;
+		}
+	}
+}
+
+.em-post-meta-sep {
+	color: #495057;
+}
+
+/* Featured image */
+.em-post-thumbnail {
+	margin: 0 0 2rem;
+	border-radius: 6px;
+	overflow: hidden;
+	line-height: 0;
+
+	.em-post-img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 6px;
+	}
+}
+
+/* Body content */
+.em-post-body {
+	color: #ced4da;
+	font-size: 1rem;
+	line-height: 1.8;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+		margin: 1.75em 0 .6em;
+		line-height: 1.3;
+		font-weight: 700;
+	}
+
+	h2 { font-size: 1.5rem; }
+	h3 { font-size: 1.25rem; }
+
+	p {
+		margin: 0 0 1.3em;
+	}
+
+	a {
+		color: #ee3b24;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+
+		&:hover {
+			color: #f4735e;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 4px;
+		margin: .5em 0 1em;
+	}
+
+	pre, code {
+		background: #1a1d27;
+		color: #e2e8f0;
+		border-radius: 4px;
+		font-size: .88rem;
+	}
+
+	pre {
+		padding: 1.1rem 1.25rem;
+		overflow-x: auto;
+		margin: 0 0 1.4em;
+		border-left: 3px solid #ee3b24;
+	}
+
+	code {
+		padding: .15em .4em;
+	}
+
+	blockquote {
+		border-left: 4px solid #ee3b24;
+		margin: 1.5em 0;
+		padding: .75rem 1.25rem;
+		background: rgba(238, 59, 36, .07);
+		color: #adb5bd;
+		font-style: italic;
+
+		p:last-child { margin-bottom: 0; }
+	}
+
+	ul, ol {
+		padding-left: 1.5rem;
+		margin: 0 0 1.3em;
+
+		li {
+			margin-bottom: .4em;
+		}
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid #2a2e42;
+		margin: 2em 0;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 0 0 1.4em;
+		font-size: .9rem;
+
+		th, td {
+			padding: .6rem 1rem;
+			border: 1px solid #2a2e42;
+			text-align: left;
+		}
+
+		th {
+			background: #1a1d27;
+			color: #fff;
+			font-weight: 600;
+		}
+
+		tr:nth-child(even) td {
+			background: rgba(255,255,255,.03);
+		}
+	}
+}
+
+/* Post footer */
+.em-post-footer {
+	margin-top: 2.5rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid #2a2e42;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+}
+
+.em-post-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .4rem;
+	flex: 1;
+}
+
+.em-tag-pill {
+	display: inline-block;
+	padding: .2rem .65rem;
+	background: rgba(255,255,255,.06);
+	color: #adb5bd;
+	font-size: .78rem;
+	border-radius: 3px;
+	text-decoration: none;
+	border: 1px solid rgba(255,255,255,.08);
+	transition: background .2s, color .2s;
+
+	&:hover {
+		background: rgba(238, 59, 36, .15);
+		color: #ee3b24;
+		border-color: rgba(238, 59, 36, .3);
+	}
+}
+
+.em-post-edit a {
+	font-size: .8rem;
+	color: #6c757d;
+	text-decoration: none;
+
+	&:hover { color: #ee3b24; }
+}
+
+/* Post navigation (prev/next) */
+.em-single-post + .post-navigation,
+.post-navigation {
+	max-width: 780px;
+	margin: 0 auto;
+	padding: 0 1.5rem 3rem;
+
+	.nav-links {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	.nav-previous, .nav-next {
+		flex: 1;
+
+		a {
+			display: block;
+			padding: 1rem 1.25rem;
+			background: #1a1d27;
+			border: 1px solid #2a2e42;
+			border-radius: 6px;
+			text-decoration: none;
+			transition: border-color .2s;
+
+			&:hover {
+				border-color: #ee3b24;
+			}
+		}
+
+		.nav-subtitle {
+			display: block;
+			font-size: .72rem;
+			text-transform: uppercase;
+			letter-spacing: .08em;
+			color: #6c757d;
+			margin-bottom: .25rem;
+		}
+
+		.nav-title {
+			display: block;
+			font-size: .9rem;
+			font-weight: 600;
+			color: #ced4da;
+		}
+	}
+
+	.nav-next {
+		text-align: right;
+	}
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 600px) {
+	.em-single-post,
+	.em-single-portfolio,
+	.em-single-service {
+		padding: 1.5rem 1rem 3rem;
+	}
+
+	.post-navigation .nav-links {
+		flex-direction: column;
+	}
+}
