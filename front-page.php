@@ -122,7 +122,7 @@
          $portfolio_post_args = array(
             'post_type'      => 'esmond-portfolio',
             'post_status'    => 'publish',
-            'posts_per_page' => 11,
+            'posts_per_page' => 12,
             'orderby'        => 'menu_order',
             'order'          => 'ASC',
          );
@@ -141,7 +141,7 @@
                $post_id    = get_the_ID();
                $featured_img = get_the_post_thumbnail_url();
                $categories = get_the_category($post_id);
-               $category   = !empty($categories[1]->name) ? strtolower($categories[1]->name) : '';
+               $category   = !empty($categories) ? implode(' ', array_map(fn($cat) => strtolower($cat->name), $categories)) : '';
                $url_link   = get_post_meta($post_id, 'portfolio_post_url_link_value', true);
                $popup_id   = get_post_meta($post_id, 'portfolio_post_popup_target_id_value', true);
 
