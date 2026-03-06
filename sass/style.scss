@@ -234,6 +234,11 @@ porfolio section
     opacity: 0;
     background: rgba(1, 1, 1, .8);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
@@ -242,9 +247,16 @@ porfolio section
 .em-modal-container .em-modal:hover .em-modal-caption{
         opacity: 1;
 }
+.em-modal-caption h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
 .em-modal-btn-contain {
-    position: relative;
-    top: 39%;
+    position: static;
+    top: auto;
+    transform: none;
 }
 .em-modal-btn-contain button {
  font-weight:700;
@@ -263,18 +275,31 @@ porfolio section
 .em-modal-btn-contain .em-portfolio-portfolio-image button:hover{
 	background:coral;
 }
-.em-modal-caption h3 {
+/* title strip — mobile only, sits flush under the image */
+.em-modal-title {
+    background: #343a40;
+    padding: 8px 14px;
+    margin: 0 10px 10px;
+    text-align: center;
+}
+.em-modal-title h3 {
     color: #fff;
-    margin: 15% 0 10px;
-    font-weight: 400;
-    position: absolute;
-    bottom: 1%;
-    width: 100%;
-    left: 0;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    padding: 0 15px;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media (max-width: 760px) {
+    .em-modal-inner {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 761px) {
+    .em-modal-title {
+        display: none;
+    }
 }
 .em-modal-text1 {
     font-weight: 700;
@@ -2006,11 +2031,9 @@ and (max-width : 962px) {
     width: 33%;
     padding: 0px;
 }
-@media only screen 
-and (max-width : 1199px) {
-.em-modal-container .em-modal-caption{
-        opacity: 1;
-}
+/* tap-to-toggle overlay on touch devices */
+.em-modal-container .em-modal.is-active .em-modal-caption {
+    opacity: 1;
 }
 @media only screen 
 and (max-width : 1020px) {

@@ -80,26 +80,33 @@
                         <li>PHP</li>
                         <li>WordPress</li>
                         <li>MySQL</li>
+                        <li>Node.js / Express</li>
+                        <li>SQLite</li>
                      </ul>
                   </div>
                   <div class="em-stack-group">
                      <h4>Frontend</h4>
                      <ul>
                         <li>JavaScript</li>
+                        <li>React</li>
+                        <li>jQuery</li>
                         <li>HTML5</li>
                         <li>CSS / SCSS</li>
+                        <li>Vite</li>
                      </ul>
                   </div>
                   <div class="em-stack-group">
                      <h4>Tools</h4>
                      <ul>
-                        <li>Git</li>
+                        <li>Git &amp; GitHub</li>
                         <li>Elementor</li>
                         <li>WooCommerce</li>
                         <li>Advanced Custom Fields</li>
                         <li>REST / GraphQL APIs</li>
                         <li>Figma</li>
                         <li>AWS &amp; Cloudflare</li>
+                        <li>Composer &amp; npm</li>
+                        <li>JWT Authentication</li>
                      </ul>
                   </div>
                </div>
@@ -170,6 +177,7 @@
                         </div>
                      </div>
                   </div>
+                  <div class="em-modal-title"><h3><?php echo esc_html($title); ?></h3></div>
                </article>
                <?php
                $portfolio_query_count++;
