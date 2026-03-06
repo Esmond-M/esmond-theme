@@ -2456,6 +2456,9 @@ and (max-width : 760px) {
     font-size: 18px;
     text-align: center;
     padding: 20px;
+    clear: both;
+    width: 100%;
+    display: block;
 }
 
 .emThemefooter a {
@@ -3997,12 +4000,52 @@ a:hover,a:active {
    Applied via template-parts/content-post.php
 ────────────────────────────────────────────────────────────── */
 
+/* ── Fix float layout on single/CPT post pages ────────────────
+   #primary is float:left globally; on single post pages we don't
+   want a sidebar float, so clear and reset the width.         */
+.single #primary,
+.single-esmond-portfolio #primary,
+.single-esmond-services #primary {
+	width: 100%;
+	float: none;
+}
+
+/* Prevent the floated #primary from pulling the footer up      */
+.single #colophon,
+.single-esmond-portfolio #colophon,
+.single-esmond-services #colophon {
+	clear: both;
+}
+
+/* ── Fixed header placeholder height ─────────────────────────
+   The JS shows this div when the header becomes sticky but never
+   sets a height, causing a scroll jump. Match the nav bar height. */
+.emTheme-fixedheader-placeholder {
+	display: none;
+	height: 48px;
+}
+
+/* ── Nav bar accent on single post pages ─────────────────────
+   Give the menu a slightly different look so it reads as a
+   "reading mode" context.                                      */
+.single .site-header #site-navigation,
+.single-esmond-portfolio .site-header #site-navigation,
+.single-esmond-services .site-header #site-navigation {
+	background: #1e2229;
+	border-top-color: #ee3b24;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, .45);
+}
+
+/* ── Post content top padding (accounts for sticky nav) ───────
+   When the header becomes sticky there is already a placeholder,
+   but on page load the nav overlaps the content top edge.      */
+
 .em-single-post,
 .em-single-portfolio,
 .em-single-service {
 	max-width: 780px;
 	margin: 0 auto;
-	padding: 2.5rem 1.5rem 4rem;
+	padding: 3.5rem 1.5rem 4rem;
 }
 
 /* Header */
