@@ -121,6 +121,7 @@
          <button type="button" class="control mixitup-control-active" data-filter="all">All</button>
          <button type="button" class="control" data-filter=".react">React</button>
          <button type="button" class="control" data-filter=".wordpress">WordPress</button>
+         <button type="button" class="control" data-filter=".laravel">Laravel</button>
       </div>
 
       <div class="em-modal-container">
