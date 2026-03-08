@@ -179,12 +179,30 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
         {
             $get_portfolio_post_url_link = get_post_meta($post->ID, 'portfolio_post_url_link_value', true);
             $get_portfolio_post_popup_target_id = get_post_meta($post->ID, 'portfolio_post_popup_target_id_value', true);
+            $get_portfolio_post_button_type = get_post_meta($post->ID, 'portfolio_post_button_type_value', true);
+            // Default to 'visit' if not yet set
+            if (empty($get_portfolio_post_button_type)) {
+                $get_portfolio_post_button_type = 'visit';
+            }
             wp_nonce_field(
                 'portfolio_post_metabox',
                 'portfolio_post_metabox_nonce'
             ); // adding nonce to meta box.
             ?>
             <div class="post_meta_extras">
+                <p>
+                    <strong>Button Type</strong><br>
+                    <label style="margin-right:15px;">
+                        <input type="radio" name="portfolio_post_button_type_value" value="visit"
+                            <?php checked($get_portfolio_post_button_type, 'visit'); ?> />
+                        Visit
+                    </label>
+                    <label>
+                        <input type="radio" name="portfolio_post_button_type_value" value="demo"
+                            <?php checked($get_portfolio_post_button_type, 'demo'); ?> />
+                        Demo
+                    </label>
+                </p>
                 <p>
 				<label>URL Link <input
                                type="text"
@@ -268,6 +286,11 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
 
             $portfolio_post_url_link_value = $_POST['portfolio_post_url_link_value']; // Input var okay.
             $portfolio_post_popup_target_id_value = $_POST['portfolio_post_popup_target_id_value']; // Input var okay.
+            $allowed_button_types = ['visit', 'demo'];
+            $portfolio_post_button_type_value = isset($_POST['portfolio_post_button_type_value'])
+                && in_array($_POST['portfolio_post_button_type_value'], $allowed_button_types, true)
+                ? $_POST['portfolio_post_button_type_value']
+                : 'visit';
             update_post_meta(
                 $post_id,
                 'portfolio_post_url_link_value',
@@ -277,6 +300,11 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
                 $post_id,
                 'portfolio_post_popup_target_id_value',
                 esc_attr($portfolio_post_popup_target_id_value)
+            );
+            update_post_meta(
+                $post_id,
+                'portfolio_post_button_type_value',
+                $portfolio_post_button_type_value
             );
         }
 
