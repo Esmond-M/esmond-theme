@@ -149,8 +149,12 @@
                $featured_img = get_the_post_thumbnail_url();
                $categories = get_the_category($post_id);
                $category   = !empty($categories) ? implode(' ', array_map(fn($cat) => strtolower($cat->name), $categories)) : '';
-               $url_link   = get_post_meta($post_id, 'portfolio_post_url_link_value', true);
-               $popup_id   = get_post_meta($post_id, 'portfolio_post_popup_target_id_value', true);
+               $url_link    = get_post_meta($post_id, 'portfolio_post_url_link_value', true);
+               $popup_id    = get_post_meta($post_id, 'portfolio_post_popup_target_id_value', true);
+               $button_type = get_post_meta($post_id, 'portfolio_post_button_type_value', true);
+               if (empty($button_type)) {
+                  $button_type = 'visit';
+               }
 
                // Output portfolio item
                ?>
@@ -166,7 +170,7 @@
                         <div class="em-modal-btn-contain">
                            <?php if ($url_link): ?>
                               <a class="em-portfolio-portfolio-link" href="<?php echo esc_url($url_link); ?>" target="_blank" rel="noopener noreferrer">
-                                 <button type="button">Visit</button>
+                                 <button type="button"><?php echo $button_type === 'demo' ? 'Demo' : 'Visit'; ?></button>
                               </a>
                            <?php endif; ?>
                            <?php if ($popup_id): ?>
