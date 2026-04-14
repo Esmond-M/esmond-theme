@@ -130,7 +130,7 @@
          $portfolio_post_args = array(
             'post_type'      => 'esmond-portfolio',
             'post_status'    => 'publish',
-            'posts_per_page' => 12,
+            'posts_per_page' => 16,
             'orderby'        => 'menu_order',
             'order'          => 'ASC',
          );
