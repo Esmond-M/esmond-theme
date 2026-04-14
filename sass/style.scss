@@ -249,7 +249,7 @@ porfolio section
 }
 .em-modal-caption h3 {
     color: #fff;
-    font-size: 16px;
+    font-size: clamp(1.5rem, 4vw, 1.9375rem);
     font-weight: 500;
     margin: 0;
 }
