@@ -284,7 +284,7 @@ final class EMTHEME_Theme_Class {
 	 */
 	public static function header_code() {
          //GA Tag
-		if($_SERVER['SERVER_NAME'] == "esmondmccain.com")
+		if( wp_parse_url( home_url(), PHP_URL_HOST ) === "esmondmccain.com" )
 		{
 			echo '<!-- Google tag (gtag.js) -->
 			<script async src="https://www.googletagmanager.com/gtag/js?id=G-0N4NM0B59G"></script>
