@@ -38,7 +38,7 @@
    <section class="em-portfolio-about-us-section-second">
       <div class="em-portfolio-about-sec wow zoomIn" data-wow-duration="1s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: zoomIn;">
          <div class="em-portfolio-content">
-            <h2 id="about" class="em-portfolio-section-title">About</h2>
+            <h2 id="about-title" class="em-portfolio-section-title">About</h2>
             <p style="color: black; text-align: center;font-size:17px;"><strong>I work with web agencies on both contract and full-time engagements, bringing extensive experience in collaborating with teams and clients to deliver successful digital projects. My core expertise lies in the LAMP/WordPress stack, including custom theme and plugin development, API integrations, and performance optimization. I also work with React and Next.js when projects need a more modern frontend approach. For inquiries, you can reach me at <a href="mailto:esmondmccain@gmail.com">esmondmccain@gmail.com</a> or via my <a class="gen-link" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/">Upwork profile</a>.</strong></p>
          </div>
          <div class="em-expertise-stack-wrap">

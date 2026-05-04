@@ -113,8 +113,6 @@ final class EMTHEME_Theme_Class {
 
 			// Add a pingback url auto-discovery header for singularly identifiable articles.
 			add_action( 'wp_head',  [$this, 'header_code' ] , 1 );
-			// Add meta viewport tag to header.
-			add_action( 'wp_head',   [$this, 'meta_viewport' ] , 1 );
 
 			// Add an X-UA-Compatible header.
 			add_filter( 'wp_headers',  [$this, 'x_ua_compatible_headers' ] );
@@ -350,9 +348,6 @@ final class EMTHEME_Theme_Class {
 	// Get current theme version.
 	$theme_version = self::get_theme_version();
 
-		// Main script dependencies.
-		$main_script_dependencies = array( 'jquery' );
-
 		// Comment reply.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -366,8 +361,6 @@ final class EMTHEME_Theme_Class {
 
 		wp_enqueue_script( 'emTheme-general', $dir . 'general.js', array(), $nonCache_version, true );
 		wp_enqueue_script( 'mixitup', $dir . 'mixitup.min.js', array(), $theme_version, true );
-
-		array_push( $main_script_dependencies, 'emTheme-main' );
 	}
 
 

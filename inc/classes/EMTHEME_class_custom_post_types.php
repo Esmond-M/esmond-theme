@@ -73,7 +73,7 @@ if (!class_exists('EMTHEME_theme_custom_post_types_Class')) {
 				'labels'                => $labels,
 				'description'           => '',
 				'public'                => false,
-				'publicly_queryable'    => false,
+				'publicly_queryable'    => true,
 				'show_ui'               => true,
 				'show_in_rest'          => true,
 				'rest_base'             => '',
