@@ -38,8 +38,8 @@
    <section class="em-portfolio-about-us-section-second">
       <div class="em-portfolio-about-sec wow zoomIn" data-wow-duration="1s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: zoomIn;">
          <div class="em-portfolio-content">
-            <h2 id="about" class="em-portfolio-section-title">About</h2>
-            <p style="color: black; text-align: center;font-size:17px;"><strong>I work with web agencies on both contract and full-time engagements, bringing extensive experience in collaborating with teams and clients to deliver successful digital projects. My core expertise lies in the LAMP/WordPress stack, including custom theme and plugin development, API integrations, and performance optimization. I’m also expanding my skill set into modern technologies, learning PHP’s Laravel framework and JavaScript’s React library to broaden my full-stack capabilities. For inquiries, you can reach me at <a href="mailto:esmondmccain@gmail.com">esmondmccain@gmail.com</a> or via my <a class="gen-link" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/">Upwork profile</a>.</strong></p>
+            <h2 id="about-title" class="em-portfolio-section-title">About</h2>
+            <p class="em-about-bio"><strong>I work with web agencies on both contract and full-time engagements, bringing extensive experience in collaborating with teams and clients to deliver successful digital projects. My core expertise lies in the LAMP/WordPress stack, including custom theme and plugin development, API integrations, and performance optimization. I also work with React and Next.js when projects need a more modern frontend approach. For inquiries, you can reach me at <a href="mailto:esmondmccain@gmail.com">esmondmccain@gmail.com</a> or via my <a class="gen-link" href="https://www.upwork.com/o/profiles/users/_~01bc262783a150ad5c/">Upwork profile</a>.</strong></p>
          </div>
          <div class="em-expertise-stack-wrap">
             <div class="em-core-expertise">
@@ -121,6 +121,7 @@
          <button type="button" class="control mixitup-control-active" data-filter="all">All</button>
          <button type="button" class="control" data-filter=".react">React</button>
          <button type="button" class="control" data-filter=".wordpress">WordPress</button>
+         <button type="button" class="control" data-filter=".laravel">Laravel</button>
       </div>
 
       <div class="em-modal-container">
@@ -129,7 +130,7 @@
          $portfolio_post_args = array(
             'post_type'      => 'esmond-portfolio',
             'post_status'    => 'publish',
-            'posts_per_page' => 12,
+            'posts_per_page' => 16,
             'orderby'        => 'menu_order',
             'order'          => 'ASC',
          );

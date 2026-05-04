@@ -32,7 +32,6 @@
                 <?php
                     wp_nav_menu(
                         array(
-                            'menu'           => 8,
                             'container'      => false,
                             'menu_class'     => 'menu',
                             'menu_id'        => 'primary-menu',

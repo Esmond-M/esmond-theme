@@ -75,7 +75,7 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
                                name="services_post_icon_class_value"
                                value="<?php 
 							   if (is_string($get_services_post_icon_class) ) {
-                             	echo $get_services_post_icon_class;
+                             	echo esc_attr( $get_services_post_icon_class );
                                }?>"
                             />
 
@@ -138,11 +138,11 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
 
             /* Ok to save */
 
-            $services_post_icon_class_value = $_POST['services_post_icon_class_value']; // Input var okay.
+            $services_post_icon_class_value = isset( $_POST['services_post_icon_class_value'] ) ? sanitize_text_field( wp_unslash( $_POST['services_post_icon_class_value'] ) ) : '';
             update_post_meta(
                 $post_id,
                 'services_post_icon_class_value',
-                esc_attr($services_post_icon_class_value)
+                $services_post_icon_class_value
             );
         }
 
@@ -209,7 +209,7 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
                                name="portfolio_post_url_link_value"
                                value="<?php 
 							   if (is_string($get_portfolio_post_url_link) ) {
-                             	echo $get_portfolio_post_url_link;
+                             	echo esc_attr( esc_url( $get_portfolio_post_url_link ) );
                                }?>"
                             />
 
@@ -221,7 +221,7 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
                                name="portfolio_post_popup_target_id_value"
                                value="<?php 
 							   if (is_string($get_portfolio_post_popup_target_id) ) {
-                             	echo $get_portfolio_post_popup_target_id;
+                             	echo esc_attr( $get_portfolio_post_popup_target_id );
                                }?>"
                             />
 
@@ -284,8 +284,8 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
 
             /* Ok to save */
 
-            $portfolio_post_url_link_value = $_POST['portfolio_post_url_link_value']; // Input var okay.
-            $portfolio_post_popup_target_id_value = $_POST['portfolio_post_popup_target_id_value']; // Input var okay.
+            $portfolio_post_url_link_value = isset( $_POST['portfolio_post_url_link_value'] ) ? esc_url_raw( wp_unslash( $_POST['portfolio_post_url_link_value'] ) ) : '';
+            $portfolio_post_popup_target_id_value = isset( $_POST['portfolio_post_popup_target_id_value'] ) ? sanitize_text_field( wp_unslash( $_POST['portfolio_post_popup_target_id_value'] ) ) : '';
             $allowed_button_types = ['visit', 'demo'];
             $portfolio_post_button_type_value = isset($_POST['portfolio_post_button_type_value'])
                 && in_array($_POST['portfolio_post_button_type_value'], $allowed_button_types, true)
@@ -294,12 +294,12 @@ if (!class_exists('EMTHEME_theme_custom_post_meta_Class')) {
             update_post_meta(
                 $post_id,
                 'portfolio_post_url_link_value',
-                esc_attr($portfolio_post_url_link_value)
+                $portfolio_post_url_link_value
             );
             update_post_meta(
                 $post_id,
                 'portfolio_post_popup_target_id_value',
-                esc_attr($portfolio_post_popup_target_id_value)
+                $portfolio_post_popup_target_id_value
             );
             update_post_meta(
                 $post_id,

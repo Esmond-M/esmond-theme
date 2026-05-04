@@ -249,7 +249,7 @@ porfolio section
 }
 .em-modal-caption h3 {
     color: #fff;
-    font-size: 16px;
+    font-size: clamp(1.5rem, 4vw, 1.9375rem);
     font-weight: 500;
     margin: 0;
 }
@@ -1017,6 +1017,7 @@ button.control {
     background: transparent;
     color: #444;
     font-size: 15px;
+    margin-bottom: 7px;
 	position: relative;
 }
 
@@ -1071,6 +1072,11 @@ button.control:hover:before{
     font-size: 32px;
     max-width: 90%;
     margin: 0 auto 50px
+}
+.em-about-bio {
+    color: black;
+    text-align: center;
+    font-size: 17px;
 }
 
 .em-portfolio-section-tagline {
