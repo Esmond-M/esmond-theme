@@ -24,8 +24,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// ...existing code...
-
 /**
  * emThemeWP theme class
  */
@@ -89,9 +87,6 @@ final class EMTHEME_Theme_Class {
 		// Define theme constants.
 		$this->emTheme_constants();
 
-		// Load framework classes.
-		add_action( 'after_setup_theme', array( 'EMTHEME_Theme_Class', 'classes' ), 4 );
-
 		// Setup theme => add_theme_support, register_nav_menus, load_theme_textdomain, etc.
 		add_action( 'after_setup_theme', array( 'EMTHEME_Theme_Class', 'theme_setup' ), 10 );
 
@@ -114,8 +109,7 @@ final class EMTHEME_Theme_Class {
 			// Add a pingback url auto-discovery header for singularly identifiable articles.
 			add_action( 'wp_head',  [$this, 'header_code' ] , 1 );
 
-			// Add an X-UA-Compatible header.
-			add_filter( 'wp_headers',  [$this, 'x_ua_compatible_headers' ] );
+
 
 			add_filter( 'emTheme_enqueue_generated_files', '__return_false' );
 		}
@@ -254,9 +248,9 @@ final class EMTHEME_Theme_Class {
 		/**
 		 * Custom post types.
 		 */
-		require_once $dir_include . '/classes/EMTHEME_class_custom_post_types.php';
-		require_once $dir_include . '/classes/EMTHEME_class_custom_post_meta.php';
-		require_once $dir_include . '/classes/EMTHEME_class_portfolio_order.php';
+		require_once $dir_include . 'classes/EMTHEME_class_custom_post_types.php';
+		require_once $dir_include . 'classes/EMTHEME_class_custom_post_meta.php';
+		require_once $dir_include . 'classes/EMTHEME_class_portfolio_order.php';
 
 		/**
 		 * Load Jetpack compatibility file.
@@ -327,12 +321,27 @@ final class EMTHEME_Theme_Class {
 	// Define dir.
 	$dir           = self::get_css_dir_uri();
 	$theme_version = self::get_theme_version();
-	$nonCache_version = rand( 1, 99999999999 );
-	wp_enqueue_style( 'emTheme', get_stylesheet_directory_uri() . "/style.min.css", array(), $nonCache_version );
-	wp_enqueue_style( 'gfont-css', $dir . "g-fonts.css", array(), $theme_version );
+	$css_file = get_stylesheet_directory() . '/style.min.css';
+	$css_version = file_exists( $css_file ) ? filemtime( $css_file ) : $theme_version;
+	wp_enqueue_style( 'emTheme', get_stylesheet_directory_uri() . '/style.min.css', array(), $css_version );
+	wp_enqueue_style( 'gfont-css', $dir . 'g-fonts.css', array(), $theme_version );
 	wp_style_add_data( 'emTheme', 'rtl', 'replace' );
-	wp_enqueue_style('font-awesome-official-css', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css');
-	wp_enqueue_style('font-awesome-official-v4shim-css', 'https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css');
+	wp_enqueue_style(
+		'font-awesome-official-css',
+		'https://use.fontawesome.com/releases/v5.14.0/css/all.css',
+		array(),
+		null,
+		'all'
+	);
+	wp_style_add_data( 'font-awesome-official-css', 'integrity', 'sha384-HzLeBuhoNPvSl5KYnjx0BT+RMBtzAOhSXhIGxSl5N7BdqTqTmSO0Ib7qS+K9X7' );
+	wp_style_add_data( 'font-awesome-official-css', 'crossorigin', 'anonymous' );
+	wp_enqueue_style(
+		'font-awesome-official-v4shim-css',
+		'https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css',
+		array( 'font-awesome-official-css' ),
+		null,
+		'all'
+	);
 	}
 
 	/**
@@ -357,23 +366,13 @@ final class EMTHEME_Theme_Class {
 		 * Load Theme Scripts.
 		 */
 
-		$nonCache_version = rand( 1, 99999999999 );
+		$js_file = self::get_theme_dir() . '/assets/js/general.js';
+		$js_version = file_exists( $js_file ) ? filemtime( $js_file ) : $theme_version;
 
-		wp_enqueue_script( 'emTheme-general', $dir . 'general.js', array(), $nonCache_version, true );
+		wp_enqueue_script( 'emTheme-general', $dir . 'general.js', array(), $js_version, true );
 		wp_enqueue_script( 'mixitup', $dir . 'mixitup.min.js', array(), $theme_version, true );
 	}
 
-
-	/**
-	 * Add headers for IE to override IE's Compatibility View Settings
-	 *
-	 * @param obj $headers   header settings.
-	 * @since 1.0.0
-	 */
-	public static function x_ua_compatible_headers( $headers ) {
-		$headers['X-UA-Compatible'] = 'IE=edge';
-		return $headers;
-	}
 
 	/**
 	 * Registers sidebars
